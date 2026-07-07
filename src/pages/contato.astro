@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import LeadForm from '../components/LeadForm.astro';
+import { site, whatsappUrl } from '../data/site';
+---
+
+<BaseLayout title="Contato | Luiz Reis">
+  <PageHeader title="Contato" eyebrow="Agendamento e guia gratuito" />
+  <section class="book-appointment dark-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-xl-6">
+          <div class="appointment-content">
+            <div class="section-title">
+              <span class="section-sub-title">Proximo passo</span>
+              <h2>Converse pelo WhatsApp ou deixe seu contato para receber o guia gratuito.</h2>
+              <p>Atendimentos em Belo Horizonte e Nova Lima. O formulario esta preparado para enviar leads ao Google Sheets via Apps Script.</p>
+            </div>
+            <div class="appointment-contact-item-list">
+              <div class="appointment-contact-item">
+                <div class="icon-box"><img src="/images/icon-headphone-white.svg" alt="" /></div>
+                <div class="appointment-contact-item-content">
+                  <p>WhatsApp</p>
+                  <h3><a href={whatsappUrl} target="_blank" rel="noopener">{site.phoneLabel}</a></h3>
+                </div>
+              </div>
+              <div class="appointment-contact-item">
+                <div class="icon-box"><img src="/images/icon-mail-white.svg" alt="" /></div>
+                <div class="appointment-contact-item-content">
+                  <p>E-mail</p>
+                  <h3><a href={`mailto:${site.email}`}>{site.email}</a></h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-6">
+          <div class="appointment-form guide-panel">
+            <LeadForm title="Formulario de captura" source="contato" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

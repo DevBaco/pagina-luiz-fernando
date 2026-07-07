@@ -1,0 +1,133 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import { site, whatsappUrl } from '../data/site';
+
+const trust = [
+  '15+ anos de experiencia',
+  'Professor de Ayurveda',
+  'Atendimentos em Belo Horizonte e Nova Lima',
+  'Centenas de pessoas acompanhadas',
+  'Especialista em terapias corporais e saude integrativa',
+];
+
+const tools = [
+  {
+    icon: '/images/icon-approach-item-1.svg',
+    title: 'Escuta e presenca',
+    text: 'Antes da tecnica vem o olhar. Entender a sua historia por inteiro e o inicio de todo o cuidado.',
+  },
+  {
+    icon: '/images/icon-approach-item-2.svg',
+    title: 'Ayurveda e toque',
+    text: 'Consulta, Abhyanga, alimentacao e rotina se combinam conforme o que o seu momento pede.',
+  },
+  {
+    icon: '/images/icon-approach-item-3.svg',
+    title: 'Cuidado individual',
+    text: 'Nenhum plano e igual ao outro. O caminho e construido para caber na sua vida real.',
+  },
+];
+---
+
+<BaseLayout
+  title="Sobre Luiz Reis | Ayurveda e terapias integrativas em BH"
+  description="Conheca Luiz Reis: 15+ anos cuidando de pessoas com Ayurveda, toque terapeutico, escuta e saude integrativa em Belo Horizonte e Nova Lima."
+>
+  <PageHeader title="Sobre Luiz Reis" eyebrow="Escuta, presenca e cuidado individual" />
+
+  <section class="about-us">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-xl-6">
+          <div class="about-us-content">
+            <div class="section-title">
+              <span class="section-sub-title wow fadeInUp">Quem conduz o cuidado</span>
+              <h2 class="text-anime-style-3" data-cursor="-opaque">Mais do que aplicar tecnicas, o trabalho e entender o que esta acontecendo com voce</h2>
+              <p class="wow fadeInUp" data-wow-delay="0.2s">Luiz Reis atua com Ayurveda, terapias corporais, saude integrativa e formacao de terapeutas. A proposta e acolher pessoas que vivem cansaco, ansiedade, dores, insonia e a sensacao de estar vivendo no automatico.</p>
+              <p class="wow fadeInUp" data-wow-delay="0.3s">O atendimento une escuta, presenca, toque terapeutico e orientacoes individualizadas para reorganizar rotina, corpo e emocoes.</p>
+            </div>
+            <ul class="trust-list wow fadeInUp" data-wow-delay="0.4s">
+              {trust.map((item) => <li>{item}</li>)}
+            </ul>
+            <div class="about-us-btn wow fadeInUp" data-wow-delay="0.5s">
+              <a class="btn-default" href={whatsappUrl} target="_blank" rel="noopener">Agendar conversa</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-6">
+          <div class="about-us-image-box wow fadeInUp">
+            <div class="about-us-image-box-1">
+              <div class="about-us-image-1">
+                <figure class="image-anime"><img src="/images/about-us-image-1.jpg" alt={site.name} /></figure>
+              </div>
+              <div class="about-us-image-2">
+                <figure class="image-anime"><img src="/images/about-us-image-2.jpg" alt="Ambiente de cuidado" /></figure>
+              </div>
+            </div>
+            <div class="about-us-image-box-2">
+              <div class="about-us-image-3">
+                <figure class="image-anime"><img src="/images/about-us-image-3.jpg" alt="Terapia corporal" /></figure>
+              </div>
+              <div class="about-image-content">
+                <a href={whatsappUrl} target="_blank" rel="noopener">WhatsApp: {site.phoneLabel}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="our-approach light-section">
+    <div class="container">
+      <div class="row section-row align-items-center">
+        <div class="col-xl-7">
+          <div class="section-title">
+            <span class="section-sub-title wow fadeInUp">A caixa de ferramentas</span>
+            <h2 class="text-anime-style-3" data-cursor="-opaque">Ajudo pessoas a reencontrar saude, vitalidade e presenca atraves de um cuidado verdadeiramente individual</h2>
+          </div>
+        </div>
+        <div class="col-xl-5">
+          <div class="section-title-content wow fadeInUp" data-wow-delay="0.2s">
+            <p>Ayurveda, toque, alimentacao e xamanismo entram quando fazem sentido. O que voce recebe e a experiencia de ser acolhido e conduzido.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        {tools.map((tool, index) => (
+          <div class="col-xl-4 col-md-6">
+            <div class="approach-item wow fadeInUp" data-wow-delay={`${index * 0.2}s`}>
+              <div class="approach-item-header">
+                <div class="icon-box"><img src={tool.icon} alt="" /></div>
+                <div class="approach-item-content">
+                  <h3>{tool.title}</h3>
+                  <p>{tool.text}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="book-appointment dark-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-xl-8">
+          <div class="section-title">
+            <span class="section-sub-title wow fadeInUp">Primeiro passo</span>
+            <h2 class="text-anime-style-3" data-cursor="-opaque">Talvez o que voce procure nao seja uma tecnica, e alguem que organize o caos</h2>
+          </div>
+        </div>
+        <div class="col-xl-4">
+          <div class="section-btn wow fadeInUp" data-wow-delay="0.2s">
+            <a class="btn-default btn-highlighted" href={whatsappUrl} target="_blank" rel="noopener">Agendar conversa</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

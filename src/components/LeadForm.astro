@@ -1,0 +1,36 @@
+---
+interface Props {
+  title?: string;
+  button?: string;
+  source?: string;
+}
+
+const { title = 'Receba o guia gratuito', button = 'Quero receber o guia', source = 'site' } = Astro.props;
+---
+
+<form class="lead-form" data-lead-form>
+  <input type="hidden" name="source" value={source} />
+  <input type="hidden" name="guide" value="7 sinais de que seu corpo esta pedindo ajuda" />
+  <div class="section-title compact-title">
+    <span class="section-sub-title">{title}</span>
+    <h2>7 sinais de que seu corpo esta pedindo ajuda</h2>
+  </div>
+  <div class="row">
+    <div class="form-group col-md-12 mb-4">
+      <label>Nome*</label>
+      <input type="text" name="name" class="form-control" placeholder="Seu nome" required />
+    </div>
+    <div class="form-group col-md-6 mb-4">
+      <label>WhatsApp*</label>
+      <input type="tel" name="whatsapp" class="form-control" placeholder="(31) 99999-9999" required />
+    </div>
+    <div class="form-group col-md-6 mb-4">
+      <label>E-mail*</label>
+      <input type="email" name="email" class="form-control" placeholder="seu@email.com" required />
+    </div>
+    <div class="col-md-12">
+      <button type="submit" class="btn-default btn-highlighted">{button}</button>
+      <p class="form-status" data-form-status></p>
+    </div>
+  </div>
+</form>

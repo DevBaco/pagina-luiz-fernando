@@ -1,0 +1,66 @@
+---
+import { services, site, whatsappUrl } from '../data/site';
+---
+
+<footer class="main-footer dark-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-4">
+        <div class="about-footer">
+          <div class="footer-logo brand-text footer-brand">
+            <span>{site.name}</span>
+            <small>Ayurveda e terapias integrativas</small>
+          </div>
+          <div class="about-footer-content">
+            <p>Ajudo pessoas que sentem que perderam o equilibrio entre corpo, mente e emocoes a reencontrar saude, vitalidade e presenca.</p>
+          </div>
+          <div class="footer-social-links">
+            <ul>
+              <li><a href={site.instagramUrl} target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+              <li><a href={site.youtubeUrl} target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></li>
+              <li><a href={whatsappUrl} target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-8">
+        <div class="footer-links-box">
+          <div class="footer-links">
+            <h2>Menu</h2>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/sobre/">Sobre</a></li>
+              <li><a href="/atendimentos/">Atendimentos</a></li>
+              <li><a href="/blog/">Blog</a></li>
+              <li><a href="/contato/">Contato</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h2>Servicos</h2>
+            <ul>
+              {services.slice(0, 5).map((service) => <li><a href="/atendimentos/">{service.title}</a></li>)}
+            </ul>
+          </div>
+          <div class="footer-links footer-contact-info-list">
+            <h2>Contato</h2>
+            <div class="footer-contact-item">
+              <p>Local</p>
+              <h3>{site.address}</h3>
+            </div>
+            <div class="footer-contact-item">
+              <p>WhatsApp</p>
+              <h3><a href={whatsappUrl} target="_blank" rel="noopener">{site.phoneLabel}</a></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-12">
+        <div class="footer-copyright-text">
+          <p>Copyright © 2026 {site.name}. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

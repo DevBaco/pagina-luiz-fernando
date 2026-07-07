@@ -1,0 +1,304 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import LeadForm from '../components/LeadForm.astro';
+import { services, site, whatsappUrl } from '../data/site';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
+  .slice(0, 3);
+---
+
+<BaseLayout
+  title="Luiz Reis | Ayurveda, toque terapeutico e cuidado integral em BH"
+  description="Atendimentos em Belo Horizonte e Nova Lima para ansiedade, cansaco, insonia, dores recorrentes e desequilibrios digestivos."
+>
+  <div class="hero dark-section parallaxie">
+    <div class="container">
+      <div class="row align-items-end">
+        <div class="col-xl-8">
+          <div class="hero-content">
+            <div class="section-title">
+              <span class="section-sub-title wow fadeInUp">Cuidado individual em Belo Horizonte e Nova Lima</span>
+              <h1 class="text-anime-style-3" data-cursor="-opaque">Seu corpo esta pedindo ajuda?</h1>
+            </div>
+            <div class="hero-body wow fadeInUp" data-wow-delay="0.2s">
+              <p>Ansiedade, cansaco, insonia, dores recorrentes, sobrecarga emocional e desequilibrios digestivos sao sinais de que seu organismo precisa de atencao. Atraves da Ayurveda, do toque terapeutico e de um acompanhamento individualizado, ajudo pessoas a recuperar equilibrio, vitalidade e qualidade de vida.</p>
+              <div class="hero-btn">
+                <a href={whatsappUrl} class="btn-default btn-highlighted" target="_blank" rel="noopener">Agendar conversa no WhatsApp</a>
+              </div>
+              <ul class="hero-pain-list" aria-label="Dores atendidas">
+                <li>Cansaco constante</li>
+                <li>Ansiedade</li>
+                <li>Insonia</li>
+                <li>Dores recorrentes</li>
+                <li>Intestino preso</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-4">
+          <div class="hero-info-box wow fadeInUp">
+            <div class="hero-info-client-box">
+              <div class="hero-info-client-content">
+                <p>Escuta, presenca e cuidado integral</p>
+              </div>
+            </div>
+            <div class="hero-info-review-box">
+              <h2><span class="counter">15</span>+</h2>
+              <p>anos de experiencia em terapias corporais e saude integrativa</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="about-us" id="sobre">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-xl-6">
+          <div class="about-us-content">
+            <div class="section-title">
+              <span class="section-sub-title wow fadeInUp">Quem e Luiz Reis?</span>
+              <h2 class="text-anime-style-3" data-cursor="-opaque">Um cuidado para quem precisa ser olhado por inteiro</h2>
+              <p class="wow fadeInUp" data-wow-delay="0.2s">Luiz Reis conduz atendimentos individuais, massagens terapeuticas, cursos e imersoes para pessoas que sentem que perderam o equilibrio entre corpo, mente e emocoes.</p>
+            </div>
+            <ul class="trust-list wow fadeInUp" data-wow-delay="0.4s">
+              <li>15+ anos de experiencia</li>
+              <li>Professor de Ayurveda</li>
+              <li>Atendimentos em Belo Horizonte e Nova Lima</li>
+              <li>Centenas de pessoas acompanhadas</li>
+              <li>Especialista em terapias corporais e saude integrativa</li>
+            </ul>
+            <div class="about-us-btn wow fadeInUp" data-wow-delay="0.2s">
+              <a href="/sobre/" class="btn-default">Conhecer a historia</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-6">
+          <div class="about-us-image-box wow fadeInUp">
+            <div class="about-us-image-box-1">
+              <div class="about-us-image-1">
+                <figure class="image-anime"><img src="/images/about-us-image-1.jpg" alt="Atendimento terapeutico" /></figure>
+              </div>
+              <div class="about-us-image-2">
+                <figure class="image-anime"><img src="/images/about-us-image-2.jpg" alt="Ambiente de cuidado" /></figure>
+              </div>
+            </div>
+            <div class="about-us-image-box-2">
+              <div class="about-us-image-3">
+                <figure class="image-anime"><img src="/images/about-us-image-3.jpg" alt="Terapia corporal" /></figure>
+              </div>
+              <div class="about-image-content">
+                <a href={whatsappUrl} target="_blank" rel="noopener">WhatsApp: {site.phoneLabel}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="our-services light-section" id="atendimentos">
+    <div class="container">
+      <div class="row section-row align-items-center">
+        <div class="col-xl-6">
+          <div class="section-title">
+            <span class="section-sub-title wow fadeInUp">Como posso te ajudar?</span>
+            <h2 class="text-anime-style-3" data-cursor="-opaque">Caminhos de cuidado para voltar a se sentir bem</h2>
+          </div>
+        </div>
+        <div class="col-xl-6">
+          <div class="section-content-btn">
+            <div class="section-title-content wow fadeInUp" data-wow-delay="0.2s">
+              <p>Cada atendimento parte da sua historia, dos sinais do corpo e do que precisa ser reorganizado na rotina para que o cuidado seja possivel.</p>
+            </div>
+            <div class="section-btn wow fadeInUp" data-wow-delay="0.4s">
+              <a href="/atendimentos/" class="btn-default">Ver atendimentos</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="service-slider">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                {services.map((service, index) => (
+                  <div class="swiper-slide">
+                    <div class="service-item">
+                      <div class="service-item-header">
+                        <div class="service-item-number"><h2>{String(index + 1).padStart(2, '0')}</h2></div>
+                        <div class="service-item-content">
+                          <h2><a href="/atendimentos/">{service.title}</a></h2>
+                          <p>{service.text}</p>
+                        </div>
+                      </div>
+                      <div class="icon-box"><img src={service.icon} alt="" /></div>
+                      <div class="service-item-image">
+                        <figure><img src={service.image} alt={service.title} /></figure>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div class="service-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="why-choose-us">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-xl-6">
+          <div class="why-choose-image-box wow fadeInUp">
+            <div class="why-choose-image-box-1">
+              <div class="why-choose-image">
+                <figure class="image-anime"><img src="/images/why-choose-image-1.jpg" alt="Cuidado integrativo" /></figure>
+              </div>
+              <div class="why-choose-cta-box">
+                <div class="icon-box"><img src="/images/icon-why-choose-cta-box.svg" alt="" /></div>
+                <div class="why-choose-cta-content">
+                  <p>Experiencia</p>
+                  <h3><span class="counter">15</span>+</h3>
+                </div>
+              </div>
+            </div>
+            <div class="why-choose-image-box-2">
+              <div class="why-choose-image">
+                <figure class="image-anime"><img src="/images/why-choose-image-2.jpg" alt="Massagem terapeutica" /></figure>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-6">
+          <div class="why-choose-content">
+            <div class="section-title">
+              <span class="section-sub-title wow fadeInUp">Dor, confianca, solucao</span>
+              <h2 class="text-anime-style-3" data-cursor="-opaque">O que voce procura talvez nao seja uma tecnica. E alguem que organize o caos.</h2>
+              <p class="wow fadeInUp" data-wow-delay="0.2s">A Ayurveda, o toque, a alimentacao e a escuta sao ferramentas. O centro do trabalho e entender o que esta acontecendo com voce e construir um caminho realista de cuidado.</p>
+            </div>
+            <div class="why-choose-body wow fadeInUp" data-wow-delay="0.4s">
+              <div class="why-choose-info-box">
+                <div class="why-choose-info-content">
+                  <h3>Voce nao precisa continuar vivendo no automatico</h3>
+                  <p>O maior objetivo e acordar melhor, ter disposicao, sentir paz e perceber: estou voltando a ser eu.</p>
+                </div>
+                <div class="why-choose-info-list">
+                  <ul>
+                    <li>Escuta individual</li>
+                    <li>Plano de cuidado possivel</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="why-choose-btn wow fadeInUp" data-wow-delay="0.6s">
+              <a href={whatsappUrl} class="btn-default" target="_blank" rel="noopener">Agendar conversa</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="book-appointment dark-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-xl-6">
+          <div class="appointment-content">
+            <div class="section-title">
+              <span class="section-sub-title wow fadeInUp">Guia gratuito</span>
+              <h2 class="text-anime-style-3" data-cursor="-opaque">7 sinais de que seu corpo esta pedindo ajuda</h2>
+              <p class="wow fadeInUp" data-wow-delay="0.2s">Receba o material e comece a identificar sinais como cansaco, ansiedade, insonia, dor e desequilibrios digestivos antes que eles virem rotina.</p>
+            </div>
+            <div class="appointment-image-box wow fadeInUp" data-wow-delay="0.4s">
+              <div class="appointment-image">
+                <figure><img src="/images/appointment-image.jpg" alt="Guia gratuito sobre sinais do corpo" /></figure>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-6">
+          <div class="appointment-form guide-panel">
+            <LeadForm source="home-guide" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="our-testimonials">
+    <div class="container">
+      <div class="row section-row align-items-center">
+        <div class="col-xl-6">
+          <div class="section-title">
+            <span class="section-sub-title wow fadeInUp">Comunidade Toque Inteligente</span>
+            <h2 class="text-anime-style-3" data-cursor="-opaque">Um espaco para terapeutas, massoterapeutas e pessoas em formacao</h2>
+          </div>
+        </div>
+        <div class="col-xl-6">
+          <div class="section-content-btn">
+            <div class="section-title-content wow fadeInUp" data-wow-delay="0.2s">
+              <p>A comunidade nasce para aprofundar presenca, escuta e toque terapeutico. Entre para receber avisos sobre encontros, conteudos e proximas turmas.</p>
+            </div>
+            <div class="section-btn wow fadeInUp" data-wow-delay="0.4s">
+              <a class="btn-default" href={whatsappUrl} target="_blank" rel="noopener">Entrar para a comunidade</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="our-blog light-section">
+    <div class="container">
+      <div class="row section-row align-items-center">
+        <div class="col-xl-6">
+          <div class="section-title">
+            <span class="section-sub-title wow fadeInUp">Blog</span>
+            <h2 class="text-anime-style-3" data-cursor="-opaque">Conteudos para entender os sinais do corpo</h2>
+          </div>
+        </div>
+        <div class="col-xl-6">
+          <div class="section-content-btn">
+            <div class="section-title-content wow fadeInUp" data-wow-delay="0.2s">
+              <p>Artigos sobre ansiedade natural, cansaco constante, insonia, massagem terapeutica, Ayurveda e qualidade de vida.</p>
+            </div>
+            <div class="section-btn wow fadeInUp" data-wow-delay="0.4s">
+              <a class="btn-default" href="/blog/">Ver blog</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        {posts.map((post, index) => (
+          <div class="col-xl-4 col-md-6">
+            <div class="post-item wow fadeInUp" data-wow-delay={`${index * 0.2}s`}>
+              <div class="post-featured-image">
+                <a href={`/blog/${post.slug}/`} data-cursor-text="Ver">
+                  <figure class="image-anime"><img src={post.data.image} alt={post.data.title} /></figure>
+                </a>
+              </div>
+              <div class="post-item-body">
+                <div class="post-item-content">
+                  <h2><a href={`/blog/${post.slug}/`}>{post.data.title}</a></h2>
+                </div>
+                <div class="post-item-btn">
+                  <a href={`/blog/${post.slug}/`} class="readmore-btn">Ler artigo</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</BaseLayout>

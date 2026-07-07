@@ -1,0 +1,53 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import LeadForm from '../../components/LeadForm.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return posts.map((post) => ({ params: { slug: post.slug }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<BaseLayout title={`${post.data.title} | Luiz Reis`} description={post.data.description}>
+  <div class="page-header parallaxie">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="page-header-box">
+            <h1 class="text-anime-style-3" data-cursor="-opaque">{post.data.title}</h1>
+            <div class="post-single-meta wow fadeInUp">
+              <ol class="breadcrumb">
+                <li><i class="fa-regular fa-user"></i> Luiz Reis</li>
+                <li><i class="fa-regular fa-clock"></i> {post.data.publishDate.toLocaleDateString('pt-BR')}</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-single-post">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="post-image">
+            <figure class="image-anime reveal"><img src={post.data.image} alt={post.data.title} /></figure>
+          </div>
+          <div class="post-content">
+            <div class="post-entry">
+              <Content />
+            </div>
+          </div>
+          <div class="appointment-form guide-panel">
+            <LeadForm title="Aprofunde o cuidado" source={`blog-${post.slug}`} />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

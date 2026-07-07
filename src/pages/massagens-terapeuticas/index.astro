@@ -1,0 +1,106 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import { whatsappUrl } from '../../data/site';
+
+const benefits = [
+  {
+    icon: '/images/icon-service-benefits-item-1.svg',
+    title: 'Relaxamento profundo e alivio do estresse',
+    text: 'O toque conduz o sistema nervoso de volta ao descanso para quem vive em estado de alerta constante.',
+  },
+  {
+    icon: '/images/icon-service-benefits-item-2.svg',
+    title: 'Alivio de dores e tensoes',
+    text: 'Trabalho direcionado para tensao muscular, dores recorrentes e a rigidez que a rotina acumula.',
+  },
+  {
+    icon: '/images/icon-service-benefits-item-3.svg',
+    title: 'Sono e digestao mais equilibrados',
+    text: 'Ao regular o sistema nervoso, a massagem apoia noites de sono melhores e um corpo menos sobrecarregado.',
+  },
+  {
+    icon: '/images/icon-service-benefits-item-4.svg',
+    title: 'Reconexao com o proprio corpo',
+    text: 'Mais do que aliviar sintomas, e um retorno ao corpo para quem anda vivendo no automatico.',
+  },
+];
+---
+
+<BaseLayout
+  title="Massagens Terapeuticas em BH | Abhyanga e toque terapeutico"
+  description="Abhyanga e toque terapeutico em Belo Horizonte e Nova Lima para estresse, dores recorrentes, insonia e regulacao do sistema nervoso."
+>
+  <PageHeader title="Massagens Terapeuticas" eyebrow="Abhyanga e toque terapeutico" />
+
+  <section class="service-single-content-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-xl-6">
+          <div class="page-single-image">
+            <figure class="image-anime"><img src="/images/service-image-2.jpg" alt="Massagem terapeutica Abhyanga" /></figure>
+          </div>
+        </div>
+        <div class="col-xl-6">
+          <div class="section-title">
+            <span class="section-sub-title wow fadeInUp">Cuidado pelo corpo</span>
+            <h2 class="text-anime-style-3" data-cursor="-opaque">Um toque que ajuda o sistema nervoso a lembrar como descansar</h2>
+            <p class="wow fadeInUp" data-wow-delay="0.2s">A massagem terapeutica e indicada para quem vive tensao, estresse, dores recorrentes, insonia e dificuldade de relaxar. Cada sessao considera o seu momento fisico e emocional — nao ha um roteiro unico, ha o que o seu corpo precisa hoje.</p>
+            <p class="wow fadeInUp" data-wow-delay="0.3s">A Abhyanga, tradicao associada a Ayurveda, une oleos e movimentos que favorecem circulacao, presenca e a sensacao de voltar para dentro de si.</p>
+            <div class="about-us-btn wow fadeInUp" data-wow-delay="0.4s">
+              <a class="btn-default" href={whatsappUrl} target="_blank" rel="noopener">Agendar conversa</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="our-services light-section">
+    <div class="container">
+      <div class="row section-row align-items-center">
+        <div class="col-xl-7">
+          <div class="section-title">
+            <span class="section-sub-title wow fadeInUp">Para que serve</span>
+            <h2 class="text-anime-style-3" data-cursor="-opaque">O que a massagem terapeutica pode fazer por voce</h2>
+          </div>
+        </div>
+        <div class="col-xl-5">
+          <div class="section-title-content wow fadeInUp" data-wow-delay="0.2s">
+            <p>Ela nao e um luxo pontual. E parte de um cuidado que reorganiza corpo, sono e emocoes ao longo do tempo.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-benefits-item-list">
+        {benefits.map((benefit, index) => (
+          <div class="service-benefits-item wow fadeInUp" data-wow-delay={`${(index % 2) * 0.2}s`}>
+            <div class="icon-box"><img src={benefit.icon} alt="" /></div>
+            <div class="service-benefits-item-content">
+              <h3>{benefit.title}</h3>
+              <p>{benefit.text}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="book-appointment dark-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-xl-8">
+          <div class="section-title">
+            <span class="section-sub-title wow fadeInUp">Proximo passo</span>
+            <h2 class="text-anime-style-3" data-cursor="-opaque">Reserve um tempo para o seu corpo descansar de verdade</h2>
+          </div>
+        </div>
+        <div class="col-xl-4">
+          <div class="section-btn wow fadeInUp" data-wow-delay="0.2s">
+            <a class="btn-default btn-highlighted" href={whatsappUrl} target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
