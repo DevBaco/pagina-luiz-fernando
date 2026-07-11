@@ -9,7 +9,7 @@ export const site = {
   telegramUrl: 'https://t.me/',
   hotmartCourseUrl:
     'https://casaayurvedabh.kpages.online/curso-de-massoterapia-ayurvedica-formacao-em-massagem-abhyanga-e2bc94cf-e735-4ada-857c-829b9c5a399a',
-  whatsappMessage: 'Ola, Luiz. Quero agendar uma conversa pelo WhatsApp.',
+  whatsappMessage: 'Olá, Luiz. Quero agendar uma conversa pelo WhatsApp.',
 };
 
 export const whatsappUrl = `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(site.whatsappMessage)}`;
@@ -17,37 +17,37 @@ export const whatsappUrl = `https://wa.me/${site.whatsappNumber}?text=${encodeUR
 export const services = [
   {
     title: 'Consulta Ayurveda',
-    text: 'Investiga as causas dos desequilibrios e organiza um plano personalizado para corpo, mente, rotina e alimentacao.',
+    text: 'Investiga as causas dos desequilíbrios e organiza um plano personalizado para corpo, mente, rotina e alimentação.',
     image: '/images/service-image-1.jpg',
     icon: '/images/icon-service-item-1.svg',
   },
   {
     title: 'Abhyanga',
-    text: 'Massagem terapeutica para relaxamento profundo, regulacao do sistema nervoso e reconexao com o corpo.',
+    text: 'Massagem terapêutica para relaxamento profundo, regulação do sistema nervoso e reconexão com o corpo.',
     image: '/images/service-image-2.jpg',
     icon: '/images/icon-service-item-2.svg',
   },
   {
-    title: 'Metodo Suddhi',
-    text: 'Experiencia terapeutica de purificacao e reorganizacao integral para quem sente que precisa recomecar.',
+    title: 'Método Suddhi',
+    text: 'Experiência terapêutica de purificação e reorganização integral para quem sente que precisa recomeçar.',
     image: '/images/service-image-3.jpg',
     icon: '/images/icon-service-item-3.svg',
   },
   {
     title: 'Curso Toque Inteligente',
-    text: 'Formacao para terapeutas e massoterapeutas que desejam desenvolver escuta, presenca e toque terapeutico.',
+    text: 'Formação para terapeutas e massoterapeutas que desejam desenvolver escuta, presença e toque terapêutico.',
     image: '/images/service-image-4.jpg',
     icon: '/images/icon-service-item-4.svg',
   },
   {
-    title: 'Cursos e Imersoes',
-    text: 'Ayurveda, Astrologia Vedica e desenvolvimento humano em encontros para estudo e transformacao.',
+    title: 'Cursos e Imersões',
+    text: 'Ayurveda, Astrologia Védica e desenvolvimento humano em encontros para estudo e transformação.',
     image: '/images/service-image-5.jpg',
     icon: '/images/icon-service-item-5.svg',
   },
   {
     title: 'Despertar Shamana',
-    text: 'Retiro de tratamento para cuidado profundo, descanso, presenca e restauracao do equilibrio interno.',
+    text: 'Retiro de tratamento para cuidado profundo, descanso, presença e restauração do equilíbrio interno.',
     image: '/images/service-image-6.jpg',
     icon: '/images/icon-service-item-6.svg',
   },

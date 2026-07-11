@@ -10,8 +10,8 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
 ---
 
 <BaseLayout
-  title="Luiz Reis | Ayurveda, toque terapeutico e cuidado integral em BH"
-  description="Atendimentos em Belo Horizonte e Nova Lima para ansiedade, cansaco, insonia, dores recorrentes e desequilibrios digestivos."
+  title="Luiz Reis | Ayurveda, toque terapêutico e cuidado integral em BH"
+  description="Atendimentos em Belo Horizonte e Nova Lima para ansiedade, cansaço, insônia, dores recorrentes e desequilíbrios digestivos."
 >
   <div class="hero dark-section parallaxie">
     <div class="container">
@@ -20,20 +20,19 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
           <div class="hero-content">
             <div class="section-title">
               <span class="section-sub-title wow fadeInUp">Cuidado individual em Belo Horizonte e Nova Lima</span>
-              <h1 class="text-anime-style-3" data-cursor="-opaque">Seu corpo esta pedindo ajuda?</h1>
+              <h1 class="text-anime-style-3" data-cursor="-opaque">Seu corpo está pedindo ajuda?</h1>
             </div>
             <div class="hero-body wow fadeInUp" data-wow-delay="0.2s">
-              <p>Ansiedade, cansaco, insonia, dores recorrentes, sobrecarga emocional e desequilibrios digestivos sao sinais de que seu organismo precisa de atencao. Atraves da Ayurveda, do toque terapeutico e de um acompanhamento individualizado, ajudo pessoas a recuperar equilibrio, vitalidade e qualidade de vida.</p>
               <div class="hero-btn">
-                <a href={whatsappUrl} class="btn-default btn-highlighted" target="_blank" rel="noopener">Agendar conversa no WhatsApp</a>
+                <a href={whatsappUrl} class="btn-default btn-highlighted" target="_blank" rel="noopener">Agendar conversa</a>
               </div>
-              <ul class="hero-pain-list" aria-label="Dores atendidas">
-                <li>Cansaco constante</li>
-                <li>Ansiedade</li>
-                <li>Insonia</li>
-                <li>Dores recorrentes</li>
-                <li>Intestino preso</li>
-              </ul>
+              {/* Vídeo genérico do YouTube: troque a URL abaixo pelo vídeo do Luiz */}
+              <div class="video-play-button" data-cursor-text="Play">
+                <a href="https://www.youtube.com/watch?v=Y-x0efG1seA" class="popup-video">
+                  <span><i class="fa-solid fa-play"></i></span>
+                  <p>Assista minha história</p>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -42,12 +41,12 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
           <div class="hero-info-box wow fadeInUp">
             <div class="hero-info-client-box">
               <div class="hero-info-client-content">
-                <p>Escuta, presenca e cuidado integral</p>
+                <p>Escuta, presença e cuidado integral</p>
               </div>
             </div>
             <div class="hero-info-review-box">
               <h2><span class="counter">15</span>+</h2>
-              <p>anos de experiencia em terapias corporais e saude integrativa</p>
+              <p>anos de experiência em terapias corporais e saúde integrativa</p>
             </div>
           </div>
         </div>
@@ -61,19 +60,19 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
         <div class="col-xl-6">
           <div class="about-us-content">
             <div class="section-title">
-              <span class="section-sub-title wow fadeInUp">Quem e Luiz Reis?</span>
+              <span class="section-sub-title wow fadeInUp">Quem é Luiz Reis?</span>
               <h2 class="text-anime-style-3" data-cursor="-opaque">Um cuidado para quem precisa ser olhado por inteiro</h2>
-              <p class="wow fadeInUp" data-wow-delay="0.2s">Luiz Reis conduz atendimentos individuais, massagens terapeuticas, cursos e imersoes para pessoas que sentem que perderam o equilibrio entre corpo, mente e emocoes.</p>
+              <p class="wow fadeInUp" data-wow-delay="0.2s">Luiz Reis conduz atendimentos individuais, massagens terapêuticas, cursos e imersões para pessoas que sentem que perderam o equilíbrio entre corpo, mente e emoções.</p>
             </div>
             <ul class="trust-list wow fadeInUp" data-wow-delay="0.4s">
-              <li>15+ anos de experiencia</li>
+              <li>15+ anos de experiência</li>
               <li>Professor de Ayurveda</li>
               <li>Atendimentos em Belo Horizonte e Nova Lima</li>
               <li>Centenas de pessoas acompanhadas</li>
-              <li>Especialista em terapias corporais e saude integrativa</li>
+              <li>Especialista em terapias corporais e saúde integrativa</li>
             </ul>
             <div class="about-us-btn wow fadeInUp" data-wow-delay="0.2s">
-              <a href="/sobre/" class="btn-default">Conhecer a historia</a>
+              <a href="/sobre/" class="btn-default">Conhecer a história</a>
             </div>
           </div>
         </div>
@@ -82,7 +81,7 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
           <div class="about-us-image-box wow fadeInUp">
             <div class="about-us-image-box-1">
               <div class="about-us-image-1">
-                <figure class="image-anime"><img src="/images/about-us-image-1.jpg" alt="Atendimento terapeutico" /></figure>
+                <figure class="image-anime"><img src="/images/about-us-image-1.jpg" alt="Atendimento terapêutico" /></figure>
               </div>
               <div class="about-us-image-2">
                 <figure class="image-anime"><img src="/images/about-us-image-2.jpg" alt="Ambiente de cuidado" /></figure>
@@ -114,7 +113,7 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
         <div class="col-xl-6">
           <div class="section-content-btn">
             <div class="section-title-content wow fadeInUp" data-wow-delay="0.2s">
-              <p>Cada atendimento parte da sua historia, dos sinais do corpo e do que precisa ser reorganizado na rotina para que o cuidado seja possivel.</p>
+              <p>Cada atendimento parte da sua história, dos sinais do corpo e do que precisa ser reorganizado na rotina para que o cuidado seja possível.</p>
             </div>
             <div class="section-btn wow fadeInUp" data-wow-delay="0.4s">
               <a href="/atendimentos/" class="btn-default">Ver atendimentos</a>
@@ -166,14 +165,14 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
               <div class="why-choose-cta-box">
                 <div class="icon-box"><img src="/images/icon-why-choose-cta-box.svg" alt="" /></div>
                 <div class="why-choose-cta-content">
-                  <p>Experiencia</p>
+                  <p>Experiência</p>
                   <h3><span class="counter">15</span>+</h3>
                 </div>
               </div>
             </div>
             <div class="why-choose-image-box-2">
               <div class="why-choose-image">
-                <figure class="image-anime"><img src="/images/why-choose-image-2.jpg" alt="Massagem terapeutica" /></figure>
+                <figure class="image-anime"><img src="/images/why-choose-image-2.jpg" alt="Massagem terapêutica" /></figure>
               </div>
             </div>
           </div>
@@ -182,20 +181,20 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
         <div class="col-xl-6">
           <div class="why-choose-content">
             <div class="section-title">
-              <span class="section-sub-title wow fadeInUp">Dor, confianca, solucao</span>
-              <h2 class="text-anime-style-3" data-cursor="-opaque">O que voce procura talvez nao seja uma tecnica. E alguem que organize o caos.</h2>
-              <p class="wow fadeInUp" data-wow-delay="0.2s">A Ayurveda, o toque, a alimentacao e a escuta sao ferramentas. O centro do trabalho e entender o que esta acontecendo com voce e construir um caminho realista de cuidado.</p>
+              <span class="section-sub-title wow fadeInUp">Dor, confiança, solução</span>
+              <h2 class="text-anime-style-3" data-cursor="-opaque">O que você procura talvez não seja uma técnica. É alguém que organize o caos.</h2>
+              <p class="wow fadeInUp" data-wow-delay="0.2s">A Ayurveda, o toque, a alimentação e a escuta são ferramentas. O centro do trabalho é entender o que está acontecendo com você e construir um caminho realista de cuidado.</p>
             </div>
             <div class="why-choose-body wow fadeInUp" data-wow-delay="0.4s">
               <div class="why-choose-info-box">
                 <div class="why-choose-info-content">
-                  <h3>Voce nao precisa continuar vivendo no automatico</h3>
-                  <p>O maior objetivo e acordar melhor, ter disposicao, sentir paz e perceber: estou voltando a ser eu.</p>
+                  <h3>Você não precisa continuar vivendo no automático</h3>
+                  <p>O maior objetivo é acordar melhor, ter disposição, sentir paz e perceber: estou voltando a ser eu.</p>
                 </div>
                 <div class="why-choose-info-list">
                   <ul>
                     <li>Escuta individual</li>
-                    <li>Plano de cuidado possivel</li>
+                    <li>Plano de cuidado possível</li>
                   </ul>
                 </div>
               </div>
@@ -216,8 +215,8 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
           <div class="appointment-content">
             <div class="section-title">
               <span class="section-sub-title wow fadeInUp">Guia gratuito</span>
-              <h2 class="text-anime-style-3" data-cursor="-opaque">7 sinais de que seu corpo esta pedindo ajuda</h2>
-              <p class="wow fadeInUp" data-wow-delay="0.2s">Receba o material e comece a identificar sinais como cansaco, ansiedade, insonia, dor e desequilibrios digestivos antes que eles virem rotina.</p>
+              <h2 class="text-anime-style-3" data-cursor="-opaque">7 sinais de que seu corpo está pedindo ajuda</h2>
+              <p class="wow fadeInUp" data-wow-delay="0.2s">Receba o material e comece a identificar sinais como cansaço, ansiedade, insônia, dor e desequilíbrios digestivos antes que eles virem rotina.</p>
             </div>
             <div class="appointment-image-box wow fadeInUp" data-wow-delay="0.4s">
               <div class="appointment-image">
@@ -241,13 +240,13 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
         <div class="col-xl-6">
           <div class="section-title">
             <span class="section-sub-title wow fadeInUp">Comunidade Toque Inteligente</span>
-            <h2 class="text-anime-style-3" data-cursor="-opaque">Um espaco para terapeutas, massoterapeutas e pessoas em formacao</h2>
+            <h2 class="text-anime-style-3" data-cursor="-opaque">Um espaço para terapeutas, massoterapeutas e pessoas em formação</h2>
           </div>
         </div>
         <div class="col-xl-6">
           <div class="section-content-btn">
             <div class="section-title-content wow fadeInUp" data-wow-delay="0.2s">
-              <p>A comunidade nasce para aprofundar presenca, escuta e toque terapeutico. Entre para receber avisos sobre encontros, conteudos e proximas turmas.</p>
+              <p>A comunidade nasce para aprofundar presença, escuta e toque terapêutico. Entre para receber avisos sobre encontros, conteúdos e próximas turmas.</p>
             </div>
             <div class="section-btn wow fadeInUp" data-wow-delay="0.4s">
               <a class="btn-default" href={whatsappUrl} target="_blank" rel="noopener">Entrar para a comunidade</a>
@@ -264,13 +263,13 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
         <div class="col-xl-6">
           <div class="section-title">
             <span class="section-sub-title wow fadeInUp">Blog</span>
-            <h2 class="text-anime-style-3" data-cursor="-opaque">Conteudos para entender os sinais do corpo</h2>
+            <h2 class="text-anime-style-3" data-cursor="-opaque">Conteúdos para entender os sinais do corpo</h2>
           </div>
         </div>
         <div class="col-xl-6">
           <div class="section-content-btn">
             <div class="section-title-content wow fadeInUp" data-wow-delay="0.2s">
-              <p>Artigos sobre ansiedade natural, cansaco constante, insonia, massagem terapeutica, Ayurveda e qualidade de vida.</p>
+              <p>Artigos sobre ansiedade natural, cansaço constante, insônia, massagem terapêutica, Ayurveda e qualidade de vida.</p>
             </div>
             <div class="section-btn wow fadeInUp" data-wow-delay="0.4s">
               <a class="btn-default" href="/blog/">Ver blog</a>

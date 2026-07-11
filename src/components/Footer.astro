@@ -7,12 +7,11 @@ import { services, site, whatsappUrl } from '../data/site';
     <div class="row">
       <div class="col-xl-4">
         <div class="about-footer">
-          <div class="footer-logo brand-text footer-brand">
-            <span>{site.name}</span>
-            <small>Ayurveda e terapias integrativas</small>
+          <div class="footer-logo">
+            <img src="/images/logo-luiz-trim.png" alt={`${site.name} — Medicina Ayurveda`} />
           </div>
           <div class="about-footer-content">
-            <p>Ajudo pessoas que sentem que perderam o equilibrio entre corpo, mente e emocoes a reencontrar saude, vitalidade e presenca.</p>
+            <p>Ajudo pessoas que sentem que perderam o equilíbrio entre corpo, mente e emoções a reencontrar saúde, vitalidade e presença.</p>
           </div>
           <div class="footer-social-links">
             <ul>
@@ -37,7 +36,7 @@ import { services, site, whatsappUrl } from '../data/site';
             </ul>
           </div>
           <div class="footer-links">
-            <h2>Servicos</h2>
+            <h2>Serviços</h2>
             <ul>
               {services.slice(0, 5).map((service) => <li><a href="/atendimentos/">{service.title}</a></li>)}
             </ul>

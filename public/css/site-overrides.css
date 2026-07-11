@@ -6,66 +6,64 @@
   --accent-color: #64704f;
 }
 
-.brand-text {
-  display: inline-flex;
-  flex-direction: column;
-  line-height: 1;
-  color: var(--primary-color);
-  text-decoration: none;
+/* Menu: itens de topo nunca quebram em varias linhas */
+.main-menu .nav-menu-wrapper > ul > li > a {
+  white-space: nowrap;
 }
 
-.brand-text span {
-  font-size: 28px;
-  font-weight: 700;
+/* Logo no header: versao escura no fundo claro, branca quando o menu fixa (fundo escuro) */
+.navbar-brand .brand-logo {
+  height: 74px;
+  width: auto;
+  display: block;
 }
 
-.brand-text small {
-  margin-top: 7px;
-  font-size: 12px;
-  font-weight: 500;
-  color: var(--accent-color);
+.navbar-brand .brand-logo-light,
+.header-sticky.active .brand-logo-dark {
+  display: none;
 }
 
-.dark-section .brand-text,
-.footer-brand {
-  color: var(--white-color);
+.header-sticky.active .brand-logo-light {
+  display: block;
 }
 
-.dark-section .brand-text small,
-.footer-brand small {
-  color: rgba(255, 255, 255, 0.72);
+.footer-logo img {
+  width: auto;
+  max-width: 200px;
+}
+
+/* Simbolo da logo dentro do circulo do preloader */
+#loading-icon {
+  width: 56px;
+  height: 56px;
+  max-width: none;
+}
+
+#loading-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 .hero .section-title h1 {
   max-width: 900px;
 }
 
+/* Hero: alinha exatamente o botao e o botao de video (remove o strut do line-box) */
 .hero-body {
-  max-width: 820px;
+  align-items: center;
 }
 
-.hero-body p {
-  margin: 0 0 28px;
-  color: rgba(255, 255, 255, 0.86);
-  font-size: 20px;
-  line-height: 1.55;
-}
-
-.hero-pain-list {
+.hero-body .hero-btn,
+.hero-body .video-play-button {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 24px;
-  padding: 0;
-  list-style: none;
+  align-items: center;
+  margin: 0;
 }
 
-.hero-pain-list li {
-  padding: 9px 14px;
-  border: 1px solid var(--dark-divider-color);
-  border-radius: 999px;
-  color: var(--white-color);
-  background: rgba(255, 255, 255, 0.08);
+.hero-body .video-play-button a {
+  line-height: 1;
 }
 
 .trust-list {
@@ -167,17 +165,14 @@ section.page-single-faqs {
   list-style: none;
 }
 
+/* Card de preco unico (curso em destaque): ocupa a coluna inteira */
+.pricing-single .pricing-item {
+  width: 100%;
+}
+
 @media (max-width: 767px) {
-  .brand-text span {
-    font-size: 22px;
-  }
-
-  .brand-text small {
-    font-size: 10px;
-  }
-
-  .hero-body p {
-    font-size: 17px;
+  .navbar-brand .brand-logo {
+    height: 56px;
   }
 
   .guide-panel {

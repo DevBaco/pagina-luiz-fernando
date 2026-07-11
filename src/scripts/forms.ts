@@ -7,7 +7,7 @@ document.querySelectorAll<HTMLFormElement>('[data-lead-form]').forEach((form) =>
     event.preventDefault();
 
     if (!endpoint) {
-      if (status) status.textContent = 'Formulario pronto. Configure PUBLIC_APPS_SCRIPT_URL para enviar ao Google Sheets.';
+      if (status) status.textContent = 'Formulário pronto. Configure PUBLIC_APPS_SCRIPT_URL para enviar ao Google Sheets.';
       return;
     }
 
@@ -26,9 +26,9 @@ document.querySelectorAll<HTMLFormElement>('[data-lead-form]').forEach((form) =>
         body: new FormData(form),
       });
       form.reset();
-      if (status) status.textContent = 'Recebido. Em breve o material chega para voce.';
+      if (status) status.textContent = 'Recebido. Em breve o material chega para você.';
     } catch {
-      if (status) status.textContent = 'Nao foi possivel enviar agora. Tente novamente em instantes.';
+      if (status) status.textContent = 'Não foi possível enviar agora. Tente novamente em instantes.';
     } finally {
       if (button) {
         button.disabled = false;

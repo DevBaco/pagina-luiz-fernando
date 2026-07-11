@@ -7,45 +7,48 @@ const steps = [
   {
     icon: '/images/icon-approach-item-1.svg',
     title: '1. Escuta',
-    text: 'Uma conversa para entender seu momento, seus sintomas e o que ja tentou ate aqui.',
+    text: 'Uma conversa para entender seu momento, seus sintomas e o que já tentou até aqui.',
+    li: 'Sem pressa, sem julgamento',
   },
   {
     icon: '/images/icon-approach-item-2.svg',
-    title: '2. Avaliacao individual',
-    text: 'Investigamos juntos as causas por tras do cansaco, da ansiedade, das dores e do sono.',
+    title: '2. Avaliação individual',
+    text: 'Investigamos juntos as causas por trás do cansaço, da ansiedade, das dores e do sono.',
+    li: 'Olhar para a causa, não só o sintoma',
   },
   {
     icon: '/images/icon-approach-item-3.svg',
     title: '3. Plano de cuidado',
-    text: 'Um caminho realista com toque terapeutico, rotina e alimentacao possiveis para a sua vida.',
+    text: 'Um caminho realista com toque terapêutico, rotina e alimentação possíveis para a sua vida.',
+    li: 'Um caminho possível de seguir',
   },
 ];
 
 const faqs = [
   {
-    q: 'Preciso saber o que e Ayurveda para me consultar?',
-    a: 'Nao. Voce nao precisa entender de tecnicas. O primeiro passo e simples: uma conversa para entender o que esta acontecendo com voce. A tecnica e minha responsabilidade.',
+    q: 'Preciso saber o que é Ayurveda para me consultar?',
+    a: 'Não. Você não precisa entender de técnicas. O primeiro passo é simples: uma conversa para entender o que está acontecendo com você. A técnica é minha responsabilidade.',
   },
   {
-    q: 'Ja tentei varias coisas e nada resolveu. Isso funciona para mim?',
-    a: 'A maioria das pessoas que atendo chega justamente assim: ja passou por nutricionista, medico, academia, terapia. Aqui o olhar e diferente porque parte da sua historia por inteiro, e nao de um sintoma isolado.',
+    q: 'Já tentei várias coisas e nada resolveu. Isso funciona para mim?',
+    a: 'A maioria das pessoas que atendo chega justamente assim: já passou por nutricionista, médico, academia, terapia. Aqui o olhar é diferente porque parte da sua história por inteiro, e não de um sintoma isolado.',
   },
   {
-    q: 'O atendimento e presencial?',
-    a: 'Sim, os atendimentos acontecem em Belo Horizonte e Nova Lima. Consultas de acompanhamento tambem podem ser combinadas conforme o seu caso.',
+    q: 'O atendimento é presencial?',
+    a: 'Sim, os atendimentos acontecem em Belo Horizonte e Nova Lima. Consultas de acompanhamento também podem ser combinadas conforme o seu caso.',
   },
   {
-    q: 'Como comeco?',
-    a: 'Pelo WhatsApp. Voce me conta rapidamente o seu momento e combinamos o melhor caminho para o primeiro encontro.',
+    q: 'Como começo?',
+    a: 'Pelo WhatsApp. Você me conta rapidamente o seu momento e combinamos o melhor caminho para o primeiro encontro.',
   },
 ];
 ---
 
 <BaseLayout
   title="Atendimentos | Luiz Reis"
-  description="Consulta Ayurveda, Abhyanga, Metodo Suddhi e cuidado individual em Belo Horizonte e Nova Lima para cansaco, ansiedade, insonia e dores."
+  description="Consulta Ayurveda, Abhyanga, Método Suddhi e cuidado individual em Belo Horizonte e Nova Lima para cansaço, ansiedade, insônia e dores."
 >
-  <PageHeader title="Atendimentos" eyebrow="Cuidado para corpo, mente e emocoes" />
+  <PageHeader title="Atendimentos" eyebrow="Cuidado para corpo, mente e emoções" />
 
   <section class="our-services light-section">
     <div class="container">
@@ -53,22 +56,22 @@ const faqs = [
         <div class="col-xl-7">
           <div class="section-title">
             <span class="section-sub-title wow fadeInUp">Como posso te ajudar?</span>
-            <h2 class="text-anime-style-3" data-cursor="-opaque">Caminhos de cuidado para quem sente que perdeu o equilibrio</h2>
+            <h2 class="text-anime-style-3" data-cursor="-opaque">Caminhos de cuidado para quem sente que perdeu o equilíbrio</h2>
           </div>
         </div>
         <div class="col-xl-5">
           <div class="section-title-content wow fadeInUp" data-wow-delay="0.2s">
-            <p>Cada atendimento parte da sua historia, dos sinais do corpo e do que precisa ser reorganizado na rotina. Ayurveda, toque, alimentacao e escuta sao as ferramentas — o centro do trabalho e voce.</p>
+            <p>Cada atendimento parte da sua história, dos sinais do corpo e do que precisa ser reorganizado na rotina. Ayurveda, toque, alimentação e escuta são as ferramentas — o centro do trabalho é você.</p>
           </div>
         </div>
       </div>
 
-      <div class="row">
+      <div class="row service-item-list">
         {services.map((service, index) => (
           <div class="col-xl-4 col-md-6">
-            <div class="service-item wow fadeInUp" data-wow-delay={`${(index % 3) * 0.2}s`}>
+            <div class={`service-item wow fadeInUp${index === 0 ? ' active' : ''}`} data-wow-delay={`${(index % 3) * 0.2}s`}>
               <div class="service-item-header">
-                <div class="service-item-number"><h2>{String(index + 1).padStart(2, '0')}</h2></div>
+                <div class="service-item-number"><h2>{String(index + 1).padStart(2, '0')}.</h2></div>
                 <div class="service-item-content">
                   <h2>{service.title}</h2>
                   <p>{service.text}</p>
@@ -95,7 +98,7 @@ const faqs = [
         <div class="col-xl-6">
           <div class="section-content-btn">
             <div class="section-title-content wow fadeInUp" data-wow-delay="0.2s">
-              <p>Voce nao precisa chegar com um diagnostico pronto. Precisa apenas dar o primeiro passo — o resto construimos juntos.</p>
+              <p>Você não precisa chegar com um diagnóstico pronto. Precisa apenas dar o primeiro passo — o resto construímos juntos.</p>
             </div>
             <div class="section-btn wow fadeInUp" data-wow-delay="0.4s">
               <a class="btn-default" href={whatsappUrl} target="_blank" rel="noopener">Agendar conversa</a>
@@ -105,19 +108,24 @@ const faqs = [
       </div>
 
       <div class="row">
-        {steps.map((step, index) => (
-          <div class="col-xl-4 col-md-6">
-            <div class="approach-item wow fadeInUp" data-wow-delay={`${index * 0.2}s`}>
-              <div class="approach-item-header">
-                <div class="icon-box"><img src={step.icon} alt="" /></div>
-                <div class="approach-item-content">
-                  <h3>{step.title}</h3>
-                  <p>{step.text}</p>
+        <div class="col-lg-12">
+          <div class="approach-items-list">
+            {steps.map((step, index) => (
+              <div class="approach-item wow fadeInUp" data-wow-delay={`${index * 0.2}s`}>
+                <div class="approach-item-header">
+                  <div class="icon-box"><img src={step.icon} alt="" /></div>
+                  <div class="approach-item-content">
+                    <h3>{step.title}</h3>
+                    <p>{step.text}</p>
+                  </div>
+                </div>
+                <div class="approach-item-list">
+                  <ul><li>{step.li}</li></ul>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
     </div>
   </section>
@@ -127,8 +135,8 @@ const faqs = [
       <div class="row section-row align-items-center">
         <div class="col-xl-6">
           <div class="section-title">
-            <span class="section-sub-title wow fadeInUp">Duvidas comuns</span>
-            <h2 class="text-anime-style-3" data-cursor="-opaque">Antes de agendar, talvez voce esteja se perguntando</h2>
+            <span class="section-sub-title wow fadeInUp">Dúvidas comuns</span>
+            <h2 class="text-anime-style-3" data-cursor="-opaque">Antes de agendar, talvez você esteja se perguntando</h2>
           </div>
         </div>
       </div>
@@ -164,7 +172,7 @@ const faqs = [
         </div>
       </div>
       <div class="section-footer-text wow fadeInUp">
-        <p>O melhor primeiro passo e uma conversa breve para entender seu momento. <a href={whatsappUrl} target="_blank" rel="noopener">Agendar pelo WhatsApp</a></p>
+        <p>O melhor primeiro passo é uma conversa breve para entender seu momento. <a href={whatsappUrl} target="_blank" rel="noopener">Agendar pelo WhatsApp</a></p>
       </div>
     </div>
   </section>

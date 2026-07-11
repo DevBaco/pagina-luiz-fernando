@@ -800,7 +800,7 @@ header.main-header .header-sticky.active{
 
 .hero{
 	position: relative;
-	background-image: url('../images/hero-bg-image.jpg');
+	background-image: url('../images/hero-bg-image.png');
 	background-position: center center;
 	min-height: 980px;
 	align-content: end;

@@ -4,18 +4,18 @@ import PageHeader from '../../components/PageHeader.astro';
 import { site, whatsappUrl } from '../../data/site';
 
 const courseIncludes = [
-  'Fundamentos da massoterapia Ayurvedica',
-  'Formacao em massagem Abhyanga',
-  'Tecnica, escuta e presenca no toque',
-  'Pratica para atender com seguranca',
+  'Fundamentos da massoterapia Ayurvédica',
+  'Formação em massagem Abhyanga',
+  'Técnica, escuta e presença no toque',
+  'Prática para atender com segurança',
 ];
 ---
 
 <BaseLayout
-  title="Cursos e Formacoes | Luiz Reis"
-  description="Formacao em massoterapia Ayurvedica e massagem Abhyanga, cursos de Ayurveda e a Comunidade Toque Inteligente."
+  title="Cursos e Formações | Luiz Reis"
+  description="Formação em massoterapia Ayurvédica e massagem Abhyanga, cursos de Ayurveda e a Comunidade Toque Inteligente."
 >
-  <PageHeader title="Cursos e Formacoes" eyebrow="Ayurveda, Astrologia Vedica e toque terapeutico" />
+  <PageHeader title="Cursos e Formações" eyebrow="Ayurveda, Astrologia Védica e toque terapêutico" />
 
   <section class="simple-page-section">
     <div class="container">
@@ -23,16 +23,16 @@ const courseIncludes = [
         <div class="col-xl-6">
           <div class="section-title">
             <span class="section-sub-title wow fadeInUp">Toque Inteligente</span>
-            <h2 class="text-anime-style-3" data-cursor="-opaque">Formacoes para quem deseja cuidar com mais profundidade</h2>
-            <p class="wow fadeInUp" data-wow-delay="0.2s">Os cursos unem fundamentos de Ayurveda, Astrologia Vedica, escuta, presenca e pratica corporal para terapeutas, massoterapeutas e pessoas em caminho de desenvolvimento humano.</p>
-            <p class="wow fadeInUp" data-wow-delay="0.3s">A Comunidade Toque Inteligente sera o primeiro canal para receber conteudos, datas e novas turmas.</p>
+            <h2 class="text-anime-style-3" data-cursor="-opaque">Formações para quem deseja cuidar com mais profundidade</h2>
+            <p class="wow fadeInUp" data-wow-delay="0.2s">Os cursos unem fundamentos de Ayurveda, Astrologia Védica, escuta, presença e prática corporal para terapeutas, massoterapeutas e pessoas em caminho de desenvolvimento humano.</p>
+            <p class="wow fadeInUp" data-wow-delay="0.3s">A Comunidade Toque Inteligente será o primeiro canal para receber conteúdos, datas e novas turmas.</p>
           </div>
           <div class="about-us-btn wow fadeInUp" data-wow-delay="0.4s">
             <a class="btn-default" href={whatsappUrl} target="_blank" rel="noopener">Entrar para a comunidade</a>
           </div>
         </div>
         <div class="col-xl-6">
-          <figure class="image-anime"><img src="/images/our-feature-image-1.jpg" alt="Cursos e formacoes com Luiz Reis" /></figure>
+          <figure class="image-anime"><img src="/images/our-feature-image-1.jpg" alt="Cursos e formações com Luiz Reis" /></figure>
         </div>
       </div>
     </div>
@@ -44,29 +44,29 @@ const courseIncludes = [
         <div class="col-xl-7">
           <div class="section-title">
             <span class="section-sub-title wow fadeInUp">Curso em destaque</span>
-            <h2 class="text-anime-style-3" data-cursor="-opaque">Formacao em Massoterapia Ayurvedica e Massagem Abhyanga</h2>
+            <h2 class="text-anime-style-3" data-cursor="-opaque">Formação em Massoterapia Ayurvédica e Massagem Abhyanga</h2>
           </div>
         </div>
         <div class="col-xl-5">
           <div class="section-title-content wow fadeInUp" data-wow-delay="0.2s">
-            <p>Uma formacao completa para quem deseja aprender a massagem Abhyanga e levar o toque terapeutico Ayurvedico para a sua pratica. Curso disponivel na plataforma Hotmart.</p>
+            <p>Uma formação completa para quem deseja aprender a massagem Abhyanga e levar o toque terapêutico Ayurvédico para a sua prática. Curso disponível na plataforma Hotmart.</p>
           </div>
         </div>
       </div>
 
       <div class="row justify-content-center">
-        <div class="col-xl-7 col-lg-9">
+        <div class="col-xl-8 col-lg-10 pricing-single">
           <div class="pricing-item highlighted-box wow fadeInUp">
             <div class="pricing-item-header">
               <div class="icon-box"><img src="/images/icon-pricing-2.svg" alt="" /></div>
               <div class="pricing-item-content">
-                <span class="pricing-item-title">Massoterapia Ayurvedica</span>
-                <p>Formacao em massagem Abhyanga com fundamentos, tecnica e pratica.</p>
+                <span class="pricing-item-title">Massoterapia Ayurvédica</span>
+                <p>Formação em massagem Abhyanga com fundamentos, técnica e prática.</p>
               </div>
             </div>
             <div class="pricing-item-body">
               <div class="pricing-item-body-list">
-                <h3>O que voce aprende:</h3>
+                <h3>O que você aprende:</h3>
                 <ul>
                   {courseIncludes.map((item) => <li>{item}</li>)}
                 </ul>
@@ -87,7 +87,7 @@ const courseIncludes = [
         <div class="col-xl-8">
           <div class="section-title">
             <span class="section-sub-title wow fadeInUp">Comunidade Toque Inteligente</span>
-            <h2 class="text-anime-style-3" data-cursor="-opaque">Receba avisos sobre encontros, conteudos e proximas turmas</h2>
+            <h2 class="text-anime-style-3" data-cursor="-opaque">Receba avisos sobre encontros, conteúdos e próximas turmas</h2>
           </div>
         </div>
         <div class="col-xl-4">

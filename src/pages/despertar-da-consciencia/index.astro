@@ -8,25 +8,28 @@ const pillars = [
     icon: '/images/icon-benefits-item-1.svg',
     title: 'Pausa e descanso',
     text: 'Interromper o ciclo de sobrecarga e permitir que corpo e mente finalmente desacelerem.',
+    li: 'Sair do modo automático',
   },
   {
     icon: '/images/icon-benefits-item-2.svg',
-    title: 'Presenca e escuta',
-    text: 'Um espaco para se olhar por inteiro, sem pressa e sem a cobranca de estar sempre funcionando.',
+    title: 'Presença e escuta',
+    text: 'Um espaço para se olhar por inteiro, sem pressa e sem a cobrança de estar sempre funcionando.',
+    li: 'Tempo para se reencontrar',
   },
   {
     icon: '/images/icon-approach-item-3.svg',
-    title: 'Reorganizacao integral',
-    text: 'Cuidado com corpo, alimentacao e emocoes para reencontrar direcao e vitalidade.',
+    title: 'Reorganização integral',
+    text: 'Cuidado com corpo, alimentação e emoções para reencontrar direção e vitalidade.',
+    li: 'Voltar diferente',
   },
 ];
 ---
 
 <BaseLayout
-  title="Despertar da Consciencia | Retiro Despertar Shamana"
-  description="Retiro de tratamento Despertar Shamana: pausa, presenca e reorganizacao integral para quem precisa interromper o ciclo de sobrecarga."
+  title="Despertar da Consciência | Retiro Despertar Shamana"
+  description="Retiro de tratamento Despertar Shamana: pausa, presença e reorganização integral para quem precisa interromper o ciclo de sobrecarga."
 >
-  <PageHeader title="Despertar da Consciencia" eyebrow="Retiro de tratamento Despertar Shamana" />
+  <PageHeader title="Despertar da Consciência" eyebrow="Retiro de tratamento Despertar Shamana" />
 
   <section class="service-single-content-section">
     <div class="container">
@@ -39,9 +42,9 @@ const pillars = [
         <div class="col-xl-6">
           <div class="section-title">
             <span class="section-sub-title wow fadeInUp">Tratamento profundo</span>
-            <h2 class="text-anime-style-3" data-cursor="-opaque">Um espaco de pausa, presenca e reorganizacao integral</h2>
-            <p class="wow fadeInUp" data-wow-delay="0.2s">O Retiro de tratamento Despertar Shamana e uma experiencia para quem chegou ao limite da sobrecarga e sente que precisa recomecar. Nao e sobre aprender uma tecnica — e sobre parar, escutar o corpo e reencontrar direcao.</p>
-            <p class="wow fadeInUp" data-wow-delay="0.3s">Para quem ja cuidou de todos e esqueceu de si, o retiro e um convite para voltar a se sentir por inteiro.</p>
+            <h2 class="text-anime-style-3" data-cursor="-opaque">Um espaço de pausa, presença e reorganização integral</h2>
+            <p class="wow fadeInUp" data-wow-delay="0.2s">O Retiro de tratamento Despertar Shamana é uma experiência para quem chegou ao limite da sobrecarga e sente que precisa recomeçar. Não é sobre aprender uma técnica — é sobre parar, escutar o corpo e reencontrar direção.</p>
+            <p class="wow fadeInUp" data-wow-delay="0.3s">Para quem já cuidou de todos e esqueceu de si, o retiro é um convite para voltar a se sentir por inteiro.</p>
             <div class="about-us-btn wow fadeInUp" data-wow-delay="0.4s">
               <a class="btn-default" href={whatsappUrl} target="_blank" rel="noopener">Tenho interesse</a>
             </div>
@@ -56,31 +59,36 @@ const pillars = [
       <div class="row section-row align-items-center">
         <div class="col-xl-7">
           <div class="section-title">
-            <span class="section-sub-title wow fadeInUp">O que voce vive no retiro</span>
-            <h2 class="text-anime-style-3" data-cursor="-opaque">Tres pilares de um cuidado que restaura</h2>
+            <span class="section-sub-title wow fadeInUp">O que você vive no retiro</span>
+            <h2 class="text-anime-style-3" data-cursor="-opaque">Três pilares de um cuidado que restaura</h2>
           </div>
         </div>
         <div class="col-xl-5">
           <div class="section-title-content wow fadeInUp" data-wow-delay="0.2s">
-            <p>Mais do que descansar, o retiro cria as condicoes para que voce se reorganize por dentro e volte diferente.</p>
+            <p>Mais do que descansar, o retiro cria as condições para que você se reorganize por dentro e volte diferente.</p>
           </div>
         </div>
       </div>
 
       <div class="row">
-        {pillars.map((pillar, index) => (
-          <div class="col-xl-4 col-md-6">
-            <div class="approach-item wow fadeInUp" data-wow-delay={`${index * 0.2}s`}>
-              <div class="approach-item-header">
-                <div class="icon-box"><img src={pillar.icon} alt="" /></div>
-                <div class="approach-item-content">
-                  <h3>{pillar.title}</h3>
-                  <p>{pillar.text}</p>
+        <div class="col-lg-12">
+          <div class="approach-items-list">
+            {pillars.map((pillar, index) => (
+              <div class="approach-item wow fadeInUp" data-wow-delay={`${index * 0.2}s`}>
+                <div class="approach-item-header">
+                  <div class="icon-box"><img src={pillar.icon} alt="" /></div>
+                  <div class="approach-item-content">
+                    <h3>{pillar.title}</h3>
+                    <p>{pillar.text}</p>
+                  </div>
+                </div>
+                <div class="approach-item-list">
+                  <ul><li>{pillar.li}</li></ul>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
     </div>
   </section>
@@ -90,7 +98,7 @@ const pillars = [
       <div class="row align-items-center">
         <div class="col-xl-8">
           <div class="section-title">
-            <span class="section-sub-title wow fadeInUp">Proxima edicao</span>
+            <span class="section-sub-title wow fadeInUp">Próxima edição</span>
             <h2 class="text-anime-style-3" data-cursor="-opaque">Quero ser avisado sobre datas e vagas</h2>
           </div>
         </div>
