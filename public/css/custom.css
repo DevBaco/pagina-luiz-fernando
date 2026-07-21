@@ -3141,7 +3141,8 @@ input[type="date"]::-webkit-calendar-picker-indicator{
 
 .page-header{
 	position: relative;
-    background: url('../images/page-header-bg.jpg') no-repeat;
+    background-image: var(--page-header-image), url('../images/page-header-bg.jpg');
+    background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     padding: 260px 0 175px;

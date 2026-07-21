@@ -2,12 +2,16 @@
 interface Props {
   title: string;
   eyebrow?: string;
+  backgroundImage?: string;
 }
 
-const { title } = Astro.props;
+const { title, backgroundImage = '/images/page-header-bg.jpg' } = Astro.props;
 ---
 
-<div class="page-header parallaxie">
+<div
+  class="page-header parallaxie"
+  style={`--page-header-image: url("${backgroundImage}")`}
+>
   <div class="container">
     <div class="row">
       <div class="col-lg-12">

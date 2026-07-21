@@ -1,0 +1,174 @@
+- generic [ref=e3]:
+  - generic:
+    - heading "Press question mark to see available shortcut keys" [level=2] [ref=e5]
+    - generic [ref=e10]:
+      - button "Google apps" [ref=e14] [cursor=pointer]
+      - link "Sign in" [ref=e18] [cursor=pointer]:
+        - /url: https://accounts.google.com/ServiceLogin?service=lh2&passive=1209600&osid=1&continue=https://photos.google.com/share/AF1QipNsRbXiDQxingJyhDKyj-NA_GcsXlQw54ZWffBhjth7b20ScENstSlRa4N6tCahkQ?key%3DUy1saGxZYTZ4ZnpyUXdKWGFPYzhiSThYc0VESVpR&followup=https://photos.google.com/share/AF1QipNsRbXiDQxingJyhDKyj-NA_GcsXlQw54ZWffBhjth7b20ScENstSlRa4N6tCahkQ?key%3DUy1saGxZYTZ4ZnpyUXdKWGFPYzhiSThYc0VESVpR&ec=GAZAHw
+    - main [ref=e20]:
+      - menubar [ref=e22]:
+        - link "Google Photos" [ref=e24] [cursor=pointer]:
+          - /url: ./
+          - generic [ref=e25]:
+            - generic "Google" [ref=e26]
+            - generic [ref=e27]: Photos
+        - generic [ref=e29]:
+          - generic [ref=e31]:
+            - button "Share" [ref=e32] [cursor=pointer]
+            - tooltip [ref=e38]: Share
+          - generic [ref=e40]:
+            - button "Add photos" [ref=e41] [cursor=pointer]
+            - tooltip [ref=e47]: Add photos
+          - generic [ref=e49]:
+            - button "View activity" [ref=e50] [cursor=pointer]
+            - tooltip [ref=e56]: View activity
+          - generic [ref=e58]:
+            - button "Save photos" [ref=e59] [cursor=pointer]
+            - tooltip [ref=e65]: Save photos
+          - generic [ref=e69]:
+            - button "More options" [ref=e70] [cursor=pointer]
+            - tooltip [ref=e75]: More options
+      - generic [ref=e78]:
+        - generic [ref=e83]:
+          - generic [ref=e84]: Massagem ayurvédica
+          - generic [ref=e85]: Apr 15, 2018 – Nov 7, 2025
+          - generic [ref=e87]:
+            - button "Shared" [ref=e88] [cursor=pointer]
+            - generic [ref=e102]:
+              - button "Copy link" [ref=e103] [cursor=pointer]:
+                - generic [ref=e104]: link
+              - tooltip [ref=e108]: Copy link
+        - generic [ref=e113]:
+          - link "Photo - Portrait - Apr 15, 2018, 5:31:52 PM" [ref=e116] [cursor=pointer]:
+            - /url: ./share/AF1QipNsRbXiDQxingJyhDKyj-NA_GcsXlQw54ZWffBhjth7b20ScENstSlRa4N6tCahkQ/photo/AF1QipNcRnJkh41OEKRhGTkFtictBsugb3jgRacjZ6pR?key=Uy1saGxZYTZ4ZnpyUXdKWGFPYzhiSThYc0VESVpR
+          - generic [ref=e120]:
+            - link "Video - Portrait - Oct 21, 2018, 8:32:13 PM" [ref=e121] [cursor=pointer]:
+              - /url: ./share/AF1QipNsRbXiDQxingJyhDKyj-NA_GcsXlQw54ZWffBhjth7b20ScENstSlRa4N6tCahkQ/photo/AF1QipP6cmN7sEjt3iYiYwDwxtlsoyL9L4CFGjRgS3-c?key=Uy1saGxZYTZ4ZnpyUXdKWGFPYzhiSThYc0VESVpR
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - text: 2:05
+                    - generic: "Duration: 2:05"
+          - generic [ref=e125]:
+            - link "Video - Portrait - Oct 21, 2018, 8:32:13 PM" [ref=e126] [cursor=pointer]:
+              - /url: ./share/AF1QipNsRbXiDQxingJyhDKyj-NA_GcsXlQw54ZWffBhjth7b20ScENstSlRa4N6tCahkQ/photo/AF1QipPduiHn8jxCm4QCS1XUptD2Xy5FjHdFz5DnbEdu?key=Uy1saGxZYTZ4ZnpyUXdKWGFPYzhiSThYc0VESVpR
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - text: 1:47
+                    - generic: "Duration: 1:47"
+          - generic [ref=e130]:
+            - link "Video - Portrait - Oct 21, 2018, 8:32:13 PM" [ref=e131] [cursor=pointer]:
+              - /url: ./share/AF1QipNsRbXiDQxingJyhDKyj-NA_GcsXlQw54ZWffBhjth7b20ScENstSlRa4N6tCahkQ/photo/AF1QipNOR_xbeJQZ_fz1ciZUHO2hEFPXzGkalu8PMzny?key=Uy1saGxZYTZ4ZnpyUXdKWGFPYzhiSThYc0VESVpR
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - text: 4:19
+                    - generic: "Duration: 4:19"
+          - generic [ref=e135]:
+            - link "Video - Portrait - Oct 21, 2018, 8:32:45 PM" [ref=e136] [cursor=pointer]:
+              - /url: ./share/AF1QipNsRbXiDQxingJyhDKyj-NA_GcsXlQw54ZWffBhjth7b20ScENstSlRa4N6tCahkQ/photo/AF1QipNb_RabUWnIk0ExLJHuOPz3Wb_vQQd7y8zIxe6H?key=Uy1saGxZYTZ4ZnpyUXdKWGFPYzhiSThYc0VESVpR
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - text: 1:30
+                    - generic: "Duration: 1:30"
+          - generic [ref=e140]:
+            - link "Video - Portrait - Oct 21, 2018, 8:39:25 PM" [ref=e141] [cursor=pointer]:
+              - /url: ./share/AF1QipNsRbXiDQxingJyhDKyj-NA_GcsXlQw54ZWffBhjth7b20ScENstSlRa4N6tCahkQ/photo/AF1QipPettVR1sBWbpNAmGUk_aNds7jb9LpzYnQyvGjJ?key=Uy1saGxZYTZ4ZnpyUXdKWGFPYzhiSThYc0VESVpR
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - text: 8:52
+                    - generic: "Duration: 8:52"
+          - link "Photo - Landscape - Oct 21, 2018, 8:39:27 PM" [ref=e146] [cursor=pointer]:
+            - /url: ./share/AF1QipNsRbXiDQxingJyhDKyj-NA_GcsXlQw54ZWffBhjth7b20ScENstSlRa4N6tCahkQ/photo/AF1QipPT_j89NX1FfDabbVaDWZYGpjZg6a2X6lWeh55Y?key=Uy1saGxZYTZ4ZnpyUXdKWGFPYzhiSThYc0VESVpR
+          - generic [ref=e150]:
+            - link "Video - Landscape - Oct 21, 2018, 8:40:12 PM" [ref=e151] [cursor=pointer]:
+              - /url: ./share/AF1QipNsRbXiDQxingJyhDKyj-NA_GcsXlQw54ZWffBhjth7b20ScENstSlRa4N6tCahkQ/photo/AF1QipNAr2Bv--e0R_4oFtV8S6IDTgTDwT3WbjCOBFLw?key=Uy1saGxZYTZ4ZnpyUXdKWGFPYzhiSThYc0VESVpR
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - text: 3:50
+                    - generic: "Duration: 3:50"
+          - generic [ref=e155]:
+            - link "Video - Landscape - Oct 21, 2018, 8:51:02 PM" [ref=e156] [cursor=pointer]:
+              - /url: ./share/AF1QipNsRbXiDQxingJyhDKyj-NA_GcsXlQw54ZWffBhjth7b20ScENstSlRa4N6tCahkQ/photo/AF1QipNtL0AKggVPjf0zDylaFoLkYaBxa2Ca438wRgZh?key=Uy1saGxZYTZ4ZnpyUXdKWGFPYzhiSThYc0VESVpR
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - text: 11:27
+                    - generic: "Duration: 11:27"
+          - generic [ref=e160]:
+            - link "Video - Portrait - Oct 21, 2018, 8:51:33 PM" [ref=e161] [cursor=pointer]:
+              - /url: ./share/AF1QipNsRbXiDQxingJyhDKyj-NA_GcsXlQw54ZWffBhjth7b20ScENstSlRa4N6tCahkQ/photo/AF1QipNd5Mu-qF0zakrZMgRaQ2OQrEKzTpE1w8OXfpxT?key=Uy1saGxZYTZ4ZnpyUXdKWGFPYzhiSThYc0VESVpR
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - text: 8:32
+                    - generic: "Duration: 8:32"
+          - link "Photo - Landscape - Nov 4, 2018, 4:01:51 AM" [ref=e166] [cursor=pointer]:
+            - /url: ./share/AF1QipNsRbXiDQxingJyhDKyj-NA_GcsXlQw54ZWffBhjth7b20ScENstSlRa4N6tCahkQ/photo/AF1QipOmjtWFydBuC7K7_4YjCOD-qwfGf15hy2MNzIwJ?key=Uy1saGxZYTZ4ZnpyUXdKWGFPYzhiSThYc0VESVpR
+          - link "Photo - Landscape - Nov 4, 2018, 4:02:02 AM" [ref=e171] [cursor=pointer]:
+            - /url: ./share/AF1QipNsRbXiDQxingJyhDKyj-NA_GcsXlQw54ZWffBhjth7b20ScENstSlRa4N6tCahkQ/photo/AF1QipNpylppa3ph_eNKS-5-zTQnuPKlvIJ12PGjWHdi?key=Uy1saGxZYTZ4ZnpyUXdKWGFPYzhiSThYc0VESVpR
+          - generic [ref=e175]:
+            - link "Video - Portrait - Nov 4, 2018, 4:23:57 PM" [ref=e176] [cursor=pointer]:
+              - /url: ./share/AF1QipNsRbXiDQxingJyhDKyj-NA_GcsXlQw54ZWffBhjth7b20ScENstSlRa4N6tCahkQ/photo/AF1QipMsVXdTSC1fL3X07cVuXc-JiUvotcQbH2ktECiX?key=Uy1saGxZYTZ4ZnpyUXdKWGFPYzhiSThYc0VESVpR
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - text: 1:22
+                    - generic: "Duration: 1:22"
+          - generic [ref=e180]:
+            - link "Video - Portrait - Nov 8, 2018, 6:47:37 PM" [ref=e181] [cursor=pointer]:
+              - /url: ./share/AF1QipNsRbXiDQxingJyhDKyj-NA_GcsXlQw54ZWffBhjth7b20ScENstSlRa4N6tCahkQ/photo/AF1QipMaR22El0R8CK-H3XVzOJJZRjjh8od3y1VSkzpq?key=Uy1saGxZYTZ4ZnpyUXdKWGFPYzhiSThYc0VESVpR
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - text: 3:24
+                    - generic: "Duration: 3:24"
+          - link "Photo - Portrait - Nov 18, 2018, 3:21:50 PM" [ref=e186] [cursor=pointer]:
+            - /url: ./share/AF1QipNsRbXiDQxingJyhDKyj-NA_GcsXlQw54ZWffBhjth7b20ScENstSlRa4N6tCahkQ/photo/AF1QipOUZ8TDZmoIpkgGiSlSi6rF3U4_B7fjo7sxGb7E?key=Uy1saGxZYTZ4ZnpyUXdKWGFPYzhiSThYc0VESVpR
+          - link "Photo - Landscape - Mar 30, 2019, 11:22:48 AM" [ref=e191] [cursor=pointer]:
+            - /url: ./share/AF1QipNsRbXiDQxingJyhDKyj-NA_GcsXlQw54ZWffBhjth7b20ScENstSlRa4N6tCahkQ/photo/AF1QipPsA1AN_1VTJVDJrGI_vO9ZveWNApFdetR1AMav?key=Uy1saGxZYTZ4ZnpyUXdKWGFPYzhiSThYc0VESVpR
+          - link "Photo - Portrait - Mar 30, 2019, 3:50:56 PM" [ref=e196] [cursor=pointer]:
+            - /url: ./share/AF1QipNsRbXiDQxingJyhDKyj-NA_GcsXlQw54ZWffBhjth7b20ScENstSlRa4N6tCahkQ/photo/AF1QipOtJf-gNv870fK494GT_akKWAqB2i_X5lmKJabE?key=Uy1saGxZYTZ4ZnpyUXdKWGFPYzhiSThYc0VESVpR
+          - link "Photo - Landscape - Mar 30, 2019, 3:50:56 PM" [ref=e201] [cursor=pointer]:
+            - /url: ./share/AF1QipNsRbXiDQxingJyhDKyj-NA_GcsXlQw54ZWffBhjth7b20ScENstSlRa4N6tCahkQ/photo/AF1QipMGI7B20SPzPQKZpFSHOIzYh5FC2GUFarGky2sH?key=Uy1saGxZYTZ4ZnpyUXdKWGFPYzhiSThYc0VESVpR
+          - link "Photo - Landscape - Mar 30, 2019, 3:50:56 PM" [ref=e206] [cursor=pointer]:
+            - /url: ./share/AF1QipNsRbXiDQxingJyhDKyj-NA_GcsXlQw54ZWffBhjth7b20ScENstSlRa4N6tCahkQ/photo/AF1QipP-2HVUXAQsiaMJ5G-lbBsfHZpN0AlcDjbSRdEb?key=Uy1saGxZYTZ4ZnpyUXdKWGFPYzhiSThYc0VESVpR
+          - link "Photo - Portrait - Mar 30, 2019, 3:50:57 PM" [ref=e211] [cursor=pointer]:
+            - /url: ./share/AF1QipNsRbXiDQxingJyhDKyj-NA_GcsXlQw54ZWffBhjth7b20ScENstSlRa4N6tCahkQ/photo/AF1QipM1_wC0pSBlBD96aAOOm9ORpmqSoVswZFg_eZZw?key=Uy1saGxZYTZ4ZnpyUXdKWGFPYzhiSThYc0VESVpR
+          - link "Photo - Landscape - Mar 30, 2019, 3:50:57 PM" [ref=e216] [cursor=pointer]:
+            - /url: ./share/AF1QipNsRbXiDQxingJyhDKyj-NA_GcsXlQw54ZWffBhjth7b20ScENstSlRa4N6tCahkQ/photo/AF1QipOiujc2b8SrMaIQ8gum2kyDizmJGTUUNJOcfZBF?key=Uy1saGxZYTZ4ZnpyUXdKWGFPYzhiSThYc0VESVpR
+          - link "Photo - Landscape - Mar 30, 2019, 3:50:57 PM" [ref=e221] [cursor=pointer]:
+            - /url: ./share/AF1QipNsRbXiDQxingJyhDKyj-NA_GcsXlQw54ZWffBhjth7b20ScENstSlRa4N6tCahkQ/photo/AF1QipPhRne5cVM3AcHwLsl83r7BgkRxMja_4cr0OkRh?key=Uy1saGxZYTZ4ZnpyUXdKWGFPYzhiSThYc0VESVpR
+          - link "Photo - Landscape - Apr 10, 2019, 1:30:57 PM" [ref=e226] [cursor=pointer]:
+            - /url: ./share/AF1QipNsRbXiDQxingJyhDKyj-NA_GcsXlQw54ZWffBhjth7b20ScENstSlRa4N6tCahkQ/photo/AF1QipNZ0FweLJXbWliG6PLUo1iJMC8Xb7g8WexsDS8g?key=Uy1saGxZYTZ4ZnpyUXdKWGFPYzhiSThYc0VESVpR
+          - link "Photo - Landscape - Apr 10, 2019, 1:30:59 PM" [ref=e231] [cursor=pointer]:
+            - /url: ./share/AF1QipNsRbXiDQxingJyhDKyj-NA_GcsXlQw54ZWffBhjth7b20ScENstSlRa4N6tCahkQ/photo/AF1QipNUm9BHNLHr3kewvHaOUiACY-rDXFjzLEqxpEIw?key=Uy1saGxZYTZ4ZnpyUXdKWGFPYzhiSThYc0VESVpR
+          - link "Photo - Landscape - Apr 10, 2019, 1:31:00 PM" [ref=e236] [cursor=pointer]:
+            - /url: ./share/AF1QipNsRbXiDQxingJyhDKyj-NA_GcsXlQw54ZWffBhjth7b20ScENstSlRa4N6tCahkQ/photo/AF1QipPKixIUKWfUuxGFVrq87BPfwn9gwWSfw6JZD_R3?key=Uy1saGxZYTZ4ZnpyUXdKWGFPYzhiSThYc0VESVpR
+          - link "Photo - Landscape - Apr 10, 2019, 1:31:01 PM" [ref=e241] [cursor=pointer]:
+            - /url: ./share/AF1QipNsRbXiDQxingJyhDKyj-NA_GcsXlQw54ZWffBhjth7b20ScENstSlRa4N6tCahkQ/photo/AF1QipPr8cd4I_r8zWE9TvE7rSVb3QI7mrz1X3k27IX-?key=Uy1saGxZYTZ4ZnpyUXdKWGFPYzhiSThYc0VESVpR
+          - link "Photo - Landscape - Apr 10, 2019, 1:31:02 PM" [ref=e246] [cursor=pointer]:
+            - /url: ./share/AF1QipNsRbXiDQxingJyhDKyj-NA_GcsXlQw54ZWffBhjth7b20ScENstSlRa4N6tCahkQ/photo/AF1QipPwUSnK_Jj6QeKtWo676m0qie6Ar8pHCh4e8Tvu?key=Uy1saGxZYTZ4ZnpyUXdKWGFPYzhiSThYc0VESVpR
+          - link "Photo - Portrait - Apr 10, 2019, 1:31:04 PM" [ref=e251] [cursor=pointer]:
+            - /url: ./share/AF1QipNsRbXiDQxingJyhDKyj-NA_GcsXlQw54ZWffBhjth7b20ScENstSlRa4N6tCahkQ/photo/AF1QipPQ7wuFie05yhJuopvobntVZWm29qy_OMbYImLf?key=Uy1saGxZYTZ4ZnpyUXdKWGFPYzhiSThYc0VESVpR
+          - link "Photo - Landscape - Apr 10, 2019, 1:31:05 PM" [ref=e256] [cursor=pointer]:
+            - /url: ./share/AF1QipNsRbXiDQxingJyhDKyj-NA_GcsXlQw54ZWffBhjth7b20ScENstSlRa4N6tCahkQ/photo/AF1QipP4wBJlsVnetwmaY96aIjqLS3kY4scd7Z9GbSMf?key=Uy1saGxZYTZ4ZnpyUXdKWGFPYzhiSThYc0VESVpR
+          - link "Photo - Portrait - Apr 10, 2019, 1:31:48 PM" [ref=e261] [cursor=pointer]:
+            - /url: ./share/AF1QipNsRbXiDQxingJyhDKyj-NA_GcsXlQw54ZWffBhjth7b20ScENstSlRa4N6tCahkQ/photo/AF1QipNiPzixaZHvRVlafM5p4aPUOL2Rhmh1jsh-hz2Y?key=Uy1saGxZYTZ4ZnpyUXdKWGFPYzhiSThYc0VESVpR
+      - button "Say something" [ref=e266] [cursor=pointer]:
+        - button "Like" [ref=e267]
+        - text: Say something

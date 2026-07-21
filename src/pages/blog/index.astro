@@ -8,7 +8,11 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
 ---
 
 <BaseLayout title="Blog | Luiz Reis" description="Conteúdos sobre Ayurveda, ansiedade, cansaço, insônia, massagem terapêutica e saúde integrativa.">
-  <PageHeader title="Blog" eyebrow="Conteúdos para cuidar do corpo e da rotina" />
+  <PageHeader
+    title="Blog"
+    eyebrow="Conteúdos para cuidar do corpo e da rotina"
+    backgroundImage="/images/page-header-blog.webp"
+  />
   <div class="page-blog">
     <div class="container">
       <div class="row">

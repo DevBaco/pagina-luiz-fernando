@@ -13,7 +13,10 @@ const { Content } = await render(post);
 ---
 
 <BaseLayout title={`${post.data.title} | Luiz Reis`} description={post.data.description}>
-  <div class="page-header parallaxie">
+  <div
+    class="page-header parallaxie"
+    style="--page-header-image: url('/images/page-header-blog.webp')"
+  >
     <div class="container">
       <div class="row">
         <div class="col-lg-12">

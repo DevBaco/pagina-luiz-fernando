@@ -57,7 +57,7 @@ não dá pra saber qual é qual só de olhar. Este arquivo é o guia.
 
 | Arquivo | Dimensão ideal | Proporção | O que colocar |
 |---|---|---|---|
-| `our-feature-image-1.jpg` | 830 × 600 | 4:3 (paisagem) | Foto do curso / turma / prática do toque |
+| `cursos-e-formacoes.webp` | 1920 × 1280 | 3:2 (paisagem) | Foto de Luiz Reis com Helô Nascimento enviada para a seção principal. | OK
 
 ## 🌱 Despertar da Consciência (`/despertar-da-consciencia/`)
 
@@ -73,34 +73,53 @@ não dá pra saber qual é qual só de olhar. Este arquivo é o guia.
 | `post-2.jpg` | 1366 × 768 | 16:9 | "Ansiedade também fala pelo corpo" |
 | `post-3.jpg` | 1366 × 768 | 16:9 | "Abhyanga em Belo Horizonte" |
 
-## 📄 Todas as páginas internas (cabeçalho)
+## 📄 Cabeçalhos das páginas internas — atribuídos
 
-| Arquivo | Dimensão ideal | Proporção | O que colocar |
+As imagens estão em **`public/images/`**, com **1920 × 768 px** (proporção 5:2).
+O título aparece na parte inferior esquerda e há um degradê escuro sobre a imagem;
+os recortes preservam as áreas essenciais fora dessa região.
+
+| Status | Rota/uso | Nome exato em `public/images/` | O que colocar |
 |---|---|---|---|
-| `page-header-bg.jpg` | 1920 × 768 | 5:2 (banner largo) | Fundo do cabeçalho de Sobre, Atendimentos, Massagens, Cursos, Despertar, Blog e Contato. Imagem calma/textura — fica com o título por cima. |
+| **OK** | Background genérico de segurança | `page-header-bg.jpg` | Sala de atendimento vazia, com maca de madeira, linho, recipiente de cobre e luz natural. |
+| **OK** | `/sobre/` | `page-header-sobre.webp` | Mãos do terapeuta preparando ervas e óleo em uma bancada de madeira. |
+| **OK** | `/atendimentos/` — tratamentos | `page-header-atendimentos.webp` | Consulta individual, com mãos em conversa, caderno e chá sobre a mesa. |
+| **OK** | `/massagens-terapeuticas/` — tratamento | `page-header-massagens-terapeuticas.webp` | Massagem terapêutica nas mãos e no antebraço, sem rostos em destaque. |
+| **OK** | `/despertar-da-consciencia/` — tratamento | `page-header-despertar-da-consciencia.webp` | Espaço simples de retiro aberto para a mata, com almofadas e névoa matinal. |
+| **OK** | `/cursos-e-formacoes/` | `page-header-cursos-e-formacoes.webp` | Aula prática em grupo, com alunos aprendendo uma técnica manual. |
+| **OK** | `/blog/` e artigos | `page-header-blog.webp` | Mesa de estudos com caderno, livro, chá, ervas e recipiente de cobre. |
+| **OK** | `/contato/` | `page-header-contato.webp` | Canto de recepção acolhedor, com cadeira, mesa lateral, planta e porta aberta. |
+
+> As 8 imagens foram geradas separadamente para o contexto de cada página, sem repetição,
+> e exportadas em **1920 × 768 px**. Os sete banners específicos usam
+> WebP; `page-header-bg.jpg` permanece em JPG porque é o fallback já referenciado no CSS.
 
 ## 🔖 Ícone do site
 
 | Arquivo | Dimensão | O que colocar |
 |---|---|---|
-| `favicon.png` | 32 × 32 (ou 64 × 64) | Ícone da aba do navegador (logo/símbolo do Luiz) |
+| `logo.png` | 118 × 161 | Logo/símbolo do Luiz usado também como ícone da aba. | OK
 
 ---
 
-## ✅ Resumo — fotos que você precisa providenciar (14 imagens)
+## ✅ Resumo — fotos que você precisa providenciar
 
 1. **Retrato do Luiz** → `about-us-image-1.jpg`
 2. Luiz atendendo / ambiente → `about-us-image-2.jpg`
 3. Detalhe do atendimento → `about-us-image-3.jpg`
 4. Fundo do topo (hero) → `hero-bg-image.png`
-5. Fundo dos cabeçalhos internos → `page-header-bg.jpg`
-6. Toque / cuidado → `why-choose-image-1.jpg`
-7. Ambiente / mãos → `why-choose-image-2.jpg`
-8. Mockup do guia gratuito → `appointment-image.jpg`
-9–14. **6 fotos dos serviços** → `service-image-1.jpg` … `service-image-6.jpg`
-15. Curso / turma → `our-feature-image-1.jpg`
-16. Retiro → `intro-video-image.jpg`
-17–19. **3 capas de blog** → `post-1.jpg`, `post-2.jpg`, `post-3.jpg`
+5. **Background genérico 1920 × 768 (OK)** → `page-header-bg.jpg`
+6–12. **7 fundos dos cabeçalhos internos (TODOS OK)** → `page-header-sobre.webp`,
+   `page-header-atendimentos.webp`, `page-header-massagens-terapeuticas.webp`,
+   `page-header-cursos-e-formacoes.webp`, `page-header-despertar-da-consciencia.webp`,
+   `page-header-blog.webp` e `page-header-contato.webp`
+13. Toque / cuidado → `why-choose-image-1.jpg`
+14. Ambiente / mãos → `why-choose-image-2.jpg`
+15. Mockup do guia gratuito → `appointment-image.jpg`
+16–21. **6 fotos dos serviços** → `service-image-1.jpg` … `service-image-6.jpg`
+22. Curso / turma → `cursos-e-formacoes.webp` (OK)
+23. Retiro → `intro-video-image.jpg`
+24–26. **3 capas de blog** → `post-1.jpg`, `post-2.jpg`, `post-3.jpg`
 
 ---
 
