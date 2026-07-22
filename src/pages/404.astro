@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+---
+
+<BaseLayout
+  title="Página não encontrada | Luiz Reis"
+  description="A página que você tentou acessar não foi encontrada."
+  noindex
+>
+  <PageHeader
+    title="Página não encontrada"
+    eyebrow="Erro 404"
+    backgroundImage="/images/page-header-bg.jpg"
+  />
+
+  <main class="not-found-page">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="not-found-card text-center">
+            <span class="section-sub-title">O caminho termina aqui</span>
+            <h2>Esta página não existe ou mudou de endereço.</h2>
+            <p>Volte para a página inicial ou use o menu para continuar navegando.</p>
+            <a class="btn-default btn-highlighted" href="/">Voltar para o início</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</BaseLayout>

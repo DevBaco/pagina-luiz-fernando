@@ -1,16 +1,23 @@
 import IMask from 'imask';
 
-const endpoint = import.meta.env.PUBLIC_APPS_SCRIPT_URL;
 const thankYouUrl = '/obrigado/';
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 const loader = document.querySelector<HTMLElement>('.preloader');
+
+declare global {
+  interface Window {
+    turnstile?: {
+      reset: (widget?: HTMLElement | string) => void;
+    };
+  }
+}
 
 const setSubmissionLoading = (isLoading: boolean) => {
   loader?.classList.toggle('is-submitting', isLoading);
   document.body.classList.toggle('form-submitting', isLoading);
 };
 
-document.querySelectorAll<HTMLFormElement>('[data-lead-form]').forEach((form, index) => {
+document.querySelectorAll<HTMLFormElement>('[data-lead-form]').forEach((form) => {
   const status = form.querySelector<HTMLElement>('[data-form-status]');
   const pageUrl = form.querySelector<HTMLInputElement>('[data-page-url]');
   const requestToken = form.querySelector<HTMLInputElement>('[data-request-token]');
@@ -22,7 +29,7 @@ document.querySelectorAll<HTMLFormElement>('[data-lead-form]').forEach((form, in
   const emailError = form.querySelector<HTMLElement>('[data-email-error]');
   const button = form.querySelector<HTMLButtonElement>('button[type="submit"]');
   const originalButtonText = button?.textContent ?? '';
-  const frame = document.createElement('iframe');
+  const turnstileContainer = form.querySelector<HTMLElement>('[data-turnstile-container]');
   const phoneMask = phone
     ? IMask(phone, {
         mask: '(00) 00000-0000',
@@ -99,68 +106,41 @@ document.querySelectorAll<HTMLFormElement>('[data-lead-form]').forEach((form, in
     validateEmail();
   });
 
-  frame.name = `lead-submit-${index}-${Date.now()}`;
-  frame.hidden = true;
-  frame.setAttribute('aria-hidden', 'true');
-  form.insertAdjacentElement('afterend', frame);
-
   if (pageUrl) pageUrl.value = window.location.href;
-  if (endpoint) {
-    form.action = endpoint;
-    form.method = 'POST';
-    form.target = frame.name;
-  }
-
-  let pendingToken = '';
   let timeoutId: number | undefined;
 
-  const finishSubmission = (message: string) => {
+  const finishSubmission = (message: string, resetChallenge = true) => {
     if (timeoutId) window.clearTimeout(timeoutId);
-    pendingToken = '';
     setSubmissionLoading(false);
     if (button) {
       button.disabled = false;
       button.textContent = originalButtonText;
     }
     if (status) status.textContent = message;
+    if (resetChallenge && window.turnstile) {
+      window.turnstile.reset(turnstileContainer || undefined);
+    }
   };
 
-  window.addEventListener('message', (event: MessageEvent) => {
-    const message = event.data as { type?: string; token?: string; message?: string } | null;
-    if (!message || message.token !== pendingToken) return;
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
 
-    if (message.type === 'lead-saved') {
-      if (timeoutId) window.clearTimeout(timeoutId);
-      pendingToken = '';
-      if (status) status.textContent = 'Dados recebidos. Redirecionando...';
-      window.location.assign(thankYouUrl);
-      return;
-    }
-
-    if (message.type === 'lead-error') {
-      finishSubmission(message.message || 'Não foi possível salvar seus dados. Tente novamente ou fale pelo WhatsApp.');
-    }
-  });
-
-  form.addEventListener('submit', (event) => {
     const isNameValid = validateName();
     const isPhoneValid = validatePhone();
     const isEmailValid = validateEmail();
 
     if (!isNameValid || !isPhoneValid || !isEmailValid) {
-      event.preventDefault();
       form.querySelector<HTMLElement>('.form-control.is-invalid')?.focus();
       return;
     }
 
-    if (!endpoint) {
-      event.preventDefault();
-      if (status) status.textContent = 'Não foi possível iniciar o envio. Fale conosco pelo WhatsApp.';
+    const turnstileToken = form.querySelector<HTMLInputElement>('input[name="cf-turnstile-response"]')?.value;
+    if (!turnstileToken) {
+      if (status) status.textContent = 'Conclua a verificação de segurança antes de enviar.';
       return;
     }
 
-    pendingToken = crypto.randomUUID();
-    if (requestToken) requestToken.value = pendingToken;
+    if (requestToken) requestToken.value = crypto.randomUUID();
     if (pageUrl) pageUrl.value = window.location.href;
 
     if (button) {
@@ -170,9 +150,35 @@ document.querySelectorAll<HTMLFormElement>('[data-lead-form]').forEach((form, in
     if (status) status.textContent = 'Salvando seus dados...';
     setSubmissionLoading(true);
 
+    const controller = new AbortController();
     if (timeoutId) window.clearTimeout(timeoutId);
-    timeoutId = window.setTimeout(() => {
-      if (pendingToken) finishSubmission('O envio demorou mais que o esperado. Tente novamente.');
-    }, 30000);
+    timeoutId = window.setTimeout(() => controller.abort(), 30000);
+
+    try {
+      const response = await fetch('/api/lead', {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: new FormData(form),
+        credentials: 'omit',
+        signal: controller.signal,
+      });
+      const result = (await response.json().catch(() => null)) as { ok?: boolean; message?: string } | null;
+
+      if (!response.ok || !result?.ok) {
+        throw new Error(result?.message || 'Não foi possível salvar seus dados. Tente novamente ou fale pelo WhatsApp.');
+      }
+
+      if (timeoutId) window.clearTimeout(timeoutId);
+      if (status) status.textContent = 'Dados recebidos. Redirecionando...';
+      window.location.assign(thankYouUrl);
+    } catch (error) {
+      const message =
+        error instanceof DOMException && error.name === 'AbortError'
+          ? 'O envio demorou mais que o esperado. Tente novamente.'
+          : error instanceof Error
+            ? error.message
+            : 'Não foi possível salvar seus dados. Tente novamente ou fale pelo WhatsApp.';
+      finishSubmission(message);
+    }
   });
 });

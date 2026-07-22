@@ -6,6 +6,7 @@ interface Props {
 }
 
 const { title = 'Receba o guia gratuito', button = 'Quero receber o guia', source = 'site' } = Astro.props;
+const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY?.trim();
 ---
 
 <form class="lead-form" data-lead-form novalidate>
@@ -37,9 +38,28 @@ const { title = 'Receba o guia gratuito', button = 'Quero receber o guia', sourc
       <input type="email" name="email" class="form-control" placeholder="seu@email.com" autocomplete="email" maxlength="254" aria-describedby={`email-error-${source}`} required />
       <p id={`email-error-${source}`} class="field-error" data-email-error aria-live="polite"></p>
     </div>
+    <div class="col-md-12 turnstile-field">
+      {turnstileSiteKey ? (
+        <div
+          class="cf-turnstile"
+          data-turnstile-container
+          data-sitekey={turnstileSiteKey}
+          data-action="lead_form"
+          data-language="pt-BR"
+          data-size="flexible"
+          data-theme="light"
+        ></div>
+      ) : (
+        <p class="turnstile-config-error" role="alert">A verificação de segurança não foi configurada. Fale conosco pelo WhatsApp.</p>
+      )}
+    </div>
     <div class="col-md-12">
       <button type="submit" class="btn-default btn-highlighted">{button}</button>
+      <p class="privacy-note">
+        Ao enviar, você declara que leu a <a href="/politica-de-privacidade/">Política de Privacidade</a> e autoriza o uso dos dados para receber o material e o retorno solicitado.
+      </p>
       <p class="form-status" data-form-status aria-live="polite"></p>
     </div>
   </div>
 </form>
+<script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>

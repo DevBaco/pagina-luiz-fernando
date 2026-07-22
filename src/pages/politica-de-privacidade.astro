@@ -1,0 +1,101 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import { site } from '../data/site';
+---
+
+<BaseLayout
+  title="Política de Privacidade | Luiz Reis"
+  description="Saiba como os dados enviados pelo site de Luiz Reis são coletados, utilizados e protegidos."
+>
+  <PageHeader
+    title="Política de Privacidade"
+    eyebrow="Transparência e cuidado com seus dados"
+    backgroundImage="/images/page-header-bg.jpg"
+  />
+
+  <main class="privacy-page">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+          <p class="privacy-updated">Última atualização: 22 de julho de 2026.</p>
+
+          <section>
+            <h2>1. Quem cuida dos seus dados</h2>
+            <p>
+              Luiz Reis é o responsável pelos dados pessoais enviados neste site. Para dúvidas, correções ou solicitações relacionadas à privacidade, escreva para <a href={`mailto:${site.email}`}>{site.email}</a>.
+            </p>
+          </section>
+
+          <section>
+            <h2>2. Quais dados são coletados</h2>
+            <p>Nos formulários do site, podemos coletar:</p>
+            <ul>
+              <li>nome;</li>
+              <li>número de WhatsApp;</li>
+              <li>endereço de e-mail;</li>
+              <li>página e origem do formulário;</li>
+              <li>data e horário do envio.</li>
+            </ul>
+            <p>O formulário não solicita dados de saúde, documentos, dados financeiros ou outras informações pessoais sensíveis.</p>
+          </section>
+
+          <section>
+            <h2>3. Para que os dados são usados</h2>
+            <p>Os dados são utilizados somente para:</p>
+            <ul>
+              <li>enviar o material solicitado;</li>
+              <li>responder ao contato e dar continuidade ao atendimento solicitado;</li>
+              <li>identificar de qual página ou formulário veio a solicitação;</li>
+              <li>prevenir abuso, fraude e envios automatizados.</li>
+            </ul>
+            <p>Os dados não são vendidos nem disponibilizados para listas de terceiros.</p>
+          </section>
+
+          <section>
+            <h2>4. Armazenamento e fornecedores</h2>
+            <p>
+              Os dados enviados são armazenados em uma planilha privada do Google, por meio do Google Apps Script. A página é hospedada pela Cloudflare e utiliza o Cloudflare Turnstile para reduzir fraude e envios automatizados. Esses fornecedores podem processar dados técnicos conforme seus próprios termos e políticas de privacidade.
+            </p>
+            <p>O acesso à planilha deve permanecer restrito às pessoas que precisam tratar os contatos recebidos.</p>
+          </section>
+
+          <section>
+            <h2>5. Por quanto tempo os dados são mantidos</h2>
+            <p>
+              Os dados são mantidos apenas pelo tempo necessário para entregar o material, responder à solicitação, manter o relacionamento iniciado pelo titular e cumprir eventuais obrigações legais. Registros sem utilidade serão eliminados ou anonimizados em revisões periódicas.
+            </p>
+          </section>
+
+          <section>
+            <h2>6. Seus direitos</h2>
+            <p>
+              Você pode solicitar confirmação do tratamento, acesso, correção, informação sobre compartilhamento, revogação de consentimento ou exclusão dos dados, quando aplicável. Envie a solicitação para <a href={`mailto:${site.email}`}>{site.email}</a> usando o mesmo e-mail informado no formulário sempre que possível.
+            </p>
+          </section>
+
+          <section>
+            <h2>7. Segurança</h2>
+            <p>
+              São adotadas medidas técnicas e organizacionais para reduzir acesso indevido, alteração, perda ou divulgação dos dados. Nenhum sistema é totalmente imune a incidentes, mas eventuais ocorrências serão avaliadas e tratadas conforme a legislação aplicável.
+            </p>
+          </section>
+
+          <section>
+            <h2>8. Cookies e tecnologias semelhantes</h2>
+            <p>
+              Atualmente, o site não utiliza cookies próprios de publicidade ou rastreamento comportamental. Recursos externos, como fontes, vídeos e links para outras plataformas, podem realizar conexões técnicas quando acessados.
+            </p>
+          </section>
+
+          <section>
+            <h2>9. Alterações nesta política</h2>
+            <p>
+              Esta política pode ser atualizada quando houver mudanças no site, no uso dos dados ou nas obrigações aplicáveis. A data da versão mais recente será sempre informada no início da página.
+            </p>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+</BaseLayout>

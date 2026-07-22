@@ -1,7 +1,10 @@
 const CONFIG = Object.freeze({
   sheetName: 'Leads',
-  whatsappNumber: '5531985556001',
-  whatsappMessage: 'Olá, Luiz. Acabei de preencher o formulário do site e quero continuar pelo WhatsApp.',
+  allowedOrigins: [
+    'https://luizzcreeiss.com.br',
+    'https://www.luizzcreeiss.com.br',
+    'https://pagina-luiz-fernando.pages.dev',
+  ],
 });
 
 const HEADERS = [
@@ -15,20 +18,25 @@ const HEADERS = [
 ];
 
 function doGet() {
-  return HtmlService.createHtmlOutput(
-    '<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>Formulário ativo</title></head><body><p>Formulário ativo.</p></body></html>',
-  );
+  return jsonResponse_({ ok: true, status: 'active' });
 }
 
 function doPost(event) {
-  let requestToken = '';
-
   try {
     const parameters = event && event.parameter ? event.parameter : {};
-    requestToken = requiredValue_(parameters.requestToken, 'Token do envio', 100);
+    const properties = PropertiesService.getScriptProperties();
+    const expectedSecret = properties.getProperty('APPS_SCRIPT_SHARED_SECRET');
+    const providedSecret = requiredValue_(parameters.sharedSecret, 'Chave de integração', 200);
+
+    if (!expectedSecret || !secureEquals_(providedSecret, expectedSecret)) {
+      throw new Error('Integração não autorizada.');
+    }
+
+    allowedParentOrigin_(parameters.pageUrl);
+    requestToken_(parameters.requestToken);
 
     // Campo invisível: robôs costumam preenchê-lo; pessoas não.
-    if (cleanValue_(parameters.company, 200)) return successPage_(requestToken);
+    if (cleanValue_(parameters.company, 200)) return jsonResponse_({ ok: true });
 
     const lead = {
       name: requiredValue_(parameters.name, 'Nome', 120),
@@ -51,7 +59,7 @@ function doPost(event) {
       throw new Error('E-mail inválido.');
     }
 
-    const spreadsheetId = PropertiesService.getScriptProperties().getProperty('SPREADSHEET_ID');
+    const spreadsheetId = properties.getProperty('SPREADSHEET_ID');
     if (!spreadsheetId) throw new Error('A propriedade SPREADSHEET_ID não foi configurada.');
 
     const lock = LockService.getScriptLock();
@@ -74,10 +82,10 @@ function doPost(event) {
       lock.releaseLock();
     }
 
-    return successPage_(requestToken);
+    return jsonResponse_({ ok: true });
   } catch (error) {
     console.error(error);
-    return errorPage_(requestToken, publicErrorMessage_(error));
+    return jsonResponse_({ ok: false, message: publicErrorMessage_(error) });
   }
 }
 
@@ -105,6 +113,56 @@ function cleanValue_(value, maxLength) {
   return String(value || '').trim().slice(0, maxLength);
 }
 
+function secureEquals_(provided, expected) {
+  const left = String(provided || '');
+  const right = String(expected || '');
+  let difference = left.length ^ right.length;
+  const length = Math.max(left.length, right.length);
+
+  for (let index = 0; index < length; index += 1) {
+    difference |= (left.charCodeAt(index) || 0) ^ (right.charCodeAt(index) || 0);
+  }
+
+  return difference === 0;
+}
+
+function requestToken_(value) {
+  const token = requiredValue_(value, 'Token do envio', 36);
+  const uuidV4Pattern = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+
+  if (!uuidV4Pattern.test(token)) throw new Error('Token do envio inválido.');
+  return token;
+}
+
+function allowedParentOrigin_(pageUrl) {
+  const value = cleanValue_(pageUrl, 500);
+  const match = value.match(/^(https?):\/\/([^\/?#]+)(?:[\/?#]|$)/i);
+  if (!match) throw new Error('Origem do envio inválida.');
+
+  const protocol = match[1].toLowerCase();
+  const authority = match[2].toLowerCase();
+  const hostname = authority.split(':')[0];
+  const origin = protocol + '://' + authority;
+
+  if (CONFIG.allowedOrigins.indexOf(origin) !== -1) return origin;
+
+  if (
+    protocol === 'https' &&
+    /^[a-z0-9-]+\.pagina-luiz-fernando\.pages\.dev$/.test(hostname)
+  ) {
+    return origin;
+  }
+
+  if (
+    protocol === 'http' &&
+    (hostname === 'localhost' || hostname === '127.0.0.1')
+  ) {
+    return origin;
+  }
+
+  throw new Error('Origem do envio inválida.');
+}
+
 function safeCell_(value) {
   const cleaned = String(value || '');
   return /^[=+\-@]/.test(cleaned) ? "'" + cleaned : cleaned;
@@ -130,42 +188,8 @@ function publicErrorMessage_(error) {
   return 'Não foi possível salvar seus dados. Tente novamente ou fale pelo WhatsApp.';
 }
 
-function whatsappUrl_() {
-  return (
-    'https://wa.me/' +
-    CONFIG.whatsappNumber +
-    '?text=' +
-    encodeURIComponent(CONFIG.whatsappMessage)
+function jsonResponse_(payload) {
+  return ContentService.createTextOutput(JSON.stringify(payload)).setMimeType(
+    ContentService.MimeType.JSON,
   );
-}
-
-function successPage_(requestToken) {
-  const url = whatsappUrl_();
-  const payload = JSON.stringify({ type: 'lead-saved', token: requestToken });
-
-  return HtmlService.createHtmlOutput(
-    '<!doctype html>' +
-      '<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><base target="_top">' +
-      '<title>Contato recebido</title></head><body>' +
-      '<p>Contato recebido.</p>' +
-      '<p><a href="' + url + '" target="_top">Continuar no WhatsApp</a></p>' +
-      '<script>window.top.postMessage(' + payload + ', "*");<\/script>' +
-      '</body></html>',
-  ).setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
-}
-
-function errorPage_(requestToken, publicMessage) {
-  const url = whatsappUrl_();
-  const payload = JSON.stringify({ type: 'lead-error', token: requestToken, message: publicMessage });
-
-  return HtmlService.createHtmlOutput(
-    '<!doctype html>' +
-      '<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><base target="_top">' +
-      '<title>Não foi possível salvar</title></head><body>' +
-      '<h1>Não foi possível salvar seus dados.</h1>' +
-      '<p>Você ainda pode continuar o atendimento diretamente pelo WhatsApp.</p>' +
-      '<p><a href="' + url + '" target="_top">Falar no WhatsApp</a></p>' +
-      '<script>window.top.postMessage(' + payload + ', "*");<\/script>' +
-      '</body></html>',
-  ).setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
 }
