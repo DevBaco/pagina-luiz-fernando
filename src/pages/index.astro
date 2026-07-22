@@ -1,12 +1,7 @@
 ---
-import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import LeadForm from '../components/LeadForm.astro';
 import { services, site, whatsappUrl } from '../data/site';
-
-const posts = (await getCollection('blog', ({ data }) => !data.draft))
-  .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
-  .slice(0, 3);
 ---
 
 <BaseLayout
@@ -25,13 +20,6 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
             <div class="hero-body wow fadeInUp" data-wow-delay="0.2s">
               <div class="hero-btn">
                 <a href={whatsappUrl} class="btn-default btn-highlighted" target="_blank" rel="noopener">Agendar conversa</a>
-              </div>
-              {/* Vídeo genérico do YouTube: troque a URL abaixo pelo vídeo do Luiz */}
-              <div class="video-play-button" data-cursor-text="Play">
-                <a href="https://www.youtube.com/watch?v=Y-x0efG1seA" class="popup-video">
-                  <span><i class="fa-solid fa-play"></i></span>
-                  <p>Assista minha história</p>
-                </a>
               </div>
             </div>
           </div>
@@ -262,7 +250,7 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
 
   <div class="our-blog light-section">
     <div class="container">
-      <div class="row section-row align-items-center">
+      <div class="row align-items-center">
         <div class="col-xl-6">
           <div class="section-title">
             <span class="section-sub-title wow fadeInUp">Blog</span>
@@ -279,27 +267,6 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
             </div>
           </div>
         </div>
-      </div>
-      <div class="row">
-        {posts.map((post, index) => (
-          <div class="col-xl-4 col-md-6">
-            <div class="post-item wow fadeInUp" data-wow-delay={`${index * 0.2}s`}>
-              <div class="post-featured-image">
-                <a href={`/blog/${post.slug}/`} data-cursor-text="Ver">
-                  <figure class="image-anime"><img src={post.data.image} alt={post.data.title} /></figure>
-                </a>
-              </div>
-              <div class="post-item-body">
-                <div class="post-item-content">
-                  <h2><a href={`/blog/${post.slug}/`}>{post.data.title}</a></h2>
-                </div>
-                <div class="post-item-btn">
-                  <a href={`/blog/${post.slug}/`} class="readmore-btn">Ler artigo</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
       </div>
     </div>
   </div>

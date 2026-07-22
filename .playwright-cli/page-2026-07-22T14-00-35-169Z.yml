@@ -1,0 +1,618 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e6]:
+    - generic [ref=e7]:
+      - navigation [ref=e8]:
+        - generic [ref=e9]:
+          - link [ref=e10] [cursor=pointer]:
+            - /url: /
+            - img "Luizz_C_Reeiss — Medicina Ayurveda" [ref=e11]
+          - generic [ref=e12]:
+            - list [ref=e14]:
+              - listitem [ref=e15]:
+                - link "Home" [ref=e16] [cursor=pointer]:
+                  - /url: /
+              - listitem [ref=e17]:
+                - link "Sobre" [ref=e18] [cursor=pointer]:
+                  - /url: /sobre/
+              - listitem [ref=e19]:
+                - link "Atendimentos" [ref=e20] [cursor=pointer]:
+                  - /url: /atendimentos/
+              - listitem [ref=e21]:
+                - link "Cursos e Formações" [ref=e22] [cursor=pointer]:
+                  - /url: /cursos-e-formacoes/
+              - listitem [ref=e23]:
+                - link "Blog" [ref=e24] [cursor=pointer]:
+                  - /url: /blog/
+              - listitem [ref=e25]:
+                - link "Contato" [ref=e26] [cursor=pointer]:
+                  - /url: /contato/
+            - link "Agendar conversa" [ref=e28] [cursor=pointer]:
+              - /url: https://wa.me/5531985556001?text=Ol%C3%A1%2C%20Luiz.%20Quero%20agendar%20uma%20conversa%20pelo%20WhatsApp.
+      - text: 
+  - generic [ref=e31]:
+    - generic [ref=e33]:
+      - generic [ref=e34]:
+        - generic [ref=e35]: Cuidado individual em Belo Horizonte e Nova Lima
+        - heading "Seu corpo está pedindo ajuda?" [level=1] [ref=e36]:
+          - generic [ref=e37]:
+            - generic [ref=e38]:
+              - generic [ref=e39]: S
+              - generic [ref=e40]: e
+              - generic [ref=e41]: u
+            - generic [ref=e42]:
+              - generic [ref=e43]: c
+              - generic [ref=e44]: o
+              - generic [ref=e45]: r
+              - generic [ref=e46]: p
+              - generic [ref=e47]: o
+            - generic [ref=e48]:
+              - generic [ref=e49]: e
+              - generic [ref=e50]: s
+              - generic [ref=e51]: t
+              - generic [ref=e52]: á
+            - generic [ref=e53]:
+              - generic [ref=e54]: p
+              - generic [ref=e55]: e
+              - generic [ref=e56]: d
+              - generic [ref=e57]: i
+              - generic [ref=e58]: "n"
+              - generic [ref=e59]: d
+              - generic [ref=e60]: o
+          - generic [ref=e62]:
+            - generic [ref=e63]: a
+            - generic [ref=e64]: j
+            - generic [ref=e65]: u
+            - generic [ref=e66]: d
+            - generic [ref=e67]: a
+            - generic [ref=e68]: "?"
+      - link "Agendar conversa" [ref=e71] [cursor=pointer]:
+        - /url: https://wa.me/5531985556001?text=Ol%C3%A1%2C%20Luiz.%20Quero%20agendar%20uma%20conversa%20pelo%20WhatsApp.
+    - generic [ref=e73]:
+      - paragraph [ref=e76]: Escuta, presença e cuidado integral
+      - generic [ref=e77]:
+        - heading "0+" [level=2] [ref=e78]
+        - paragraph [ref=e79]: anos de experiência em terapias corporais e saúde integrativa
+  - generic [ref=e82]:
+    - generic [ref=e84]:
+      - heading "Um cuidado para quem precisa ser olhado por inteiro" [level=2] [ref=e86]:
+        - generic [ref=e87]:
+          - generic [ref=e88]:
+            - generic [ref=e89]: U
+            - generic [ref=e90]: m
+          - generic [ref=e91]:
+            - generic [ref=e92]: c
+            - generic [ref=e93]: u
+            - generic [ref=e94]: i
+            - generic [ref=e95]: d
+            - generic [ref=e96]: a
+            - generic [ref=e97]: d
+            - generic [ref=e98]: o
+          - generic [ref=e99]:
+            - generic [ref=e100]: p
+            - generic [ref=e101]: a
+            - generic [ref=e102]: r
+            - generic [ref=e103]: a
+          - generic [ref=e104]:
+            - generic [ref=e105]: q
+            - generic [ref=e106]: u
+            - generic [ref=e107]: e
+            - generic [ref=e108]: m
+        - generic [ref=e109]:
+          - generic [ref=e110]:
+            - generic [ref=e111]: p
+            - generic [ref=e112]: r
+            - generic [ref=e113]: e
+            - generic [ref=e114]: c
+            - generic [ref=e115]: i
+            - generic [ref=e116]: s
+            - generic [ref=e117]: a
+          - generic [ref=e118]:
+            - generic [ref=e119]: s
+            - generic [ref=e120]: e
+            - generic [ref=e121]: r
+          - generic [ref=e122]:
+            - generic [ref=e123]: o
+            - generic [ref=e124]: l
+            - generic [ref=e125]: h
+            - generic [ref=e126]: a
+            - generic [ref=e127]: d
+            - generic [ref=e128]: o
+          - generic [ref=e129]:
+            - generic [ref=e130]: p
+            - generic [ref=e131]: o
+            - generic [ref=e132]: r
+          - generic [ref=e133]:
+            - generic [ref=e134]: i
+            - generic [ref=e135]: "n"
+            - generic [ref=e136]: t
+            - generic [ref=e137]: e
+            - generic [ref=e138]: i
+            - generic [ref=e139]: r
+            - generic [ref=e140]: o
+      - link "Conhecer a história" [ref=e141] [cursor=pointer]:
+        - /url: /sobre/
+    - 'link "WhatsApp: (31) 98555-6001" [ref=e143] [cursor=pointer]':
+      - /url: https://wa.me/5531985556001?text=Ol%C3%A1%2C%20Luiz.%20Quero%20agendar%20uma%20conversa%20pelo%20WhatsApp.
+  - generic [ref=e145]:
+    - generic [ref=e146]:
+      - heading "Caminhos de cuidado para voltar a se sentir bem" [level=2] [ref=e149]:
+        - generic [ref=e150]:
+          - generic [ref=e151]:
+            - generic [ref=e152]: C
+            - generic [ref=e153]: a
+            - generic [ref=e154]: m
+            - generic [ref=e155]: i
+            - generic [ref=e156]: "n"
+            - generic [ref=e157]: h
+            - generic [ref=e158]: o
+            - generic [ref=e159]: s
+          - generic [ref=e160]:
+            - generic [ref=e161]: d
+            - generic [ref=e162]: e
+          - generic [ref=e163]:
+            - generic [ref=e164]: c
+            - generic [ref=e165]: u
+            - generic [ref=e166]: i
+            - generic [ref=e167]: d
+            - generic [ref=e168]: a
+            - generic [ref=e169]: d
+            - generic [ref=e170]: o
+          - generic [ref=e171]:
+            - generic [ref=e172]: p
+            - generic [ref=e173]: a
+            - generic [ref=e174]: r
+            - generic [ref=e175]: a
+        - generic [ref=e176]:
+          - generic [ref=e177]:
+            - generic [ref=e178]: v
+            - generic [ref=e179]: o
+            - generic [ref=e180]: l
+            - generic [ref=e181]: t
+            - generic [ref=e182]: a
+            - generic [ref=e183]: r
+          - generic [ref=e184]: a
+          - generic [ref=e186]:
+            - generic [ref=e187]: s
+            - generic [ref=e188]: e
+          - generic [ref=e189]:
+            - generic [ref=e190]: s
+            - generic [ref=e191]: e
+            - generic [ref=e192]: "n"
+            - generic [ref=e193]: t
+            - generic [ref=e194]: i
+            - generic [ref=e195]: r
+          - generic [ref=e196]:
+            - generic [ref=e197]: b
+            - generic [ref=e198]: e
+            - generic [ref=e199]: m
+      - link "Ver atendimentos" [ref=e202] [cursor=pointer]:
+        - /url: /atendimentos/
+    - generic [ref=e206]:
+      - generic [ref=e207]:
+        - group "1 / 6" [ref=e208]:
+          - generic [ref=e209]:
+            - generic [ref=e210]:
+              - heading "01" [level=2] [ref=e212]
+              - generic [ref=e213]:
+                - heading [level=2] [ref=e214]:
+                  - link "Consulta Ayurveda" [ref=e215] [cursor=pointer]:
+                    - /url: /atendimentos/
+                - paragraph [ref=e216]: Investiga as causas dos desequilíbrios e organiza um plano personalizado para corpo, mente, rotina e alimentação.
+            - figure [ref=e219]:
+              - img "Consulta Ayurveda" [ref=e220]
+        - group "2 / 6" [ref=e221]:
+          - generic [ref=e222]:
+            - generic [ref=e223]:
+              - heading "02" [level=2] [ref=e225]
+              - generic [ref=e226]:
+                - heading [level=2] [ref=e227]:
+                  - link "Abhyanga" [ref=e228] [cursor=pointer]:
+                    - /url: /atendimentos/
+                - paragraph [ref=e229]: Massagem terapêutica para relaxamento profundo, regulação do sistema nervoso e reconexão com o corpo.
+            - figure [ref=e232]:
+              - img "Abhyanga" [ref=e233]
+        - group "3 / 6" [ref=e234]:
+          - generic [ref=e235]:
+            - generic [ref=e236]:
+              - heading "03" [level=2] [ref=e238]
+              - generic [ref=e239]:
+                - heading [level=2] [ref=e240]:
+                  - link "Método Suddhi" [ref=e241] [cursor=pointer]:
+                    - /url: /atendimentos/
+                - paragraph [ref=e242]: Experiência terapêutica de purificação e reorganização integral para quem sente que precisa recomeçar.
+            - figure [ref=e245]:
+              - img "Método Suddhi" [ref=e246]
+        - group "4 / 6" [ref=e247]:
+          - generic [ref=e248]:
+            - generic [ref=e249]:
+              - heading "04" [level=2] [ref=e251]
+              - generic [ref=e252]:
+                - heading [level=2] [ref=e253]:
+                  - link "Curso Toque Inteligente" [ref=e254] [cursor=pointer]:
+                    - /url: /atendimentos/
+                - paragraph [ref=e255]: Formação para terapeutas e massoterapeutas que desejam desenvolver escuta, presença e toque terapêutico.
+            - figure [ref=e258]:
+              - img "Curso Toque Inteligente" [ref=e259]
+        - group "5 / 6" [ref=e260]:
+          - generic [ref=e261]:
+            - generic [ref=e262]:
+              - heading "05" [level=2] [ref=e264]
+              - generic [ref=e265]:
+                - heading [level=2] [ref=e266]:
+                  - link "Cursos e Imersões" [ref=e267] [cursor=pointer]:
+                    - /url: /atendimentos/
+                - paragraph [ref=e268]: Ayurveda, Astrologia Védica e desenvolvimento humano em encontros para estudo e transformação.
+            - figure [ref=e271]:
+              - img "Cursos e Imersões" [ref=e272]
+        - group "6 / 6" [ref=e273]:
+          - generic [ref=e274]:
+            - generic [ref=e275]:
+              - heading "06" [level=2] [ref=e277]
+              - generic [ref=e278]:
+                - heading [level=2] [ref=e279]:
+                  - link "Despertar Shamana" [ref=e280] [cursor=pointer]:
+                    - /url: /atendimentos/
+                - paragraph [ref=e281]: Retiro de tratamento para cuidado profundo, descanso, presença e restauração do equilíbrio interno.
+            - figure [ref=e284]:
+              - img "Despertar Shamana" [ref=e285]
+      - generic [ref=e286]:
+        - button "Go to slide 1" [ref=e287] [cursor=pointer]
+        - button "Go to slide 2" [ref=e288] [cursor=pointer]
+        - button "Go to slide 3" [ref=e289] [cursor=pointer]
+        - button "Go to slide 4" [ref=e290] [cursor=pointer]
+        - button "Go to slide 5" [ref=e291] [cursor=pointer]
+        - button "Go to slide 6" [ref=e292] [cursor=pointer]
+  - generic [ref=e298]:
+    - heading "O que você procura talvez não seja uma técnica. É alguém que organize o caos." [level=2] [ref=e300]:
+      - generic [ref=e301]:
+        - generic [ref=e302]: O
+        - generic [ref=e304]:
+          - generic [ref=e305]: q
+          - generic [ref=e306]: u
+          - generic [ref=e307]: e
+        - generic [ref=e308]:
+          - generic [ref=e309]: v
+          - generic [ref=e310]: o
+          - generic [ref=e311]: c
+          - generic [ref=e312]: ê
+        - generic [ref=e313]:
+          - generic [ref=e314]: p
+          - generic [ref=e315]: r
+          - generic [ref=e316]: o
+          - generic [ref=e317]: c
+          - generic [ref=e318]: u
+          - generic [ref=e319]: r
+          - generic [ref=e320]: a
+        - generic [ref=e321]:
+          - generic [ref=e322]: t
+          - generic [ref=e323]: a
+          - generic [ref=e324]: l
+          - generic [ref=e325]: v
+          - generic [ref=e326]: e
+          - generic [ref=e327]: z
+        - generic [ref=e328]:
+          - generic [ref=e329]: "n"
+          - generic [ref=e330]: ã
+          - generic [ref=e331]: o
+      - generic [ref=e332]:
+        - generic [ref=e333]:
+          - generic [ref=e334]: s
+          - generic [ref=e335]: e
+          - generic [ref=e336]: j
+          - generic [ref=e337]: a
+        - generic [ref=e338]:
+          - generic [ref=e339]: u
+          - generic [ref=e340]: m
+          - generic [ref=e341]: a
+        - generic [ref=e342]:
+          - generic [ref=e343]: t
+          - generic [ref=e344]: é
+          - generic [ref=e345]: c
+          - generic [ref=e346]: "n"
+          - generic [ref=e347]: i
+          - generic [ref=e348]: c
+          - generic [ref=e349]: a
+          - generic [ref=e350]: .
+        - generic [ref=e351]: É
+        - generic [ref=e353]:
+          - generic [ref=e354]: a
+          - generic [ref=e355]: l
+          - generic [ref=e356]: g
+          - generic [ref=e357]: u
+          - generic [ref=e358]: é
+          - generic [ref=e359]: m
+      - generic [ref=e360]:
+        - generic [ref=e361]:
+          - generic [ref=e362]: q
+          - generic [ref=e363]: u
+          - generic [ref=e364]: e
+        - generic [ref=e365]:
+          - generic [ref=e366]: o
+          - generic [ref=e367]: r
+          - generic [ref=e368]: g
+          - generic [ref=e369]: a
+          - generic [ref=e370]: "n"
+          - generic [ref=e371]: i
+          - generic [ref=e372]: z
+          - generic [ref=e373]: e
+        - generic [ref=e374]: o
+        - generic [ref=e376]:
+          - generic [ref=e377]: c
+          - generic [ref=e378]: a
+          - generic [ref=e379]: o
+          - generic [ref=e380]: s
+          - generic [ref=e381]: .
+    - link "Agendar conversa" [ref=e382] [cursor=pointer]:
+      - /url: https://wa.me/5531985556001?text=Ol%C3%A1%2C%20Luiz.%20Quero%20agendar%20uma%20conversa%20pelo%20WhatsApp.
+  - generic [ref=e385]:
+    - heading "7 sinais de que seu corpo está pedindo ajuda" [level=2] [ref=e389]:
+      - generic [ref=e390]:
+        - generic [ref=e391]: "7"
+        - generic [ref=e393]:
+          - generic [ref=e394]: s
+          - generic [ref=e395]: i
+          - generic [ref=e396]: "n"
+          - generic [ref=e397]: a
+          - generic [ref=e398]: i
+          - generic [ref=e399]: s
+        - generic [ref=e400]:
+          - generic [ref=e401]: d
+          - generic [ref=e402]: e
+        - generic [ref=e403]:
+          - generic [ref=e404]: q
+          - generic [ref=e405]: u
+          - generic [ref=e406]: e
+        - generic [ref=e407]:
+          - generic [ref=e408]: s
+          - generic [ref=e409]: e
+          - generic [ref=e410]: u
+        - generic [ref=e411]:
+          - generic [ref=e412]: c
+          - generic [ref=e413]: o
+          - generic [ref=e414]: r
+          - generic [ref=e415]: p
+          - generic [ref=e416]: o
+      - generic [ref=e417]:
+        - generic [ref=e418]:
+          - generic [ref=e419]: e
+          - generic [ref=e420]: s
+          - generic [ref=e421]: t
+          - generic [ref=e422]: á
+        - generic [ref=e423]:
+          - generic [ref=e424]: p
+          - generic [ref=e425]: e
+          - generic [ref=e426]: d
+          - generic [ref=e427]: i
+          - generic [ref=e428]: "n"
+          - generic [ref=e429]: d
+          - generic [ref=e430]: o
+        - generic [ref=e431]:
+          - generic [ref=e432]: a
+          - generic [ref=e433]: j
+          - generic [ref=e434]: u
+          - generic [ref=e435]: d
+          - generic [ref=e436]: a
+    - generic [ref=e439]:
+      - generic [ref=e440]:
+        - generic [ref=e441]: Receba o guia gratuito
+        - heading "7 sinais de que seu corpo está pedindo ajuda" [level=2] [ref=e442]
+      - generic [ref=e443]:
+        - generic [ref=e444]:
+          - generic [ref=e445]: Nome*
+          - textbox "Seu nome" [ref=e446]
+          - paragraph [ref=e447]
+        - generic [ref=e448]:
+          - generic [ref=e449]: WhatsApp*
+          - textbox "(31) 90000-0000" [ref=e450]
+          - paragraph [ref=e451]
+        - generic [ref=e452]:
+          - generic [ref=e453]: E-mail*
+          - textbox "seu@email.com" [ref=e454]
+          - paragraph [ref=e455]
+        - alert [ref=e457]: A verificação de segurança não foi configurada. Fale conosco pelo WhatsApp.
+        - generic [ref=e458]:
+          - button "Quero receber o guia" [ref=e459] [cursor=pointer]
+          - paragraph [ref=e460]:
+            - text: Ao enviar, você declara que leu a
+            - link "Política de Privacidade" [ref=e461] [cursor=pointer]:
+              - /url: /politica-de-privacidade/
+            - text: e autoriza o uso dos dados para receber o material e o retorno solicitado.
+          - paragraph [ref=e462]
+  - generic [ref=e467]:
+    - heading "Um espaço para terapeutas, massoterapeutas e pessoas em formação" [level=2] [ref=e469]:
+      - generic [ref=e470]:
+        - generic [ref=e471]:
+          - generic [ref=e472]: U
+          - generic [ref=e473]: m
+        - generic [ref=e474]:
+          - generic [ref=e475]: e
+          - generic [ref=e476]: s
+          - generic [ref=e477]: p
+          - generic [ref=e478]: a
+          - generic [ref=e479]: ç
+          - generic [ref=e480]: o
+        - generic [ref=e481]:
+          - generic [ref=e482]: p
+          - generic [ref=e483]: a
+          - generic [ref=e484]: r
+          - generic [ref=e485]: a
+        - generic [ref=e486]:
+          - generic [ref=e487]: t
+          - generic [ref=e488]: e
+          - generic [ref=e489]: r
+          - generic [ref=e490]: a
+          - generic [ref=e491]: p
+          - generic [ref=e492]: e
+          - generic [ref=e493]: u
+          - generic [ref=e494]: t
+          - generic [ref=e495]: a
+          - generic [ref=e496]: s
+          - generic [ref=e497]: ","
+      - generic [ref=e498]:
+        - generic [ref=e499]:
+          - generic [ref=e500]: m
+          - generic [ref=e501]: a
+          - generic [ref=e502]: s
+          - generic [ref=e503]: s
+          - generic [ref=e504]: o
+          - generic [ref=e505]: t
+          - generic [ref=e506]: e
+          - generic [ref=e507]: r
+          - generic [ref=e508]: a
+          - generic [ref=e509]: p
+          - generic [ref=e510]: e
+          - generic [ref=e511]: u
+          - generic [ref=e512]: t
+          - generic [ref=e513]: a
+          - generic [ref=e514]: s
+        - generic [ref=e515]: e
+        - generic [ref=e517]:
+          - generic [ref=e518]: p
+          - generic [ref=e519]: e
+          - generic [ref=e520]: s
+          - generic [ref=e521]: s
+          - generic [ref=e522]: o
+          - generic [ref=e523]: a
+          - generic [ref=e524]: s
+      - generic [ref=e525]:
+        - generic [ref=e526]:
+          - generic [ref=e527]: e
+          - generic [ref=e528]: m
+        - generic [ref=e529]:
+          - generic [ref=e530]: f
+          - generic [ref=e531]: o
+          - generic [ref=e532]: r
+          - generic [ref=e533]: m
+          - generic [ref=e534]: a
+          - generic [ref=e535]: ç
+          - generic [ref=e536]: ã
+          - generic [ref=e537]: o
+    - link "Entrar para a comunidade" [ref=e538] [cursor=pointer]:
+      - /url: https://wa.me/5531985556001?text=Ol%C3%A1%2C%20Luiz.%20Quero%20agendar%20uma%20conversa%20pelo%20WhatsApp.
+  - generic [ref=e541]:
+    - generic [ref=e542]:
+      - heading "Conteúdos para entender os sinais do corpo" [level=2] [ref=e545]:
+        - generic [ref=e546]:
+          - generic [ref=e547]:
+            - generic [ref=e548]: C
+            - generic [ref=e549]: o
+            - generic [ref=e550]: "n"
+            - generic [ref=e551]: t
+            - generic [ref=e552]: e
+            - generic [ref=e553]: ú
+            - generic [ref=e554]: d
+            - generic [ref=e555]: o
+            - generic [ref=e556]: s
+          - generic [ref=e557]:
+            - generic [ref=e558]: p
+            - generic [ref=e559]: a
+            - generic [ref=e560]: r
+            - generic [ref=e561]: a
+          - generic [ref=e562]:
+            - generic [ref=e563]: e
+            - generic [ref=e564]: "n"
+            - generic [ref=e565]: t
+            - generic [ref=e566]: e
+            - generic [ref=e567]: "n"
+            - generic [ref=e568]: d
+            - generic [ref=e569]: e
+            - generic [ref=e570]: r
+          - generic [ref=e571]:
+            - generic [ref=e572]: o
+            - generic [ref=e573]: s
+        - generic [ref=e574]:
+          - generic [ref=e575]:
+            - generic [ref=e576]: s
+            - generic [ref=e577]: i
+            - generic [ref=e578]: "n"
+            - generic [ref=e579]: a
+            - generic [ref=e580]: i
+            - generic [ref=e581]: s
+          - generic [ref=e582]:
+            - generic [ref=e583]: d
+            - generic [ref=e584]: o
+          - generic [ref=e585]:
+            - generic [ref=e586]: c
+            - generic [ref=e587]: o
+            - generic [ref=e588]: r
+            - generic [ref=e589]: p
+            - generic [ref=e590]: o
+      - link "Ver blog" [ref=e593] [cursor=pointer]:
+        - /url: /blog/
+    - img "Retrato de Luiz Reis" [ref=e596]
+  - link "Agendar conversa no WhatsApp" [ref=e597] [cursor=pointer]:
+    - /url: https://wa.me/5531985556001?text=Ol%C3%A1%2C%20Luiz.%20Quero%20agendar%20uma%20conversa%20pelo%20WhatsApp.
+  - contentinfo [ref=e599]:
+    - generic [ref=e601]:
+      - generic [ref=e603]:
+        - img "Luizz_C_Reeiss — Medicina Ayurveda" [ref=e605]
+        - paragraph [ref=e607]: Ajudo pessoas que sentem que perderam o equilíbrio entre corpo, mente e emoções a reencontrar saúde, vitalidade e presença.
+        - list [ref=e609]:
+          - listitem [ref=e610]:
+            - link "Instagram" [ref=e611] [cursor=pointer]:
+              - /url: https://www.instagram.com/luizz_c_reeiss
+          - listitem [ref=e613]:
+            - link "WhatsApp" [ref=e614] [cursor=pointer]:
+              - /url: https://wa.me/5531985556001?text=Ol%C3%A1%2C%20Luiz.%20Quero%20agendar%20uma%20conversa%20pelo%20WhatsApp.
+      - generic [ref=e617]:
+        - generic [ref=e618]:
+          - heading "Menu" [level=2] [ref=e619]
+          - list [ref=e620]:
+            - listitem [ref=e621]:
+              - text: "*"
+              - link "Home" [ref=e622] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=e623]:
+              - text: "*"
+              - link "Sobre" [ref=e624] [cursor=pointer]:
+                - /url: /sobre/
+            - listitem [ref=e625]:
+              - text: "*"
+              - link "Atendimentos" [ref=e626] [cursor=pointer]:
+                - /url: /atendimentos/
+            - listitem [ref=e627]:
+              - text: "*"
+              - link "Blog" [ref=e628] [cursor=pointer]:
+                - /url: /blog/
+            - listitem [ref=e629]:
+              - text: "*"
+              - link "Contato" [ref=e630] [cursor=pointer]:
+                - /url: /contato/
+        - generic [ref=e631]:
+          - heading "Serviços" [level=2] [ref=e632]
+          - list [ref=e633]:
+            - listitem [ref=e634]:
+              - text: "*"
+              - link "Consulta Ayurveda" [ref=e635] [cursor=pointer]:
+                - /url: /atendimentos/
+            - listitem [ref=e636]:
+              - text: "*"
+              - link "Abhyanga" [ref=e637] [cursor=pointer]:
+                - /url: /atendimentos/
+            - listitem [ref=e638]:
+              - text: "*"
+              - link "Método Suddhi" [ref=e639] [cursor=pointer]:
+                - /url: /atendimentos/
+            - listitem [ref=e640]:
+              - text: "*"
+              - link "Curso Toque Inteligente" [ref=e641] [cursor=pointer]:
+                - /url: /atendimentos/
+            - listitem [ref=e642]:
+              - text: "*"
+              - link "Cursos e Imersões" [ref=e643] [cursor=pointer]:
+                - /url: /atendimentos/
+        - generic [ref=e644]:
+          - heading "Contato" [level=2] [ref=e645]
+          - generic [ref=e646]:
+            - paragraph [ref=e647]: Local
+            - heading "Atendimentos em Belo Horizonte e Nova Lima" [level=3] [ref=e648]
+          - generic [ref=e649]:
+            - paragraph [ref=e650]: WhatsApp
+            - heading [level=3] [ref=e651]:
+              - link "(31) 98555-6001" [ref=e652] [cursor=pointer]:
+                - /url: https://wa.me/5531985556001?text=Ol%C3%A1%2C%20Luiz.%20Quero%20agendar%20uma%20conversa%20pelo%20WhatsApp.
+      - generic [ref=e654]:
+        - paragraph [ref=e655]: Copyright © 2026 Luiz Reis. Todos os direitos reservados.
+        - paragraph [ref=e656]:
+          - link "Política de Privacidade" [ref=e657] [cursor=pointer]:
+            - /url: /politica-de-privacidade/

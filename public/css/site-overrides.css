@@ -13,8 +13,8 @@
 
 /* Logo no header: versao escura no fundo claro, branca quando o menu fixa (fundo escuro) */
 .navbar-brand .brand-logo {
-  height: 74px;
-  width: auto;
+  width: 135px;
+  height: auto;
   display: block;
 }
 
@@ -29,7 +29,7 @@
 
 .footer-logo img {
   width: auto;
-  max-width: 200px;
+  max-width: 220px;
 }
 
 /* Simbolo da logo dentro do circulo do preloader */
@@ -281,6 +281,38 @@ body.form-submitting {
   transform: scale(1.03);
 }
 
+.post-item-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin-bottom: 12px;
+  color: var(--accent-color);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.post-item-content > p {
+  margin: 10px 0 0;
+}
+
+.post-tag-links {
+  margin-bottom: 60px;
+}
+
+.post-tag {
+  display: inline-block;
+  border-radius: 10px;
+  background: var(--accent-color);
+  color: var(--white-color);
+  font-family: var(--accent-font);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1em;
+  padding: 12px 20px;
+}
+
 section.page-single-faqs {
   padding: 120px 0;
 }
@@ -353,7 +385,8 @@ section.page-single-faqs {
 
 @media (max-width: 767px) {
   .navbar-brand .brand-logo {
-    height: 56px;
+    width: 112px;
+    height: auto;
   }
 
   .guide-panel {
@@ -389,6 +422,10 @@ section.page-single-faqs {
 
   .community-image {
     margin-top: 40px;
+  }
+
+  .post-tag-links {
+    margin-bottom: 40px;
   }
 }
 

@@ -2,10 +2,9 @@ export const site = {
   name: 'Luiz Reis',
   phoneLabel: '(31) 98555-6001',
   whatsappNumber: '5531985556001',
-  email: 'contato@luizzcreeiss.com.br',
+  email: 'luizreis005@gmail.com',
   address: 'Atendimentos em Belo Horizonte e Nova Lima',
   instagramUrl: 'https://www.instagram.com/luizz_c_reeiss',
-  youtubeUrl: 'https://www.youtube.com/',
   telegramUrl: 'https://t.me/',
   hotmartCourseUrl:
     'https://casaayurvedabh.kpages.online/curso-de-massoterapia-ayurvedica-formacao-em-massagem-abhyanga-e2bc94cf-e735-4ada-857c-829b9c5a399a',

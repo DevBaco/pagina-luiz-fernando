@@ -2,17 +2,24 @@
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import LeadForm from '../../components/LeadForm.astro';
+import { site } from '../../data/site';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog', ({ data }) => !data.draft);
-  return posts.map((post) => ({ params: { slug: post.slug }, props: { post } }));
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
 }
 
 const { post } = Astro.props;
 const { Content } = await render(post);
 ---
 
-<BaseLayout title={`${post.data.title} | Luiz Reis`} description={post.data.description}>
+<BaseLayout
+  title={`${post.data.title} | Luiz Reis`}
+  description={post.data.description}
+  image={post.data.image}
+  type="article"
+  publishDate={post.data.publishDate}
+>
   <div
     class="page-header parallaxie"
     style="--page-header-image: url('/images/page-header-blog.webp')"
@@ -34,23 +41,42 @@ const { Content } = await render(post);
     </div>
   </div>
 
-  <div class="page-single-post">
+  <article class="page-single-post">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
           <div class="post-image">
-            <figure class="image-anime reveal"><img src={post.data.image} alt={post.data.title} /></figure>
+            <figure class="image-anime reveal"><img src={post.data.image} alt={post.data.imageAlt} style={`object-position: ${post.data.imagePosition}`} /></figure>
           </div>
           <div class="post-content">
             <div class="post-entry">
               <Content />
             </div>
+            <div class="post-tag-links">
+              <div class="row align-items-center">
+                <div class="col-lg-8">
+                  <div class="post-tags">
+                    <span class="tag-links">
+                      Temas:
+                      {post.data.tags.map((tag) => <span class="post-tag">{tag}</span>)}
+                    </span>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="post-social-sharing">
+                    <ul>
+                      <li><a href={site.instagramUrl} target="_blank" rel="noopener" aria-label="Acompanhar Luiz Reis no Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="appointment-form guide-panel">
-            <LeadForm title="Aprofunde o cuidado" source={`blog-${post.slug}`} />
+            <LeadForm title="Aprofunde o cuidado" source={`blog-${post.id}`} />
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </article>
 </BaseLayout>
