@@ -251,6 +251,36 @@ body.form-submitting {
   padding: 120px 0;
 }
 
+.community-content {
+  padding-right: 40px;
+}
+
+.community-content > p {
+  margin: 24px 0 0;
+}
+
+.community-btn {
+  margin-top: 32px;
+}
+
+.community-image figure {
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  border-radius: 20px;
+}
+
+.community-image img {
+  width: 100%;
+  aspect-ratio: 1 / 0.78;
+  object-fit: cover;
+  transition: transform 1s ease-in-out;
+}
+
+.community-image:hover img {
+  transform: scale(1.03);
+}
+
 section.page-single-faqs {
   padding: 120px 0;
 }
@@ -351,6 +381,14 @@ section.page-single-faqs {
     grid-column: 1 / -1;
     width: 100%;
     min-width: 0;
+  }
+
+  .community-content {
+    padding-right: 0;
+  }
+
+  .community-image {
+    margin-top: 40px;
   }
 }
 

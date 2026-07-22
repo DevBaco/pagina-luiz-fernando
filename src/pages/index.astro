@@ -236,21 +236,24 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
 
   <div class="our-testimonials">
     <div class="container">
-      <div class="row section-row align-items-center">
-        <div class="col-xl-6">
-          <div class="section-title">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="community-content">
+            <div class="section-title">
             <span class="section-sub-title wow fadeInUp">Comunidade Toque Inteligente</span>
             <h2 class="text-anime-style-3" data-cursor="-opaque">Um espaço para terapeutas, massoterapeutas e pessoas em formação</h2>
-          </div>
-        </div>
-        <div class="col-xl-6">
-          <div class="section-content-btn">
-            <div class="section-title-content wow fadeInUp" data-wow-delay="0.2s">
-              <p>A comunidade nasce para aprofundar presença, escuta e toque terapêutico. Entre para receber avisos sobre encontros, conteúdos e próximas turmas.</p>
             </div>
-            <div class="section-btn wow fadeInUp" data-wow-delay="0.4s">
+            <p class="wow fadeInUp" data-wow-delay="0.2s">A comunidade nasce para aprofundar presença, escuta e toque terapêutico. Entre para receber avisos sobre encontros, conteúdos e próximas turmas.</p>
+            <div class="community-btn wow fadeInUp" data-wow-delay="0.4s">
               <a class="btn-default" href={whatsappUrl} target="_blank" rel="noopener">Entrar para a comunidade</a>
             </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="community-image wow fadeInUp" data-wow-delay="0.2s">
+            <figure class="image-anime">
+              <img src="/images/service-image-4.jpg" alt="Terapeutas praticando o toque terapêutico em comunidade" loading="lazy" />
+            </figure>
           </div>
         </div>
       </div>
