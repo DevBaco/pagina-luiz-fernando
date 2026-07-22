@@ -1,11 +1,11 @@
 # Formulário do site no Google Sheets
 
-O formulário envia nome, WhatsApp, e-mail, origem, material e URL da página. O Apps Script valida os dados, salva tudo na aba `Leads` e confirma o salvamento ao site. Somente depois dessa confirmação o site abre a página de agradecimento, que oferece a continuidade pelo WhatsApp `55 31 98555-6001`.
+O formulário envia nome, WhatsApp, e-mail, origem, material e URL da página. O Apps Script salva os dados na aba `Leads` e confirma o salvamento ao site. Somente depois dessa confirmação o site abre o WhatsApp `55 31 98555-6001`.
 
 ## 1. Criar e configurar a planilha
 
 1. Na nova conta Google, crie uma planilha.
-2. Copie o ID da URL. Em `https://docs.google.com/spreadsheets/d/ID_DA_PLANILHA/edit`, o ID é o trecho entre `/d/` e `/edit`.
+2. Copie o ID da URL. Em `https://docs.google.com/spreadsheets/d/1lwe2A6L58bWlyDJbRTX0zGxNT7A7V2B4xSW5b4w70rc/edit`, o ID é o trecho entre `/d/` e `/edit`.
 3. Na planilha, abra **Extensões > Apps Script**.
 4. Apague o conteúdo inicial de `Code.gs` e cole o conteúdo de [`Code.gs`](./Code.gs).
 5. Abra **Configurações do projeto > Propriedades do script**.
@@ -34,6 +34,6 @@ Não use a URL de teste terminada em `/dev`, pois ela só funciona para editores
 
 1. Preencha o formulário publicado.
 2. Confirme que uma linha apareceu na aba `Leads`.
-3. Confirme que, depois do salvamento, o navegador abriu `/obrigado/`.
+3. Confirme que, depois do salvamento, o navegador abriu o WhatsApp.
 
 Ao alterar o `Code.gs`, publique uma nova versão em **Implantar > Gerenciar implantações > Editar > Nova versão** para atualizar a URL `/exec` existente.
