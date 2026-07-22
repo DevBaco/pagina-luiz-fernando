@@ -1,7 +1,7 @@
 export const site = {
   name: 'Luiz Reis',
-  phoneLabel: '(31) 99999-9999',
-  whatsappNumber: '5531999999999',
+  phoneLabel: '(31) 98555-6001',
+  whatsappNumber: '5531985556001',
   email: 'contato@luizreis.com.br',
   address: 'Atendimentos em Belo Horizonte e Nova Lima',
   instagramUrl: 'https://www.instagram.com/luizz_c_reeiss',

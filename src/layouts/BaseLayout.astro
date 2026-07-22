@@ -6,11 +6,13 @@ import Footer from '../components/Footer.astro';
 interface Props {
   title?: string;
   description?: string;
+  noindex?: boolean;
 }
 
 const {
   title = 'Luiz Reis | Terapias integrativas em Belo Horizonte',
   description = 'Cuidado individual para ansiedade, cansaço, insônia, dores recorrentes e desequilíbrios digestivos com Ayurveda, toque terapêutico e escuta.',
+  noindex = false,
 } = Astro.props;
 ---
 
@@ -21,6 +23,7 @@ const {
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
     <meta name="keywords" content="Ayurveda Belo Horizonte, Consulta Ayurveda BH, Massagem Ayurveda BH, Abhyanga Belo Horizonte, Terapia Integrativa BH, massagem curativa" />
     <meta name="author" content="Luiz Reis" />
     <meta property="og:title" content={title} />
@@ -47,6 +50,7 @@ const {
         <div class="loading"></div>
         <div id="loading-icon"><img src="/images/logo.png" alt="" width="56" height="56" style="width:56px;height:56px;object-fit:contain;display:block;" /></div>
       </div>
+      <p class="submission-loading-text" role="status">Enviando seus dados...</p>
     </div>
     <Header />
     <slot />

@@ -8,9 +8,15 @@ interface Props {
 const { title = 'Receba o guia gratuito', button = 'Quero receber o guia', source = 'site' } = Astro.props;
 ---
 
-<form class="lead-form" data-lead-form>
+<form class="lead-form" data-lead-form novalidate>
   <input type="hidden" name="source" value={source} />
   <input type="hidden" name="guide" value="7 sinais de que seu corpo está pedindo ajuda" />
+  <input type="hidden" name="pageUrl" data-page-url />
+  <input type="hidden" name="requestToken" data-request-token />
+  <div class="d-none" aria-hidden="true">
+    <label for={`company-${source}`}>Empresa</label>
+    <input id={`company-${source}`} type="text" name="company" tabindex="-1" autocomplete="off" />
+  </div>
   <div class="section-title compact-title">
     <span class="section-sub-title">{title}</span>
     <h2>7 sinais de que seu corpo está pedindo ajuda</h2>
@@ -18,19 +24,22 @@ const { title = 'Receba o guia gratuito', button = 'Quero receber o guia', sourc
   <div class="row">
     <div class="form-group col-md-12 mb-4">
       <label>Nome*</label>
-      <input type="text" name="name" class="form-control" placeholder="Seu nome" required />
+      <input type="text" name="name" class="form-control" placeholder="Seu nome" autocomplete="name" minlength="2" aria-describedby={`name-error-${source}`} required />
+      <p id={`name-error-${source}`} class="field-error" data-name-error aria-live="polite"></p>
     </div>
     <div class="form-group col-md-6 mb-4">
       <label>WhatsApp*</label>
-      <input type="tel" name="whatsapp" class="form-control" placeholder="(31) 99999-9999" required />
+      <input type="text" name="whatsapp" class="form-control" placeholder="(31) 90000-0000" autocomplete="tel" inputmode="numeric" maxlength="15" aria-describedby={`phone-error-${source}`} required />
+      <p id={`phone-error-${source}`} class="field-error" data-phone-error aria-live="polite"></p>
     </div>
     <div class="form-group col-md-6 mb-4">
       <label>E-mail*</label>
-      <input type="email" name="email" class="form-control" placeholder="seu@email.com" required />
+      <input type="email" name="email" class="form-control" placeholder="seu@email.com" autocomplete="email" maxlength="254" aria-describedby={`email-error-${source}`} required />
+      <p id={`email-error-${source}`} class="field-error" data-email-error aria-live="polite"></p>
     </div>
     <div class="col-md-12">
       <button type="submit" class="btn-default btn-highlighted">{button}</button>
-      <p class="form-status" data-form-status></p>
+      <p class="form-status" data-form-status aria-live="polite"></p>
     </div>
   </div>
 </form>

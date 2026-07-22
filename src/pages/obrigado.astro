@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { whatsappUrl } from '../data/site';
+---
+
+<BaseLayout
+  title="Obrigado | Luiz Reis"
+  description="Recebemos seus dados. Em breve você receberá o material solicitado."
+  noindex={true}
+>
+  <main class="thank-you-page">
+    <div class="container">
+      <div class="thank-you-card">
+        <div class="thank-you-icon" aria-hidden="true">
+          <i class="fa-solid fa-check"></i>
+        </div>
+        <span class="section-sub-title">Formulário enviado</span>
+        <h1>Obrigado!</h1>
+        <p>Recebemos seus dados com sucesso. Em breve você receberá o material solicitado.</p>
+        <p>Se quiser conversar sobre seu momento ou tirar alguma dúvida, estou disponível pelo WhatsApp.</p>
+        <div class="thank-you-actions">
+          <a class="btn-default btn-highlighted" href={whatsappUrl} target="_blank" rel="noopener">Continuar pelo WhatsApp</a>
+          <a class="btn-default btn-secondary" href="/">Voltar para o início</a>
+        </div>
+      </div>
+    </div>
+  </main>
+</BaseLayout>
