@@ -46,6 +46,7 @@ não dá pra saber qual é qual só de olhar. Este arquivo é o guia.
 | Arquivo | O que colocar |
 |---|---|
 | `service-image-1.jpg` a `service-image-6.jpg` | As 6 fotos dos serviços (mesmas da Home, listadas acima) |
+| `metodo-suddhi.webp` | Arte vertical (1024 × 1536, 2:3) do Método Suddhi enviada pelo Luiz — usada na seção Método Suddhi. | OK
 
 ## 💆 Massagens Terapêuticas (`/massagens-terapeuticas/`)
 

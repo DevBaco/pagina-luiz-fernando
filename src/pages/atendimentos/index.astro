@@ -24,6 +24,33 @@ const steps = [
   },
 ];
 
+const consultaTopics = [
+  {
+    title: 'Sua história de saúde',
+    text: 'o que você já viveu, tratou e tentou até chegar aqui.',
+  },
+  {
+    title: 'Seu dia a dia',
+    text: 'alimentação, sono, rotina e níveis de estresse, porque tudo isso molda o seu equilíbrio.',
+  },
+  {
+    title: 'Sua constituição (Prakriti)',
+    text: 'seu tipo constitucional, baseado nos doshas Vata, Pitta e Kapha, e como ele influencia seu corpo e comportamento.',
+  },
+  {
+    title: 'O que você sente hoje',
+    text: 'físico ou emocional, tudo é acolhido com atenção.',
+  },
+  {
+    title: 'Suas questões emocionais',
+    text: 'estresse, ansiedade e outras questões fazem parte da saúde como um todo, não são “assunto à parte”.',
+  },
+  {
+    title: 'Orientação nutricional e práticas complementares',
+    text: 'sugestões de alimentação, yoga, meditação ou ervas, quando fizerem sentido pra você.',
+  },
+];
+
 const faqs = [
   {
     q: 'Preciso saber o que é Ayurveda para me consultar?',
@@ -86,6 +113,79 @@ const faqs = [
             </div>
           </div>
         ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="service-single-content-section consulta-ayurvedica">
+    <div class="container">
+      <div class="row section-row align-items-center">
+        <div class="col-xl-6">
+          <div class="section-title">
+            <span class="section-sub-title wow fadeInUp">Consulta ayurvédica</span>
+            <h2 class="text-anime-style-3" data-cursor="-opaque">Um olhar completo sobre você — corpo, mente e emoções</h2>
+          </div>
+        </div>
+        <div class="col-xl-6">
+          <div class="section-title-content wow fadeInUp" data-wow-delay="0.2s">
+            <p>A consulta ayurvédica não trata só o sintoma que te trouxe até aqui. Ela investiga a causa: sua história, sua rotina e a sua constituição única, para organizar um caminho de cuidado que realmente funcione pra sua vida.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12">
+          <h3 class="consulta-topics-title wow fadeInUp">O que conversamos na consulta</h3>
+          <div class="about-us-list consulta-topics wow fadeInUp" data-wow-delay="0.2s">
+            <ul>
+              {consultaTopics.map((topic) => (
+                <li><strong>{topic.title}</strong> — {topic.text}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="guide-panel consulta-panel wow fadeInUp" data-wow-delay="0.2s">
+            <h3>Um espaço de escuta real</h3>
+            <p>Você não precisa chegar com um diagnóstico pronto ou entender de Ayurveda. Aqui existe espaço para contar sua história sem pressa e sem julgamento — e o acompanhamento continua com você ao longo do processo, porque saúde é caminho, não evento único.</p>
+            <div class="section-btn">
+              <a class="btn-default" href={whatsappUrl} target="_blank" rel="noopener">Agendar consulta</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="service-single-content-section metodo-suddhi light-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-xl-5">
+          <div class="page-single-image suddhi-image">
+            <figure class="image-anime">
+              <img src="/images/metodo-suddhi.webp" alt="Método Suddhi — equilíbrio físico, desbloqueio mental e liberação emocional, com Luiz Reis" width="1024" height="1536" loading="lazy" />
+            </figure>
+          </div>
+        </div>
+        <div class="col-xl-7">
+          <div class="section-title suddhi-content">
+            <span class="section-sub-title wow fadeInUp">Purificação profunda</span>
+            <h2 class="text-anime-style-3" data-cursor="-opaque">Método Suddhi</h2>
+            <p class="wow fadeInUp" data-wow-delay="0.2s">O Método Suddhi é um atendimento profundo de purificação física, mental e energética, para quem sente que precisa recomeçar. A sessão dura cerca de 3 horas e combina várias técnicas em sequência, sem pressa.</p>
+            <p class="wow fadeInUp" data-wow-delay="0.3s">Você passa pela massagem Garshana (com sal medicado e ervas), por banhos de limpeza escolhidos de acordo com a sua necessidade, por um escalda-pés revigorante e por uma limpeza energética, com alinhamento dos chakras e uso de símbolos de proteção.</p>
+            <p class="wow fadeInUp" data-wow-delay="0.4s">O objetivo é simples: te ajudar a soltar o que pesa e sair mais leve, centrado(a) e com mais clareza para os próximos passos.</p>
+            <ul class="suddhi-meta wow fadeInUp" data-wow-delay="0.5s">
+              <li><i class="fa-solid fa-location-dot"></i>Atendimento presencial — Bairro Anchieta, BH</li>
+              <li><i class="fa-solid fa-calendar-check"></i>Somente com agendamento</li>
+            </ul>
+            <div class="about-us-btn wow fadeInUp" data-wow-delay="0.6s">
+              <a class="btn-default" href={whatsappUrl} target="_blank" rel="noopener">Agendar sessão</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
