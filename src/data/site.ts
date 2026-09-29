@@ -29,7 +29,8 @@ export const services = [
   {
     title: 'Método Suddhi',
     text: 'Experiência terapêutica de purificação e reorganização integral para quem sente que precisa recomeçar.',
-    image: '/images/service-image-3.jpg',
+    image: '/images/metodo-suddhi.webp',
+    cardImage: '/images/metodo-suddhi-card.webp',
     icon: '/images/icon-service-item-3.svg',
   },
   {

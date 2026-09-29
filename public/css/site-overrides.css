@@ -582,28 +582,7 @@ section.page-single-faqs {
   text-align: left;
 }
 
-/* Metodo Suddhi: poster vertical + informacoes de atendimento */
-.metodo-suddhi .suddhi-content {
-  padding-left: 40px;
-}
-
-.metodo-suddhi .suddhi-image figure {
-  overflow: hidden;
-  margin: 0;
-  border-radius: 8px;
-}
-
-.metodo-suddhi .suddhi-image img {
-  display: block;
-  width: 100%;
-  height: auto;
-  /* o tema forca 1 / 0.622 + cover em .page-single-image img; a arte e 2:3.
-     Proporcao explicita (nao 'auto') para reservar o espaco antes do load. */
-  aspect-ratio: 2 / 3;
-  object-fit: contain;
-  border-radius: 8px;
-}
-
+/* Metodo Suddhi: informacoes de atendimento */
 .suddhi-meta {
   display: grid;
   gap: 12px;
@@ -626,17 +605,6 @@ section.page-single-faqs {
   color: var(--accent-color);
 }
 
-@media (max-width: 1199px) {
-  .metodo-suddhi .suddhi-content {
-    padding-left: 0;
-    margin-top: 40px;
-  }
-
-  .metodo-suddhi .suddhi-image {
-    max-width: 460px;
-  }
-}
-
 @media (max-width: 767px) {
   .consulta-topics-title {
     font-size: 24px;
@@ -649,4 +617,36 @@ section.page-single-faqs {
   .consulta-panel {
     padding: 26px;
   }
+}
+.service-item-list .service-item.service-item-full-image .service-item-image {
+  position: relative;
+  inset: auto;
+  width: 100%;
+  height: auto;
+  flex-shrink: 0;
+  transform: none;
+  border-radius: 12px;
+}
+
+.service-item-list .service-item.service-item-full-image .service-item-image img {
+  display: block;
+  height: auto;
+  object-fit: contain;
+}
+
+.service-item-list .service-item.service-item-full-image .service-item-image figure::before {
+  display: none;
+}
+
+.service-item-list .service-item.service-item-full-image .service-item-number h2,
+.service-item-list .service-item.service-item-full-image .service-item-content h2 {
+  color: var(--primary-color);
+}
+
+.service-item-list .service-item.service-item-full-image .service-item-content p {
+  color: var(--text-color);
+}
+
+.service-item-list .service-item.service-item-full-image .service-item-content {
+  border-color: var(--divider-color);
 }
