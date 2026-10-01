@@ -18,8 +18,9 @@ export const products = {
     path: '/cursos-e-formacoes/formacao-massagem-abhyanga/',
     title: 'Formação em Massoterapia Ayurvédica e Massagem Abhyanga',
     checkoutUrl: 'https://pay.hotmart.com/U56755758Y?off=xa1vu5aq',
-    price: 'R$ 1.230,00',
+    price: 'R$ 996,00',
     installments: 12,
+    installmentPrice: 'R$ 103,01',
     guaranteeDays: 7,
   },
   culinaria: {

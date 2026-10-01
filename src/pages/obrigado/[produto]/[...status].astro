@@ -144,7 +144,7 @@ const steps = status === 'aprovada' ? info.accessSteps : pendingSteps;
               </div>
               <p class="lrx-price-kicker">Por apenas</p>
               <div class="lrx-price"><small>R$</small> {info.upsell.price.replace('R$ ', '')}</div>
-              <p class="lrx-parcel">Parcelado em até {info.upsell.installments} vezes</p>
+              <p class="lrx-parcel">à vista ou {info.upsell.installments}x de {info.upsell.installmentPrice} no cartão</p>
               <a class="lrx-button" href={info.upsell.path}>Conhecer a formação <span class="lrx-arrow" aria-hidden="true"><SalesIcon name="arrow" /></span></a>
               <p class="lrx-offer-guarantee">Curso online com {info.upsell.guaranteeDays} dias de garantia.</p>
             </div>
