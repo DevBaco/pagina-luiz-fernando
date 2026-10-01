@@ -217,3 +217,24 @@ html:has(.lrx){scroll-behavior:smooth;}
 .lrx-hero h1.lrx-title-long{font-size:clamp(40px,3.9vw,54px);}
 .lrx-hero-subtitle{max-width:460px;}
 }
+/* Páginas de obrigado (pós-venda da Hotmart). */
+.lrx-thanks-head{max-width:640px;margin-inline:auto;text-align:center;}
+.lrx-thanks-icon{display:grid;place-items:center;width:64px;height:64px;margin:0 auto 26px;border-radius:50%;background:var(--olive);color:#fff;box-shadow:0 0 0 10px var(--sage);}
+.lrx-thanks-icon svg{width:28px;height:28px;}
+.lrx-thanks-icon--aguardando-pagamento,.lrx-thanks-icon--em-analise{background:var(--gold);box-shadow:0 0 0 10px #f3ead9;}
+.lrx-thanks h1{font-size:clamp(36px,4vw,54px);margin-bottom:18px;}
+.lrx-thanks-head p{font-size:17px;}
+.lrx-steps{list-style:none;max-width:720px;margin:48px auto 0;padding:0;}
+.lrx-steps li{display:flex;gap:22px;align-items:flex-start;padding:22px 0;border-top:1px solid var(--line);}
+.lrx-steps li:last-child{border-bottom:1px solid var(--line);}
+.lrx-step-number{flex-shrink:0;min-width:40px;color:var(--olive);font-size:13px;font-weight:600;letter-spacing:.1em;padding-top:4px;}
+.lrx-steps h2{font-size:20px;letter-spacing:-.02em;margin-bottom:6px;}
+.lrx-steps p{font-size:15px;}
+.lrx-thanks-actions{display:flex;flex-direction:column;align-items:center;gap:22px;margin-top:40px;}
+.lrx-thanks-actions .lrx-about-link{margin-top:0;}
+@media(max-width:760px){.lrx-thanks-icon{width:56px;height:56px;}
+.lrx-steps{margin-top:36px;}
+.lrx-steps li{gap:14px;padding:18px 0;}
+.lrx-steps h2{font-size:18px;}
+.lrx-thanks-actions .lrx-button{width:100%;}
+}

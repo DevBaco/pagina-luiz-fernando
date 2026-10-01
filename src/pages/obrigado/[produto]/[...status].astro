@@ -1,0 +1,160 @@
+---
+// Páginas de obrigado dos produtos da Hotmart (Pós-venda > Página de obrigado externa).
+// Uma URL por produto e por status da compra; ver HOTMART-POS-VENDA.md.
+import SalesLayout from '../../../layouts/SalesLayout.astro';
+import SalesIcon from '../../../components/SalesIcon.astro';
+import { products, site } from '../../../data/site';
+
+type Status = 'aprovada' | 'aguardando-pagamento' | 'em-analise';
+
+const hotmartAccountUrl = 'https://consumer.hotmart.com/';
+
+const productInfo = {
+  'formacao-massagem-abhyanga': {
+    product: products.abhyanga,
+    name: 'Formação em Massagem Abhyanga',
+    kind: 'curso',
+    accessSteps: [
+      { title: 'Confira seu e-mail', text: 'A Hotmart enviou o acesso para o e-mail usado na compra. Se não encontrar, olhe também no spam e na aba promoções.' },
+      { title: 'Entre na sua conta Hotmart', text: 'Acesse com o mesmo e-mail da compra, abra a área de compras e selecione o curso de Massagem Abhyanga.' },
+      { title: 'Assista onde preferir', text: 'As aulas funcionam no computador, no celular e no tablet, inclusive pelo aplicativo da Hotmart.' },
+      { title: 'Emita seu certificado', text: 'Ao concluir todas as aulas obrigatórias, o botão “Emitir certificado” é liberado na própria área do curso.' },
+    ],
+    upsell: null,
+  },
+  'ebook-culinaria-ayurvedica': {
+    product: products.culinaria,
+    name: 'E-book Sua Culinária Ayurvédica',
+    kind: 'e-book',
+    accessSteps: [
+      { title: 'Confira seu e-mail', text: 'A Hotmart enviou o acesso para o e-mail usado na compra. Se não encontrar, olhe também no spam e na aba promoções.' },
+      { title: 'Entre na sua conta Hotmart', text: 'Acesse com o mesmo e-mail da compra, abra a área de compras e selecione o e-book Sua Culinária Ayurvédica.' },
+      { title: 'Leia onde preferir', text: 'O e-book pode ser lido no computador, no celular ou no tablet.' },
+    ],
+    upsell: products.abhyanga,
+  },
+} as const;
+
+type ProductSlug = keyof typeof productInfo;
+
+export function getStaticPaths() {
+  // getStaticPaths roda isolado: os slugs precisam ser listados aqui.
+  const slugs = ['formacao-massagem-abhyanga', 'ebook-culinaria-ayurvedica'];
+  const statuses: (string | undefined)[] = [undefined, 'aguardando-pagamento', 'em-analise'];
+  return slugs.flatMap((produto) => statuses.map((status) => ({ params: { produto, status } })));
+}
+
+const { produto, status: statusParam } = Astro.params as { produto: ProductSlug; status?: string };
+const status = (statusParam ?? 'aprovada') as Status;
+const info = productInfo[produto];
+const article = info.kind === 'curso' ? 'o curso' : 'o e-book';
+
+const whatsappUrl = `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(`Olá, Luiz. Comprei ${info.kind === 'curso' ? 'a' : 'o'} ${info.name} e tenho uma dúvida.`)}`;
+
+const content = {
+  aprovada: {
+    icon: 'check',
+    eyebrow: 'Compra confirmada',
+    title: 'Seja bem-vindo(a)!',
+    lead: `Seu pagamento foi aprovado e o acesso ${info.kind === 'curso' ? 'à' : 'ao'} ${info.name} já está liberado. Veja como começar:`,
+  },
+  'aguardando-pagamento': {
+    icon: 'clock',
+    eyebrow: 'Pedido recebido',
+    title: 'Falta só o pagamento.',
+    lead: `Seu pedido foi registrado. Assim que o pagamento for confirmado, a Hotmart envia o acesso para ${article} no seu e-mail.`,
+  },
+  'em-analise': {
+    icon: 'clock',
+    eyebrow: 'Pagamento em análise',
+    title: 'Estamos confirmando seu pagamento.',
+    lead: `Seu pagamento está passando por uma análise de segurança. Assim que for aprovado, a Hotmart envia o acesso para ${article} no seu e-mail.`,
+  },
+}[status];
+
+const pendingSteps = status === 'aguardando-pagamento'
+  ? [
+      { title: 'Pix', text: 'A confirmação costuma levar só alguns minutos depois do pagamento.' },
+      { title: 'Boleto', text: 'A compensação leva até 3 dias úteis depois do pagamento.' },
+      { title: 'Ainda não pagou?', text: 'O código Pix ou o boleto foi enviado para o seu e-mail. Confira também o spam.' },
+    ]
+  : [
+      { title: 'Não é preciso fazer nada', text: 'A análise é automática, feita pela Hotmart para proteger a sua compra.' },
+      { title: 'Fique de olho no e-mail', text: 'Você recebe uma mensagem assim que a análise terminar, com o acesso liberado.' },
+    ];
+
+const steps = status === 'aprovada' ? info.accessSteps : pendingSteps;
+---
+
+<SalesLayout
+  title={`${content.eyebrow} | ${info.name}`}
+  description={`${content.eyebrow}: ${info.name}.`}
+  image="/images/vendas/abhyanga-hero.webp"
+  noindex
+>
+  <div class="lrx">
+    <header class="lrx-header">
+      <div class="lrx-wrap">
+        <a class="lrx-brand" href="/" aria-label="Luiz Reis — início"><strong>Luiz Reis</strong><small>Terapeuta Ayurvédico</small></a>
+        <nav class="lrx-nav" aria-label="Navegação">
+          <a class="lrx-nav-cta" href="/">Voltar ao site <span aria-hidden="true"><SalesIcon name="arrow" /></span></a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="lrx-section lrx-thanks" aria-labelledby="lrx-thanks-title">
+        <div class="lrx-wrap">
+          <div class="lrx-thanks-head">
+            <span class={`lrx-thanks-icon lrx-thanks-icon--${status}`}><SalesIcon name={content.icon as 'check' | 'clock'} /></span>
+            <span class="lrx-eyebrow">{content.eyebrow}</span>
+            <h1 id="lrx-thanks-title">{content.title}</h1>
+            <p>{content.lead}</p>
+          </div>
+
+          <ol class="lrx-steps">
+            {steps.map((step, index) => (
+              <li>
+                <span class="lrx-step-number">{String(index + 1).padStart(2, '0')}</span>
+                <div><h2>{step.title}</h2><p>{step.text}</p></div>
+              </li>
+            ))}
+          </ol>
+
+          <div class="lrx-thanks-actions">
+            {status === 'aprovada' && (
+              <a class="lrx-button" href={hotmartAccountUrl} target="_blank" rel="noopener">Acessar minha conta Hotmart <span class="lrx-arrow" aria-hidden="true"><SalesIcon name="arrow" /></span></a>
+            )}
+            <a class="lrx-about-link" href={whatsappUrl} target="_blank" rel="noopener">Ficou com dúvida? Fale com o Luiz <span aria-hidden="true"><SalesIcon name="arrow" /></span></a>
+          </div>
+        </div>
+      </section>
+
+      {status === 'aprovada' && info.upsell && (
+        <section class="lrx-section lrx-offer" aria-labelledby="lrx-upsell-title">
+          <div class="lrx-wrap">
+            <div class="lrx-offer-heading">
+              <span class="lrx-eyebrow">Para ir além</span>
+              <h2 id="lrx-upsell-title">Conheça a Formação em Massagem Abhyanga.</h2>
+            </div>
+            <div class="lrx-price-card">
+              <div class="lrx-device-row">
+                <SalesIcon name="devices" />
+                <p>Aprenda com Luiz Reis a massagem indiana que relaxa o corpo e a mente.</p>
+              </div>
+              <p class="lrx-price-kicker">Por apenas</p>
+              <div class="lrx-price"><small>R$</small> {info.upsell.price.replace('R$ ', '')}</div>
+              <p class="lrx-parcel">Parcelado em até {info.upsell.installments} vezes</p>
+              <a class="lrx-button" href={info.upsell.path}>Conhecer a formação <span class="lrx-arrow" aria-hidden="true"><SalesIcon name="arrow" /></span></a>
+              <p class="lrx-offer-guarantee">Curso online com {info.upsell.guaranteeDays} dias de garantia.</p>
+            </div>
+          </div>
+        </section>
+      )}
+    </main>
+
+    <footer class="lrx-footer">
+      <div class="lrx-wrap"><span class="lrx-footer-brand">Luiz Reis</span><p>Luiz Reis. Todos os direitos reservados.</p><a href="/">Conheça o trabalho de Luiz Reis <SalesIcon name="arrow" /></a></div>
+    </footer>
+  </div>
+</SalesLayout>
