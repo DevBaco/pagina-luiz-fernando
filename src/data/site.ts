@@ -17,7 +17,7 @@ export const products = {
   abhyanga: {
     path: '/cursos-e-formacoes/formacao-massagem-abhyanga/',
     title: 'Formação em Massoterapia Ayurvédica e Massagem Abhyanga',
-    checkoutUrl: 'https://pay.hotmart.com/U56755758Y?off=xa1vu5aq',
+    checkoutUrl: 'https://pay.hotmart.com/Y107798181G',
     price: 'R$ 996,00',
     installments: 12,
     installmentPrice: 'R$ 103,01',
@@ -26,7 +26,7 @@ export const products = {
   culinaria: {
     path: '/cursos-e-formacoes/ebook-culinaria-ayurvedica/',
     title: 'E-book Sua Culinária Ayurvédica',
-    checkoutUrl: 'https://pay.hotmart.com/T107820379T?off=grzcckjj',
+    checkoutUrl: 'https://pay.hotmart.com/T107820379T',
     price: 'R$ 19,70',
     installments: 6,
     guaranteeDays: 7,
