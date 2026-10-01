@@ -1,0 +1,125 @@
+---
+import SalesLayout from '../../layouts/SalesLayout.astro';
+import SalesIcon from '../../components/SalesIcon.astro';
+import { products } from '../../data/site';
+
+const ebook = products.culinaria;
+---
+
+<SalesLayout
+  title="E-book Sua Culinária Ayurvédica | Luiz Reis"
+  description="E-book de culinária Ayurvédica de Luiz Reis e Camila Burgarelli: formas deliciosas de preparar o seu alimento com os conceitos do Ayurveda."
+  image="/images/ebook-culinaria-ayurvedica.webp"
+>
+  <div class="lrx">
+    <a class="lrx-skip" href="#lrx-conteudo">Ir para o conteúdo do e-book</a>
+    <header class="lrx-header">
+      <div class="lrx-wrap">
+        <a class="lrx-brand" href="#lrx-inicio" aria-label="Luiz Reis — início"><strong>Luiz Reis</strong><small>Terapeuta Ayurvédico</small></a>
+        <nav class="lrx-nav" aria-label="Navegação do e-book">
+          <a href="#lrx-conteudo">O e-book</a><a href="#lrx-professores">Quem escreveu</a><a class="lrx-nav-cta" href="#lrx-oferta">Quero o e-book <span aria-hidden="true"><SalesIcon name="arrow" /></span></a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="lrx-hero" id="lrx-inicio" aria-labelledby="lrx-title">
+        <div class="lrx-wrap">
+          <div class="lrx-hero-grid">
+            <div>
+              <span class="lrx-eyebrow">E-book de Culinária Ayurvédica</span>
+              <h1 id="lrx-title">Sua Culinária <span>Ayurvédica.</span></h1>
+              <p class="lrx-hero-subtitle">Comer bem não significa sem graça.</p>
+              <p class="lrx-hero-description">Desperte a sua criatividade na cozinha e aprenda, com os conceitos do Ayurveda, formas deliciosas de preparar o seu alimento.</p>
+              <a class="lrx-button" href={ebook.checkoutUrl} data-hotmart-checkout>Comprar agora <span class="lrx-arrow" aria-hidden="true"><SalesIcon name="arrow" /></span></a>
+              <p class="lrx-hero-note"><SalesIcon name="shield" />Compra segura pela Hotmart · Garantia de {ebook.guaranteeDays} dias</p>
+            </div>
+            <figure class="lrx-hero-photo lrx-hero-photo--cover">
+              <img src="/images/ebook-culinaria-ayurvedica.webp" alt="Capa do e-book Culinária Ayurvédica" width="1079" height="609" fetchpriority="high" />
+              <figcaption><span class="lrx-photo-label">A digestão é a chave da saúde.</span><span>E-book digital</span></figcaption>
+            </figure>
+          </div>
+          <a class="lrx-scroll" href="#lrx-conteudo">Conheça o e-book <span aria-hidden="true"><SalesIcon name="down" /></span></a>
+        </div>
+      </section>
+
+      <section class="lrx-section lrx-about" id="lrx-conteudo" aria-labelledby="lrx-about-title">
+        <div class="lrx-wrap">
+          <div class="lrx-about-single">
+            <span class="lrx-eyebrow">Ayurveda na cozinha</span>
+            <h2 id="lrx-about-title">Sobre o conteúdo</h2>
+            <p>A digestão dos alimentos é a chave que abre a porta da saúde e mantém as funções orgânicas perfeitamente em equilíbrio. Para se ter uma boa digestão precisamos digerir bem os alimentos, mas não custa nada darmos uma forcinha ao nosso organismo.</p>
+            <p>O <strong>e-book Culinária Ayurvédica</strong> é um primeiro ensaio que trazemos para que você saiba que é muito possível comer de forma saudável e prazerosa. Ele vem para despertar a sua criatividade na cozinha, inspirando você, através dos conceitos do Ayurveda, a aprender formas deliciosas de preparar o seu alimento.</p>
+            <a class="lrx-about-link" href="#lrx-oferta">Quero o e-book <span aria-hidden="true"><SalesIcon name="arrow" /></span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="lrx-section lrx-teachers" id="lrx-professores" aria-labelledby="lrx-teachers-title">
+        <div class="lrx-wrap lrx-teachers-grid lrx-teachers-solo">
+          <div>
+            <span class="lrx-eyebrow">Conheça melhor quem criou o conteúdo</span>
+            <h2 id="lrx-teachers-title">Luiz Reis.<br />Aprenda com quem cuida.</h2>
+            <p class="lrx-teachers-intro">Terapeuta Ayurvédico formado pela Escola Yoga Brahma Vidyalaya, Fundação Sri Vadeja e Suddha Dharma Mandalam. Professor e coordenador do curso de formação de Terapeuta Ayurvédico em Belo Horizonte da Escola Yoga Brahma Vidyalaya desde 2015.</p>
+            <p class="lrx-teachers-intro">Especialização em Clínica Ayurvédica pela Escola Yoga Brahma Vidyalaya e pela Clínica Dr. Gaurav Davee, em Panvel, na Índia.</p>
+            <article class="lrx-person">
+              <p>E-book criado em parceria com <strong>Camila Burgarelli</strong>.</p>
+            </article>
+          </div>
+          <figure class="lrx-teacher-photo">
+            <img src="/images/about-us-image-1.jpg" alt="Retrato de Luiz Reis" width="600" height="720" loading="lazy" />
+            <figcaption><strong>Luiz Reis</strong><span>Terapeuta Ayurvédico · BH</span></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="lrx-guarantee" aria-labelledby="lrx-guarantee-title">
+        <div class="lrx-wrap">
+          <div class="lrx-guarantee-inner">
+            <img class="lrx-seal" src="/images/vendas/selo-garantia.webp" alt="Selo de garantia incondicional" width="457" height="438" loading="lazy" />
+            <div><h2 id="lrx-guarantee-title">Garantia de {ebook.guaranteeDays} dias</h2><p>Seu dinheiro de volta <strong>sem perguntas</strong> até {ebook.guaranteeDays} dias após a compra. Um tempo para conhecer o conteúdo com tranquilidade.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="lrx-section lrx-offer" id="lrx-oferta" aria-labelledby="lrx-offer-title">
+        <div class="lrx-wrap">
+          <div class="lrx-offer-heading"><span class="lrx-eyebrow">E-book Sua Culinária Ayurvédica</span><h2 id="lrx-offer-title">Leve o Ayurveda para a sua cozinha.</h2></div>
+          <div class="lrx-price-card">
+            <div class="lrx-device-row">
+              <SalesIcon name="devices" />
+              <p>Leia no computador, no celular ou no tablet.</p>
+            </div>
+            <p class="lrx-price-kicker">Por apenas</p>
+            <div class="lrx-price"><small>R$</small> {ebook.price.replace('R$ ', '')}</div>
+            <p class="lrx-parcel">ou em até {ebook.installments} vezes no cartão</p>
+            <a class="lrx-button" href={ebook.checkoutUrl} data-hotmart-checkout>Comprar agora <span class="lrx-arrow" aria-hidden="true"><SalesIcon name="arrow" /></span></a>
+            <p class="lrx-secure"><SalesIcon name="lock" />Pagamento 100% seguro com acesso imediato</p>
+            <p class="lrx-offer-guarantee">{ebook.guaranteeDays} dias de garantia para conhecer o e-book.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lrx-section" id="lrx-duvidas" aria-labelledby="lrx-faq-title">
+        <div class="lrx-wrap">
+          <div class="lrx-faq">
+            <div class="lrx-faq-heading"><span class="lrx-eyebrow">Antes de dar o próximo passo</span><h2 id="lrx-faq-title">Perguntas frequentes</h2></div>
+            <details><summary>Preciso conhecer Ayurveda para usar o e-book?</summary><div class="lrx-answer">Não. O e-book apresenta os conceitos do Ayurveda de forma simples, para inspirar a sua criatividade na cozinha do dia a dia.</div></details>
+            <details><summary>Como funciona o “Prazo de Garantia”?</summary><div class="lrx-answer">É o período em que você pode pedir o reembolso integral do valor pago, caso o produto não seja satisfatório. Para este e-book, o prazo é de {ebook.guaranteeDays} dias após a compra.</div></details>
+            <details><summary>Como acessar o produto?</summary><div class="lrx-answer">Você receberá as instruções de acesso por e-mail após a confirmação da compra. O e-book pode ser lido no computador, celular ou tablet. Você também pode:<ol><li>Entrar na <a href="https://consumer.hotmart.com/" target="_blank" rel="noopener">sua conta Hotmart</a> com o e-mail usado na compra.</li><li>Acessar a área de compras.</li><li>Selecionar o e-book Sua Culinária Ayurvédica.</li></ol></div></details>
+            <details><summary>Como faço para comprar?</summary><div class="lrx-answer">Clique em “Comprar agora” para abrir o checkout da Hotmart. Lá você poderá conferir as condições de pagamento, como cartão de crédito e Pix, e concluir sua compra.</div></details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="lrx-footer">
+      <div class="lrx-wrap"><span class="lrx-footer-brand">Luiz Reis</span><p>Luiz Reis. Todos os direitos reservados.</p><a href="/">Conheça o trabalho de Luiz Reis <SalesIcon name="arrow" /></a></div>
+    </footer>
+
+    <aside class="lrx-sticky" aria-label="Compra do e-book" hidden>
+      <div><small>E-book Culinária Ayurvédica</small><strong>{ebook.price}</strong></div>
+      <a class="lrx-button" href={ebook.checkoutUrl} data-hotmart-checkout>Comprar agora <span class="lrx-arrow" aria-hidden="true"><SalesIcon name="arrow" /></span></a>
+    </aside>
+  </div>
+</SalesLayout>

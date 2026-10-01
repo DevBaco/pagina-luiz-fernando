@@ -335,7 +335,7 @@ section.page-single-faqs {
 /* Identificacao da plataforma no curso em destaque */
 .course-card-header {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-columns: auto minmax(0, 1fr);
   align-items: center;
   gap: 20px;
 }
@@ -618,35 +618,136 @@ section.page-single-faqs {
     padding: 26px;
   }
 }
-.service-item-list .service-item.service-item-full-image .service-item-image {
-  position: relative;
-  inset: auto;
-  width: 100%;
-  height: auto;
-  flex-shrink: 0;
-  transform: none;
-  border-radius: 12px;
+/* Card com arte própria (Método Suddhi). No desktop segue o padrão dos outros
+   cards (ícone + foto em círculo que expande no hover); no celular mostra a arte inteira. */
+.service-item-list .service-item.service-item-full-image .service-item-image img {
+  object-position: 100% center;
+  transform: scale(1.3);
+  transform-origin: 100% 50%;
+  transition: transform 0.4s ease-in-out;
 }
 
-.service-item-list .service-item.service-item-full-image .service-item-image img {
-  display: block;
+/* No círculo, aproxima o rosto para não cortar o título da arte pela metade. */
+.service-item-list .service-item.service-item-full-image:not(.active):not(:hover) .service-item-image img {
+  transform: scale(1.5);
+  transform-origin: 82% 40%;
+}
+
+@media (max-width: 767px) {
+  .service-item-list .service-item.service-item-full-image .icon-box {
+    display: none;
+  }
+
+  .service-item-list .service-item.service-item-full-image .service-item-image {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+    transform: none;
+    border-radius: 12px;
+  }
+
+  .service-item-list .service-item.service-item-full-image .service-item-image img {
+    display: block;
+    height: auto;
+    object-fit: contain;
+    transform: none !important;
+  }
+
+  .service-item-list .service-item.service-item-full-image .service-item-image figure::before {
+    display: none;
+  }
+
+  .service-item-list .service-item.service-item-full-image .service-item-number h2,
+  .service-item-list .service-item.service-item-full-image .service-item-content h2 {
+    color: var(--primary-color);
+  }
+
+  .service-item-list .service-item.service-item-full-image .service-item-content p {
+    color: var(--text-color);
+  }
+
+  .service-item-list .service-item.service-item-full-image .service-item-content {
+    border-color: var(--divider-color);
+  }
+}
+
+/* Capa do e-book na página de cursos: mantém a proporção original (16:9). */
+.ebook-cover img {
   height: auto;
+  aspect-ratio: 1079 / 609;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* Curso em destaque: foto ao lado do card e selo da Hotmart no rodapé do card. */
+.course-highlight .pricing-item {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.course-highlight .pricing-item-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.course-highlight-image {
+  position: relative;
+  height: 100%;
+  min-height: 420px;
+  margin: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #133321;
+}
+
+.course-highlight-image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 
-.service-item-list .service-item.service-item-full-image .service-item-image figure::before {
-  display: none;
-}
-
-.service-item-list .service-item.service-item-full-image .service-item-number h2,
-.service-item-list .service-item.service-item-full-image .service-item-content h2 {
+.course-highlight-image figcaption {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  z-index: 2;
+  padding: 8px 16px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.92);
   color: var(--primary-color);
+  font-size: 14px;
+  font-weight: 600;
 }
 
-.service-item-list .service-item.service-item-full-image .service-item-content p {
-  color: var(--text-color);
+.course-card-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: auto;
+  padding-top: 10px;
 }
 
-.service-item-list .service-item.service-item-full-image .service-item-content {
-  border-color: var(--divider-color);
+.course-card-footer .pricing-item-btn {
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .course-highlight-image {
+    min-height: 0;
+    height: auto;
+    aspect-ratio: 610 / 500;
+    margin-bottom: 30px;
+  }
+
+  .ebook-cover {
+    margin-bottom: 30px;
+  }
 }

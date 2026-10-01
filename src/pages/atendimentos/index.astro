@@ -108,7 +108,7 @@ const faqs = [
                   <p>{service.text}</p>
                 </div>
               </div>
-              {!service.cardImage && <div class="icon-box"><img src={service.icon} alt="" /></div>}
+              <div class="icon-box"><img src={service.icon} alt="" /></div>
               <div class="service-item-image"><figure><img src={service.cardImage ?? service.image} alt={service.cardImage ? 'Luiz Reis ao lado do nome Método Suddhi' : service.title} /></figure></div>
             </div>
           </div>

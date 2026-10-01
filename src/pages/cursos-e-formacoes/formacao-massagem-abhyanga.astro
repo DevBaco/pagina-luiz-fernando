@@ -1,0 +1,148 @@
+---
+import SalesLayout from '../../layouts/SalesLayout.astro';
+import SalesIcon from '../../components/SalesIcon.astro';
+import { products, whatsappUrl } from '../../data/site';
+
+const course = products.abhyanga;
+const youtubeId = '_oWMQHwxGbc';
+---
+
+<SalesLayout
+  title="Curso de Massoterapia Ayurvédica - Formação em Massagem Abhyanga | Luiz Reis"
+  description="Aprenda com o terapeuta Luiz Reis a técnica de Massagem Abhyanga, a massagem indiana que relaxa o corpo e a mente. Curso online com 7 dias de garantia."
+  image="/images/vendas/abhyanga-hero.webp"
+>
+  <div class="lrx">
+    <a class="lrx-skip" href="#lrx-conteudo">Ir para o conteúdo do curso</a>
+    <header class="lrx-header">
+      <div class="lrx-wrap">
+        <a class="lrx-brand" href="#lrx-inicio" aria-label="Luiz Reis — início"><strong>Luiz Reis</strong><small>Terapeuta Ayurvédico</small></a>
+        <nav class="lrx-nav" aria-label="Navegação do curso">
+          <a href="#lrx-conteudo">O curso</a><a href="#lrx-professores">Quem ensina</a><a class="lrx-nav-cta" href="#lrx-oferta">Quero me inscrever <span aria-hidden="true"><SalesIcon name="arrow" /></span></a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="lrx-hero" id="lrx-inicio" aria-labelledby="lrx-title">
+        <div class="lrx-wrap">
+          <div class="lrx-hero-grid">
+            <div>
+              <span class="lrx-eyebrow">Curso de Massoterapia Ayurvédica</span>
+              <h1 id="lrx-title" class="lrx-title-long">Formação em Massagem <span>Ayurvédica.</span></h1>
+              <p class="lrx-hero-subtitle">Domine a arte da Massagem Abhyanga.</p>
+              <p class="lrx-hero-description">Aprenda com o terapeuta Luiz Reis a técnica de Massagem Abhyanga, a massagem indiana que relaxa o corpo e a mente.</p>
+              <a class="lrx-button" href={course.checkoutUrl} data-hotmart-checkout>Comprar agora <span class="lrx-arrow" aria-hidden="true"><SalesIcon name="arrow" /></span></a>
+              <p class="lrx-hero-note"><SalesIcon name="shield" />Compra segura pela Hotmart · Garantia de {course.guaranteeDays} dias</p>
+            </div>
+            <figure class="lrx-hero-photo">
+              <img src="/images/vendas/abhyanga-hero.webp" alt="Prática de massagem Abhyanga" width="1280" height="853" fetchpriority="high" />
+              <figcaption><span class="lrx-photo-label">O cuidado começa pelo toque.</span><span>Luiz Reis · BH</span></figcaption>
+            </figure>
+          </div>
+          <a class="lrx-scroll" href="#lrx-conteudo">Conheça a formação <span aria-hidden="true"><SalesIcon name="down" /></span></a>
+        </div>
+      </section>
+
+      <section class="lrx-section lrx-about" id="lrx-conteudo" aria-labelledby="lrx-about-title">
+        <div class="lrx-wrap lrx-about-grid">
+          <div>
+            <div class="lrx-video">
+              <button class="lrx-video-launch" type="button" data-video={youtubeId} aria-label="Assistir à apresentação do curso de Massagem Abhyanga">
+                <img src="/images/vendas/abhyanga-video.webp" alt="" width="480" height="360" loading="lazy" />
+                <span class="lrx-play"><SalesIcon name="play" /></span>
+                <span class="lrx-video-label">Conheça o curso de Massagem Abhyanga</span>
+              </button>
+            </div>
+            <div class="lrx-video-caption"><span>Uma apresentação do curso</span><a href={`https://www.youtube.com/watch?v=${youtubeId}`} target="_blank" rel="noopener">Assistir no YouTube <SalesIcon name="arrow" /></a></div>
+          </div>
+          <div>
+            <span class="lrx-eyebrow">A arte de cuidar pelo toque</span>
+            <h2 id="lrx-about-title">Sobre o conteúdo</h2>
+            <p>Com o <strong>Curso de Massoterapia Ayurvédica — Formação em Massagem Abhyanga</strong>, aprenda as bases da Ayurveda e torne-se um massoterapeuta qualificado.</p>
+            <p>Com esta massagem você terá pacientes mais satisfeitos e, consequentemente, uma maior recorrência em sua clínica.</p>
+            <a class="lrx-about-link" href="#lrx-oferta">Quero fazer parte <span aria-hidden="true"><SalesIcon name="arrow" /></span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="lrx-section lrx-teachers" id="lrx-professores" aria-labelledby="lrx-teachers-title">
+        <div class="lrx-wrap lrx-teachers-grid lrx-teachers-solo">
+          <div>
+            <span class="lrx-eyebrow">Conheça melhor quem criou o conteúdo</span>
+            <h2 id="lrx-teachers-title">Luiz Reis.<br />Aprenda com quem cuida.</h2>
+            <p class="lrx-teachers-intro">Terapeuta Ayurvédico formado pela Escola Yoga Brahma Vidyalaya, Fundação Sri Vadeja e Suddha Dharma Mandalam. Professor e coordenador do curso de formação de Terapeuta Ayurvédico em Belo Horizonte da Escola Yoga Brahma Vidyalaya desde 2015.</p>
+            <p class="lrx-teachers-intro">Especialização em Clínica Ayurvédica pela Escola Yoga Brahma Vidyalaya e pela Clínica Dr. Gaurav Davee, em Panvel, na Índia.</p>
+            <article class="lrx-person">
+              <p>Este curso foi elaborado com o apoio de <strong>Eugênio Vaz</strong>.</p>
+            </article>
+          </div>
+          <figure class="lrx-teacher-photo">
+            <img src="/images/about-us-image-1.jpg" alt="Retrato de Luiz Reis" width="600" height="720" loading="lazy" />
+            <figcaption><strong>Luiz Reis</strong><span>Terapeuta Ayurvédico · BH</span></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="lrx-community" aria-labelledby="lrx-community-title">
+        <div class="lrx-wrap">
+          <div class="lrx-community-copy">
+            <SalesIcon name="whatsapp" />
+            <div><span class="lrx-eyebrow">Ficou com alguma dúvida?</span><h2 id="lrx-community-title">Fale direto com o Luiz.</h2></div>
+          </div>
+          <a class="lrx-community-link" href={whatsappUrl} target="_blank" rel="noopener">Conversar no WhatsApp <span aria-hidden="true"><SalesIcon name="arrow" /></span></a>
+        </div>
+      </section>
+
+      <section class="lrx-guarantee" aria-labelledby="lrx-guarantee-title">
+        <div class="lrx-wrap">
+          <div class="lrx-guarantee-inner">
+            <img class="lrx-seal" src="/images/vendas/selo-garantia.webp" alt="Selo de garantia incondicional" width="457" height="438" loading="lazy" />
+            <div><h2 id="lrx-guarantee-title">Garantia de {course.guaranteeDays} dias</h2><p>Seu dinheiro de volta <strong>sem perguntas</strong> até {course.guaranteeDays} dias após a compra. Um tempo para conhecer o conteúdo com tranquilidade.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="lrx-section lrx-offer" id="lrx-oferta" aria-labelledby="lrx-offer-title">
+        <div class="lrx-wrap">
+          <div class="lrx-offer-heading"><span class="lrx-eyebrow">Formação em Massagem Abhyanga</span><h2 id="lrx-offer-title">Seu próximo passo começa aqui.</h2></div>
+          <div class="lrx-price-card">
+            <div class="lrx-device-row">
+              <SalesIcon name="devices" />
+              <p>Aproveite o conteúdo em qualquer dispositivo.</p>
+            </div>
+            <p class="lrx-price-kicker">Por apenas</p>
+            <div class="lrx-price"><small>R$</small> {course.price.replace('R$ ', '')}</div>
+            <p class="lrx-parcel">Parcelado em até {course.installments} vezes</p>
+            <a class="lrx-button" href={course.checkoutUrl} data-hotmart-checkout>Comprar agora <span class="lrx-arrow" aria-hidden="true"><SalesIcon name="arrow" /></span></a>
+            <p class="lrx-secure"><SalesIcon name="lock" />Pagamento 100% seguro com acesso imediato</p>
+            <p class="lrx-offer-guarantee">{course.guaranteeDays} dias de garantia para conhecer a formação.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lrx-section" id="lrx-duvidas" aria-labelledby="lrx-faq-title">
+        <div class="lrx-wrap">
+          <div class="lrx-faq">
+            <div class="lrx-faq-heading"><span class="lrx-eyebrow">Antes de dar o próximo passo</span><h2 id="lrx-faq-title">Perguntas frequentes</h2></div>
+            <details><summary>Para quem é esse produto?</summary><div class="lrx-answer">Para massoterapeutas, terapeutas corporais e pessoas que desejam aprender a Massagem Abhyanga e as bases da Ayurveda para aplicar em atendimentos.</div></details>
+            <details><summary>Quem ministra o curso?</summary><div class="lrx-answer">O curso é ministrado por Luiz Reis, terapeuta Ayurvédico e professor de formação de terapeutas desde 2015. O conteúdo foi elaborado com o apoio de Eugênio Vaz.</div></details>
+            <details><summary>Como funciona o “Prazo de Garantia”?</summary><div class="lrx-answer">É o período em que você pode pedir o reembolso integral do valor pago, caso o produto não seja satisfatório. Para esta formação, o prazo é de {course.guaranteeDays} dias após a compra.</div></details>
+            <details><summary>Vou receber certificado de conclusão?</summary><div class="lrx-answer">Sim. Ao concluir todas as aulas obrigatórias, o botão “Emitir certificado” é liberado na própria área do curso na Hotmart (no navegador ou no aplicativo), e você baixa o seu certificado digital na hora. Ele pode ser compartilhado em redes profissionais como o LinkedIn.</div></details>
+            <details><summary>Como acessar o produto?</summary><div class="lrx-answer">Você receberá as instruções de acesso por e-mail após a confirmação da compra. O conteúdo pode ser acessado pelo computador, celular ou tablet. Você também pode:<ol><li>Entrar na <a href="https://consumer.hotmart.com/" target="_blank" rel="noopener">sua conta Hotmart</a> com o e-mail usado na compra.</li><li>Acessar a área de compras.</li><li>Selecionar o curso de Massagem Abhyanga.</li></ol></div></details>
+            <details><summary>Como faço para comprar?</summary><div class="lrx-answer">Clique em “Comprar agora” para abrir o checkout da Hotmart. Lá você poderá conferir as condições de pagamento e concluir sua inscrição.</div></details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="lrx-footer">
+      <div class="lrx-wrap"><span class="lrx-footer-brand">Luiz Reis</span><p>Luiz Reis. Todos os direitos reservados.</p><a href="/">Conheça o trabalho de Luiz Reis <SalesIcon name="arrow" /></a></div>
+    </footer>
+
+    <aside class="lrx-sticky" aria-label="Inscrição no curso" hidden>
+      <div><small>Formação em Abhyanga</small><strong>{course.price}</strong></div>
+      <a class="lrx-button" href={course.checkoutUrl} data-hotmart-checkout>Comprar agora <span class="lrx-arrow" aria-hidden="true"><SalesIcon name="arrow" /></span></a>
+    </aside>
+  </div>
+</SalesLayout>

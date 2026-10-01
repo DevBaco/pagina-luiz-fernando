@@ -6,9 +6,30 @@ export const site = {
   address: 'Atendimentos em Belo Horizonte e Nova Lima',
   instagramUrl: 'https://www.instagram.com/luizz_c_reeiss',
   telegramUrl: 'https://t.me/',
-  hotmartCourseUrl:
-    'https://casaayurvedabh.kpages.online/curso-de-massoterapia-ayurvedica-formacao-em-massagem-abhyanga-e2bc94cf-e735-4ada-857c-829b9c5a399a',
   whatsappMessage: 'Olá, Luiz. Quero agendar uma conversa pelo WhatsApp.',
+};
+
+// Produtos digitais vendidos pela Hotmart. As páginas de vendas oficiais são as
+// rotas `path` deste site (configuradas em Hotmart > Página do produto > Sua página externa).
+// `checkoutUrl` precisa ser o link da "Página de pagamento" (pay.hotmart.com), nunca o
+// go.hotmart.com: o go redireciona para a página externa e criaria um loop.
+export const products = {
+  abhyanga: {
+    path: '/cursos-e-formacoes/formacao-massagem-abhyanga/',
+    title: 'Formação em Massoterapia Ayurvédica e Massagem Abhyanga',
+    checkoutUrl: 'https://pay.hotmart.com/U56755758Y?off=xa1vu5aq',
+    price: 'R$ 1.230,00',
+    installments: 12,
+    guaranteeDays: 7,
+  },
+  culinaria: {
+    path: '/cursos-e-formacoes/ebook-culinaria-ayurvedica/',
+    title: 'E-book Sua Culinária Ayurvédica',
+    checkoutUrl: 'https://pay.hotmart.com/T107820379T?off=grzcckjj',
+    price: 'R$ 19,70',
+    installments: 6,
+    guaranteeDays: 7,
+  },
 };
 
 export const whatsappUrl = `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(site.whatsappMessage)}`;
